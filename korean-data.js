@@ -726,6 +726,1515 @@ window.KOREAN_COURSES = {
         }
       },
 
+      "15": {
+        "id": "15",
+        "course": "3b",
+        "titleKo": "전기를 아껴 쓰지 않으면 안 돼요",
+        "titleVi": "Nếu không tiết kiệm điện là không được đâu",
+        "topic": "주거 생활 & 절약 습관 (Đời sống cư trú & Thói quen tiết kiệm)",
+        "summary": "Học cách nói về các sự cố sinh hoạt trong nhà (cúp điện, rò nước, nghẹt bồn cầu), các quy tắc thuê nhà, thanh toán tiền phòng và chi phí sinh hoạt. Nắm vững ngữ pháp khiến/cho phép (-게 하다), dự đoán chủ quan (-을걸요), điều kiện bắt buộc (-지 않으면 안 되다) và tiện đường làm gì (-는 길에).",
+        "grammar": [
+          {
+            "title": "-게 하다",
+            "meaning": "Làm cho / bắt / cho phép ai đó làm gì (Sai khiến, tác động)",
+            "structure": "Động từ / Tính từ + -게 하다 (Kính ngữ: -게 하시다, -게 해 드리다)",
+            "usage": "Dùng khi chủ ngữ yêu cầu, chỉ thị, bắt buộc hoặc cho phép, tạo điều kiện cho người khác thực hiện một hành động nào đó. Ngoài ra còn dùng khi nói về việc làm thay đổi trạng thái hoặc cảm xúc của đối tượng (làm cho vui, làm cho buồn, làm cho bất tiện).",
+            "examples": [
+              {
+                "ko": "어머니는 동생에게 집을 청소하게 하셨어요.",
+                "vi": "Mẹ bắt em dọn dẹp nhà cửa."
+              },
+              {
+                "ko": "오늘 사장님은 민수를 잔업하게 하셨어요.",
+                "vi": "Hôm nay giám đốc bắt Minsu làm tăng ca."
+              },
+              {
+                "ko": "겨울철에 가족들에게 내복을 입게 하면 난방비를 아낄 수 있습니다.",
+                "vi": "Vào mùa đông, nếu cho người nhà mặc đồ giữ nhiệt thì có thể tiết kiệm tiền sưởi."
+              },
+              {
+                "ko": "불편하게 해 드려서 정말 죄송합니다.",
+                "vi": "Thành thật xin lỗi vì đã làm phiền / gây bất tiện cho bác."
+              },
+              {
+                "ko": "아이들을 밖에서 마음껏 뛰어놀게 했어요.",
+                "vi": "Tôi để cho bọn trẻ được thỏa thích chạy nhảy ngoài sân."
+              }
+            ]
+          },
+          {
+            "title": "A/V-(으)ㄹ걸요",
+            "meaning": "Chắc là... / Có lẽ là... (Phỏng đoán điều người nghe chưa biết)",
+            "structure": "Hiện tại: A/V + -(으)ㄹ걸요 | Quá khứ: A/V + -았/었을걸요 | Danh từ: N + 일걸요",
+            "usage": "Dùng trong văn nói thân mật để bày tỏ suy đoán, phỏng đoán của người nói về một sự việc mà người nghe có thể chưa biết hoặc nghĩ khác. Ngụ ý: 'Theo tôi nghĩ thì chắc là như vậy đấy'.",
+            "examples": [
+              {
+                "ko": "이 신발은 커서 못 신을걸요.",
+                "vi": "Đôi giày này to lắm nên chắc bạn không thể mang vừa đâu."
+              },
+              {
+                "ko": "책을 늦게 반납하면 연체료를 내야 할걸요.",
+                "vi": "Nếu bạn trả sách trễ thì chắc là phải nộp phí phạt trễ hạn đấy."
+              },
+              {
+                "ko": "밀린 요금을 빨리 내세요. 아마 연체료가 꽤 될걸요.",
+                "vi": "Mau thanh toán tiền nợ đi. Có lẽ tiền phạt quá hạn cũng khá nhiều đấy."
+              },
+              {
+                "ko": "인터넷에 광고 글을 올려놓으면 빨리 사람을 구할 수 있을걸요.",
+                "vi": "Nếu đăng bài quảng cáo trên mạng thì chắc sẽ nhanh tìm được người ở thay thôi."
+              },
+              {
+                "ko": "지금 출발하면 길이 막혀서 제시간에 도착하기 어려울걸요.",
+                "vi": "Nếu khởi hành bây giờ thì đường tắc nên chắc khó đến đúng giờ đấy."
+              }
+            ]
+          },
+          {
+            "title": "V-지 않으면 안 되다",
+            "meaning": "Nếu không... thì không được / Bắt buộc phải... (Phủ định kép để nhấn mạnh)",
+            "structure": "Động từ + -지 않으면 안 되다 (Kính ngữ: 안 됩니다 / 안 돼요)",
+            "usage": "Sử dụng cấu trúc phủ định kép (-지 않다 kết hợp với 안 되다) để nhấn mạnh sự cần thiết tuyệt đối, nghĩa vụ bắt buộc phải làm việc gì. Tương đương với '-아야/어야 하다' nhưng mang sắc thái khẳng định mạnh mẽ và quyết liệt hơn.",
+            "examples": [
+              {
+                "ko": "내일 중요한 일이 있어서 이 양복을 입지 않으면 안 돼요.",
+                "vi": "Ngày mai tôi có việc quan trọng nên bắt buộc phải mặc bộ vest này."
+              },
+              {
+                "ko": "관리비를 줄이지 않으면 안 됩니다.",
+                "vi": "Chúng ta bắt buộc phải cắt giảm chi phí sinh hoạt."
+              },
+              {
+                "ko": "대신 들어올 사람을 구해 놓고 나가지 않으면 안 돼요.",
+                "vi": "Bạn bắt buộc phải tìm người vào ở thay rồi mới được chuyển đi."
+              },
+              {
+                "ko": "전기를 아껴 쓰지 않으면 안 돼요.",
+                "vi": "Bắt buộc phải tiết kiệm điện, nếu không là không được đâu."
+              },
+              {
+                "ko": "도서관 책은 다음 주 월요일까지 반납하지 않으면 안 돼요.",
+                "vi": "Sách thư viện bắt buộc phải trả trước thứ Hai tuần sau, nếu không là không được."
+              }
+            ]
+          },
+          {
+            "title": "V-는 길에",
+            "meaning": "Tiện đường... / Trên đường đi/về làm gì đó thì...",
+            "structure": "Động từ di chuyển (가다, 오다, 출근하다, 퇴근하다, 외출하다, 들르다) + -는 길에",
+            "usage": "Diễn tả một hành động xảy ra nhân tiện, tiện thể trong quá trình di chuyển từ điểm A đến điểm B. Thường kết hợp với '장(을) 보다' (tiện mua đồ), '들르다' (tiện ghé vào đâu đó). Khác với -는 동안에 (chỉ đơn thuần nói về khoảng thời gian).",
+            "examples": [
+              {
+                "ko": "운동하고 오는 길에 장 좀 봐 왔어요.",
+                "vi": "Trên đường đi tập thể dục về, em tiện mua ít đồ ăn."
+              },
+              {
+                "ko": "회사에 가는 길에 회사 근처 음식점에 들러서 아침을 먹어요.",
+                "vi": "Trên đường đến công ty tôi tiện ghé vào quán ăn gần đó ăn sáng."
+              },
+              {
+                "ko": "퇴근하는 길에 마트에 들러서 세일하는 식품을 사면 식비를 절약할 수 있습니다.",
+                "vi": "Trên đường tan làm về ghé siêu thị mua thực phẩm giảm giá thì có thể tiết kiệm chi phí ăn uống."
+              },
+              {
+                "ko": "8시쯤 운동 갔다 오는 길에 들를게요.",
+                "vi": "Khoảng 8 giờ trên đường đi tập về tôi sẽ ghé qua lấy đồ."
+              },
+              {
+                "ko": "우체국에 가는 길에 편지 좀 부쳐 줄래요?",
+                "vi": "Tiện đường đến bưu điện bạn gửi giúp tôi lá thư này được không?"
+              }
+            ]
+          }
+        ],
+        "vocabulary": [
+          {
+            "category": "Sự cố & Đời sống cư trú (주거 생활 & 주택 문제)",
+            "words": [
+              {
+                "ko": "수돗물이 안 나오다",
+                "hanja": "水道-",
+                "en": "tap water is cut off",
+                "vi": "cúp nước, không có nước máy",
+                "examples": [
+                  {
+                    "ko": "아침에 갑자기 수돗물이 안 나와서 샤워를 못 했어요.",
+                    "vi": "Sáng tự nhiên bị cúp nước nên tôi không tắm được."
+                  },
+                  {
+                    "ko": "공사 때문에 하루 종일 수돗물이 안 나온대요.",
+                    "vi": "Nghe bảo do công trường thi công nên cả ngày không có nước máy."
+                  }
+                ]
+              },
+              {
+                "ko": "전기가 나가다",
+                "hanja": "電氣-",
+                "en": "power goes out / blackout",
+                "vi": "cúp điện, mất điện (đồng nghĩa: 정전되다)",
+                "examples": [
+                  {
+                    "ko": "어제 밤에 전기가 나가서 아무것도 못 했어요.",
+                    "vi": "Tối qua bị cúp điện nên tôi không làm được gì cả."
+                  },
+                  {
+                    "ko": "태풍 때문에 정전돼서 엘리베이터가 멈췄어요.",
+                    "vi": "Do bão lớn nên mất điện, thang máy bị dừng lại."
+                  }
+                ]
+              },
+              {
+                "ko": "변기가 막히다",
+                "hanja": "便器-",
+                "en": "toilet is clogged",
+                "vi": "bồn cầu bị nghẹt, tắc bồn cầu",
+                "examples": [
+                  {
+                    "ko": "휴지를 너무 많이 넣어서 변기가 막혔어요.",
+                    "vi": "Cho quá nhiều giấy vệ sinh nên bồn cầu bị nghẹt."
+                  },
+                  {
+                    "ko": "변기가 막혀서 관리실에 연락했어요.",
+                    "vi": "Bồn cầu bị nghẹt nên tôi đã gọi báo cho ban quản lý."
+                  }
+                ]
+              },
+              {
+                "ko": "물이 새다",
+                "hanja": "",
+                "en": "water leaks",
+                "vi": "rò rỉ nước, rỉ nước",
+                "examples": [
+                  {
+                    "ko": "천장에서 물이 새고 있어요.",
+                    "vi": "Nước đang rò rỉ từ trần nhà xuống."
+                  },
+                  {
+                    "ko": "싱크대 밑에서 물이 새는 것 같아요.",
+                    "vi": "Hình như nước đang rò rỉ ở dưới bồn rửa bát."
+                  }
+                ]
+              },
+              {
+                "ko": "소음이 심하다",
+                "hanja": "騷音-",
+                "en": "noise is severe",
+                "vi": "tiếng ồn nghiêm trọng, quá ồn ào",
+                "examples": [
+                  {
+                    "ko": "옆집에서 나는 소음이 너무 심해요.",
+                    "vi": "Tiếng ồn từ nhà bên cạnh quá nghiêm trọng."
+                  },
+                  {
+                    "ko": "공사 소음이 심해서 잠을 못 자요.",
+                    "vi": "Tiếng ồn thi công công trình lớn quá nên tôi không ngủ được."
+                  }
+                ]
+              },
+              {
+                "ko": "난방이 안 되다",
+                "hanja": "暖房-",
+                "en": "heating is not working",
+                "vi": "hệ thống sưởi hỏng, không có sưởi ấm",
+                "examples": [
+                  {
+                    "ko": "겨울인데 난방이 안 돼서 너무 추워요.",
+                    "vi": "Đang giữa mùa đông mà hệ thống sưởi không hoạt động nên lạnh cóng."
+                  },
+                  {
+                    "ko": "보일러가 고장 나서 난방이 안 된대요.",
+                    "vi": "Nghe bảo do nồi hơi bị hỏng nên hệ thống sưởi không chạy."
+                  }
+                ]
+              },
+              {
+                "ko": "이상한 냄새가 나다",
+                "hanja": "",
+                "en": "strange smell comes out",
+                "vi": "có mùi lạ bốc ra",
+                "examples": [
+                  {
+                    "ko": "방에서 이상한 냄새가 나요.",
+                    "vi": "Trong phòng bốc ra mùi rất lạ."
+                  },
+                  {
+                    "ko": "냉장고에서 이상한 냄새가 나서 청소했어요.",
+                    "vi": "Tủ lạnh có mùi lạ bốc ra nên tôi đã dọn dẹp sạch sẽ."
+                  }
+                ]
+              },
+              {
+                "ko": "물이 안 내려가다",
+                "hanja": "",
+                "en": "water does not drain",
+                "vi": "nước không thoát, nước không rút",
+                "examples": [
+                  {
+                    "ko": "세면대 물이 안 내려가요.",
+                    "vi": "Nước ở bồn rửa mặt không thoát được."
+                  },
+                  {
+                    "ko": "샤워실 물이 잘 안 내려가서 불편해요.",
+                    "vi": "Nước phòng tắm thoát kém nên rất bất tiện."
+                  }
+                ]
+              },
+              {
+                "ko": "하수구가 막히다",
+                "hanja": "下水口-",
+                "en": "drain is blocked",
+                "vi": "cống / ống thoát nước bị nghẹt",
+                "examples": [
+                  {
+                    "ko": "화장실 하수구가 막혀서 물이 고여 있어요.",
+                    "vi": "Cống thoát nước nhà vệ sinh bị tắc nên nước ứ đọng lại."
+                  },
+                  {
+                    "ko": "머리카락 때문에 하수구가 막히지 않게 조심하세요.",
+                    "vi": "Hãy cẩn thận đừng để tóc làm tắc cống thoát nước."
+                  }
+                ]
+              },
+              {
+                "ko": "수리 기사를 부르다",
+                "hanja": "修理技士-",
+                "en": "call a repair technician",
+                "vi": "gọi thợ sửa chữa",
+                "examples": [
+                  {
+                    "ko": "천장에서 물이 떨어져서 수리 기사를 불렀어요.",
+                    "vi": "Nước trên trần nhà nhỏ giọt xuống nên tôi đã gọi thợ sửa chữa."
+                  },
+                  {
+                    "ko": "수리 기사에게 문제를 확인해 달라고 부탁했습니다.",
+                    "vi": "Tôi đã nhờ thợ sửa chữa kiểm tra xem vấn đề là gì."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "category": "Hợp đồng nhà & Chi phí sinh hoạt (부동산 계약 & 공과금)",
+            "words": [
+              {
+                "ko": "계약서",
+                "hanja": "契約書",
+                "en": "contract document",
+                "vi": "bản hợp đồng (thuê nhà, lao động)",
+                "examples": [
+                  {
+                    "ko": "계약서를 꼼꼼히 읽어 보세요.",
+                    "vi": "Hãy đọc thật kỹ từng điều khoản trong bản hợp đồng."
+                  },
+                  {
+                    "ko": "저는 교수님과 계약서에 서명했습니다.",
+                    "vi": "Tôi đã ký tên vào bản hợp đồng với giáo sư."
+                  }
+                ]
+              },
+              {
+                "ko": "계약 기간",
+                "hanja": "契約期間",
+                "en": "contract period",
+                "vi": "thời hạn hợp đồng",
+                "examples": [
+                  {
+                    "ko": "계약 기간은 1년입니다.",
+                    "vi": "Thời hạn hợp đồng thuê nhà là 1 năm."
+                  },
+                  {
+                    "ko": "계약 기간이 끝나면 갱신해야 해요.",
+                    "vi": "Khi hết thời hạn hợp đồng thì phải gia hạn tiếp."
+                  }
+                ]
+              },
+              {
+                "ko": "계약하다",
+                "hanja": "契約-",
+                "en": "to sign a contract",
+                "vi": "ký hợp đồng, làm hợp đồng",
+                "examples": [
+                  {
+                    "ko": "오늘 마음에 드는 새 집을 계약했어요.",
+                    "vi": "Hôm nay tôi đã ký hợp đồng căn nhà mới vừa ý."
+                  },
+                  {
+                    "ko": "회사와 2년 동안 일하기로 계약했습니다.",
+                    "vi": "Tôi đã ký hợp đồng làm việc 2 năm với công ty."
+                  }
+                ]
+              },
+              {
+                "ko": "보증금",
+                "hanja": "保證金",
+                "en": "security deposit",
+                "vi": "tiền đặt cọc (thuê nhà)",
+                "examples": [
+                  {
+                    "ko": "보증금이 너무 비싸서 다른 원룸을 찾고 있어요.",
+                    "vi": "Tiền đặt cọc quá đắt nên tôi đang tìm phòng trọ khép kín khác."
+                  },
+                  {
+                    "ko": "계약할 때 보증금을 먼저 내야 합니다.",
+                    "vi": "Khi ký hợp đồng phải nộp tiền đặt cọc trước."
+                  }
+                ]
+              },
+              {
+                "ko": "월세",
+                "hanja": "月貰",
+                "en": "monthly rent",
+                "vi": "tiền thuê nhà trả theo tháng (đặt cọc ít)",
+                "examples": [
+                  {
+                    "ko": "매달 25일에 집주인에게 월세를 보내요.",
+                    "vi": "Mỗi tháng vào ngày 25 tôi chuyển tiền thuê nhà cho chủ nhà."
+                  },
+                  {
+                    "ko": "월세를 늦게 내면 연체료가 붙어요.",
+                    "vi": "Nếu trả tiền nhà trễ hạn thì sẽ bị phạt thêm phí trễ."
+                  }
+                ]
+              },
+              {
+                "ko": "전세",
+                "hanja": "傳貰",
+                "en": "Jeonse (lump-sum deposit lease)",
+                "vi": "tiền thuê nhà trả cọc 1 lần (2-3 năm, không trả tiền tháng)",
+                "examples": [
+                  {
+                    "ko": "한국에는 매달 방세를 내지 않는 전세 제도가 있어요.",
+                    "vi": "Ở Hàn Quốc có chế độ thuê nhà jeonse đặt cọc lớn không phải trả tiền phòng hàng tháng."
+                  },
+                  {
+                    "ko": "전세 보증금은 계약이 끝나면 전액 돌려받아요.",
+                    "vi": "Tiền cọc jeonse sẽ được hoàn trả toàn bộ khi kết thúc hợp đồng."
+                  }
+                ]
+              },
+              {
+                "ko": "공과금",
+                "hanja": "公課金",
+                "en": "utility bills",
+                "vi": "chi phí điện nước, ga sinh hoạt",
+                "examples": [
+                  {
+                    "ko": "공과금이 관리비에 포함되어 있나요?",
+                    "vi": "Tiền điện nước ga đã bao gồm trong phí quản lý chưa ạ?"
+                  },
+                  {
+                    "ko": "매달 공과금을 따로 내야 해요.",
+                    "vi": "Mỗi tháng phải đóng riêng các khoản tiền điện nước."
+                  }
+                ]
+              },
+              {
+                "ko": "연체료",
+                "hanja": "延滯料",
+                "en": "late fee / overdue charge",
+                "vi": "tiền phạt trễ hạn, phí chậm trả",
+                "examples": [
+                  {
+                    "ko": "연체료를 내야 할 수도 있어요.",
+                    "vi": "Có thể bạn sẽ phải trả thêm phí phạt trễ hạn đấy."
+                  },
+                  {
+                    "ko": "요금을 기한 내에 내지 않으면 연체료가 붙어요.",
+                    "vi": "Nếu không thanh toán đúng hạn thì sẽ bị tính phí phạt chậm."
+                  }
+                ]
+              },
+              {
+                "ko": "포함되다",
+                "hanja": "包含-",
+                "en": "to be included",
+                "vi": "được bao gồm",
+                "examples": [
+                  {
+                    "ko": "인터넷 요금이 관리비에 포함되어 있어요.",
+                    "vi": "Cước internet đã được bao gồm trong phí quản lý."
+                  },
+                  {
+                    "ko": "방값에 모든 공과금이 포함돼서 편리해요.",
+                    "vi": "Tiền phòng đã bao gồm tất cả các khoản điện nước nên rất tiện lợi."
+                  }
+                ]
+              },
+              {
+                "ko": "납부하다",
+                "hanja": "納付-",
+                "en": "to pay / make payment",
+                "vi": "nộp, thanh toán (đồng nghĩa: 내다; trả lại: 반납하다)",
+                "examples": [
+                  {
+                    "ko": "은행에 가서 세금을 납부했습니다.",
+                    "vi": "Tôi đã ra ngân hàng để nộp thuế."
+                  },
+                  {
+                    "ko": "마감일까지 공과금을 꼭 납부하세요.",
+                    "vi": "Hãy nhớ nộp các khoản phí sinh hoạt trước ngày hết hạn."
+                  }
+                ]
+              },
+              {
+                "ko": "밀리다",
+                "hanja": "",
+                "en": "to be backed up / in arrears",
+                "vi": "bị dồn ứ (nước, xe cộ), bị nợ đọng (tiền nộp)",
+                "examples": [
+                  {
+                    "ko": "전기 요금이 세 달이나 밀렸네요.",
+                    "vi": "Tiền điện đã bị chậm dồn lại tới tận 3 tháng rồi đấy."
+                  },
+                  {
+                    "ko": "출퇴근 시간에는 도로에 차가 심하게 밀려요.",
+                    "vi": "Vào giờ cao điểm thì xe cộ trên đường bị dồn ứ kẹt cứng."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "category": "Thu chi tài chính & Thói quen tiết kiệm (수입, 지출 & 절약)",
+            "words": [
+              {
+                "ko": "지출",
+                "hanja": "支出",
+                "en": "expense / expenditure",
+                "vi": "chi tiêu, khoản tiền chi ra",
+                "examples": [
+                  {
+                    "ko": "이번 달은 외식을 많이 해서 지출이 늘었어요.",
+                    "vi": "Tháng này ăn ngoài nhiều nên khoản chi tiêu đã tăng lên."
+                  },
+                  {
+                    "ko": "불필요한 지출을 줄이도록 노력해야 해요.",
+                    "vi": "Phải nỗ lực cắt giảm các khoản chi tiêu không cần thiết."
+                  }
+                ]
+              },
+              {
+                "ko": "수입",
+                "hanja": "收入",
+                "en": "income / earnings",
+                "vi": "thu nhập (đồng nghĩa: 소득)",
+                "examples": [
+                  {
+                    "ko": "수입보다 지출이 많으면 빚이 생겨요.",
+                    "vi": "Nếu chi tiêu nhiều hơn thu nhập thì sẽ phát sinh nợ nần."
+                  },
+                  {
+                    "ko": "아르바이트를 시작해서 매달 일정한 수입이 생겼어요.",
+                    "vi": "Đi làm thêm nên mỗi tháng tôi đã có được khoản thu nhập đều đặn."
+                  }
+                ]
+              },
+              {
+                "ko": "늘다",
+                "hanja": "",
+                "en": "to increase / improve",
+                "vi": "tăng lên, phát triển (số lượng, kỹ năng; không dùng trực tiếp cho tiền lương)",
+                "examples": [
+                  {
+                    "ko": "한국에 온 지 1년 만에 한국어 실력이 많이 늘었어요.",
+                    "vi": "Chỉ sau 1 năm sang Hàn Quốc, kỹ năng tiếng Hàn của tôi đã tiến bộ rất nhiều."
+                  },
+                  {
+                    "ko": "물가가 올라서 매달 생활비 지출이 늘었어요.",
+                    "vi": "Vật giá leo thang nên chi tiêu sinh hoạt hằng tháng tăng lên."
+                  }
+                ]
+              },
+              {
+                "ko": "줄다",
+                "hanja": "",
+                "en": "to decrease / shrink",
+                "vi": "giảm đi, rút bớt (số lượng, kích cỡ, chi tiêu)",
+                "examples": [
+                  {
+                    "ko": "외식을 줄이고 집에서 요리하니 식비가 많이 줄었어요.",
+                    "vi": "Bớt ăn ngoài và tự nấu ăn ở nhà nên chi phí ăn uống đã giảm đáng kể."
+                  },
+                  {
+                    "ko": "운동을 꾸준히 해서 몸무게가 3킬로그램 줄었어요.",
+                    "vi": "Chăm chỉ tập thể dục nên cân nặng đã giảm được 3 kg."
+                  }
+                ]
+              },
+              {
+                "ko": "낭비하다",
+                "hanja": "浪費-",
+                "en": "to waste / squander",
+                "vi": "lãng phí (tiền bạc, thời gian, điện nước)",
+                "examples": [
+                  {
+                    "ko": "안 쓰는 불을 켜 두는 것은 전기 낭비예요.",
+                    "vi": "Bật đèn ở phòng không dùng là lãng phí điện."
+                  },
+                  {
+                    "ko": "젊은 시절에 시간을 낭비하면 나중에 후회해요.",
+                    "vi": "Lãng phí thời gian khi còn trẻ thì sau này sẽ hối hận."
+                  }
+                ]
+              },
+              {
+                "ko": "아끼다",
+                "hanja": "",
+                "en": "to save / cherish / use sparingly",
+                "vi": "tiết kiệm, quý trọng, dùng dè sẻn (đồng nghĩa: 절약하다)",
+                "examples": [
+                  {
+                    "ko": "전기를 아껴 쓰지 않으면 안 돼요.",
+                    "vi": "Bắt buộc phải tiết kiệm điện, nếu không là không được đâu."
+                  },
+                  {
+                    "ko": "부모님께서 사 주신 아끼는 옷이라서 조심해서 입어요.",
+                    "vi": "Đây là bộ quần áo tôi rất quý do bố mẹ mua cho nên tôi mặc rất giữ gìn."
+                  }
+                ]
+              },
+              {
+                "ko": "저축하다",
+                "hanja": "貯蓄-",
+                "en": "to save money / deposit in bank",
+                "vi": "tiết kiệm tiền, gửi tiền tiết kiệm",
+                "examples": [
+                  {
+                    "ko": "월급을 받으면 절반을 은행에 저축해요.",
+                    "vi": "Khi nhận lương tôi trích một nửa gửi tiết kiệm vào ngân hàng."
+                  },
+                  {
+                    "ko": "미래를 위해 꾸준히 돈을 저축하고 있습니다.",
+                    "vi": "Tôi đang đều đặn tiết kiệm tiền để chuẩn bị cho tương lai."
+                  }
+                ]
+              },
+              {
+                "ko": "가계부",
+                "hanja": "家計簿",
+                "en": "household ledger / budget book",
+                "vi": "sổ chi tiêu gia đình",
+                "examples": [
+                  {
+                    "ko": "매일 영수증을 모으고 가계부를 씁니다.",
+                    "vi": "Mỗi ngày tôi gom hóa đơn và ghi chép vào sổ chi tiêu."
+                  },
+                  {
+                    "ko": "가계부를 쓰면 어디에 돈을 썼는지 한눈에 알 수 있어요.",
+                    "vi": "Ghi chép sổ chi tiêu giúp nhìn vào là biết ngay mình đã tiêu tiền vào đâu."
+                  }
+                ]
+              },
+              {
+                "ko": "티끌 모아 태산",
+                "hanja": "- 泰山",
+                "en": "many a little makes a mickle",
+                "vi": "tích tiểu thành đại (gom từng hạt bụi thành núi Thái Sơn)",
+                "examples": [
+                  {
+                    "ko": "티끌 모아 태산이라는 말처럼 작은 돈부터 아껴야 해요.",
+                    "vi": "Đúng như câu 'tích tiểu thành đại', phải bắt đầu tiết kiệm từ những khoản tiền nhỏ nhất."
+                  },
+                  {
+                    "ko": "매일 조금씩 저축하다 보면 티끌 모아 태산이 됩니다.",
+                    "vi": "Mỗi ngày tiết kiệm một chút thì tích tiểu cũng sẽ thành đại."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "category": "Từ vựng mở rộng & Ghi chú bài học (Hội thoại & Reading)",
+            "words": [
+              {
+                "ko": "방을 빼다",
+                "hanja": "",
+                "en": "to vacate a room / move out",
+                "vi": "trả phòng, dọn phòng rời đi",
+                "examples": [
+                  {
+                    "ko": "이번 달까지만 살고 방을 빼려고 해요.",
+                    "vi": "Tôi định chỉ ở đến hết tháng này rồi trả phòng chuyển đi."
+                  },
+                  {
+                    "ko": "계약 기간 전에 방을 빼면 보증금을 받기 어려워요.",
+                    "vi": "Nếu trả phòng trước thời hạn hợp đồng thì khó lấy lại tiền cọc."
+                  }
+                ]
+              },
+              {
+                "ko": "고지서",
+                "hanja": "告知書",
+                "en": "bill / payment notice",
+                "vi": "giấy báo đóng tiền, hóa đơn thanh toán",
+                "examples": [
+                  {
+                    "ko": "우편함에서 관리비 고지서를 가져왔어요.",
+                    "vi": "Tôi đã lấy giấy báo phí quản lý từ hòm thư về."
+                  },
+                  {
+                    "ko": "고지서를 확인하고 마감일 전에 납부하세요.",
+                    "vi": "Hãy kiểm tra hóa đơn và thanh toán trước ngày hết hạn."
+                  }
+                ]
+              },
+              {
+                "ko": "관리비",
+                "hanja": "管理費",
+                "en": "maintenance / management fee",
+                "vi": "phí quản lý tòa nhà, chi phí chung cư",
+                "examples": [
+                  {
+                    "ko": "이번 달 관리비가 생각보다 많이 나왔어요.",
+                    "vi": "Phí quản lý tháng này nhiều hơn so với tôi nghĩ."
+                  },
+                  {
+                    "ko": "엘리베이터 유지비와 청소비가 관리비에 포함돼요.",
+                    "vi": "Phí bảo dưỡng thang máy và dọn dẹp được tính vào phí quản lý."
+                  }
+                ]
+              },
+              {
+                "ko": "자동이체",
+                "hanja": "自動移替",
+                "en": "automatic transfer",
+                "vi": "trích nợ tự động, thanh toán tự động qua ngân hàng",
+                "examples": [
+                  {
+                    "ko": "공과금을 매달 자동이체로 신청해 놓았어요.",
+                    "vi": "Tôi đã đăng ký trích nợ tự động tiền điện nước hàng tháng qua tài khoản."
+                  },
+                  {
+                    "ko": "자동이체를 해 두면 연체료를 낼 걱정이 없어요.",
+                    "vi": "Cài đặt trích nợ tự động thì không lo bị nộp phí phạt trễ hạn."
+                  }
+                ]
+              },
+              {
+                "ko": "플러그",
+                "hanja": "",
+                "en": "electrical plug",
+                "vi": "phích cắm điện",
+                "examples": [
+                  {
+                    "ko": "사용하지 않는 전기 플러그를 뽑아 두세요.",
+                    "vi": "Hãy rút phích cắm của các thiết bị điện không sử dụng."
+                  },
+                  {
+                    "ko": "외출할 때 플러그를 뽑으면 전기를 절약할 수 있어요.",
+                    "vi": "Khi ra ngoài nếu rút phích cắm thì có thể tiết kiệm điện."
+                  }
+                ]
+              },
+              {
+                "ko": "내복",
+                "hanja": "內服",
+                "en": "thermal underwear",
+                "vi": "quần áo lót giữ nhiệt mùa đông",
+                "examples": [
+                  {
+                    "ko": "겨울철에 내복을 입으면 난방비를 크게 아낄 수 있습니다.",
+                    "vi": "Vào mùa đông nếu mặc đồ giữ nhiệt thì có thể tiết kiệm đáng kể tiền sưởi."
+                  },
+                  {
+                    "ko": "날씨가 쌀쌀해져서 따뜻한 내복을 샀어요.",
+                    "vi": "Thời tiết se lạnh nên tôi đã mua bộ đồ giữ nhiệt ấm áp."
+                  }
+                ]
+              },
+              {
+                "ko": "알뜰하게",
+                "hanja": "",
+                "en": "economically / thriftily",
+                "vi": "một cách tiết kiệm, đảm đang, biết tính toán",
+                "examples": [
+                  {
+                    "ko": "알뜰하게 장을 봐서 맛있는 저녁을 만들었어요.",
+                    "vi": "Tôi đã đi chợ rất khéo léo tiết kiệm và nấu một bữa tối ngon lành."
+                  },
+                  {
+                    "ko": "세일 기간을 이용해 알뜰하게 쇼핑합니다.",
+                    "vi": "Tận dụng đợt giảm giá để mua sắm một cách thông minh tiết kiệm."
+                  }
+                ]
+              },
+              {
+                "ko": "실천하다",
+                "hanja": "實踐-",
+                "en": "to practice / put into action",
+                "vi": "thực hành, áp dụng vào thực tế",
+                "examples": [
+                  {
+                    "ko": "목표를 세우는 것보다 실천하는 것이 더 중요해요.",
+                    "vi": "Bắt tay vào thực hiện quan trọng hơn là chỉ lập mục tiêu."
+                  },
+                  {
+                    "ko": "작은 절약 습관부터 하나씩 실천합시다.",
+                    "vi": "Hãy thực hành từng thói quen tiết kiệm nhỏ nhất."
+                  }
+                ]
+              },
+              {
+                "ko": "소매",
+                "hanja": "",
+                "en": "sleeve",
+                "vi": "tay áo",
+                "examples": [
+                  {
+                    "ko": "양복 소매에 이상한 얼룩이 묻었어요.",
+                    "vi": "Ở tay áo vest có dính vết bẩn lạ."
+                  },
+                  {
+                    "ko": "더워서 셔츠 소매를 걷어 올렸어요.",
+                    "vi": "Trời nóng nên tôi xắn tay áo sơ mi lên."
+                  }
+                ]
+              },
+              {
+                "ko": "싱싱하다",
+                "hanja": "",
+                "en": "fresh",
+                "vi": "tươi ngon, tươi mát (rau củ, hoa quả, cá)",
+                "examples": [
+                  {
+                    "ko": "시장에 가면 싱싱한 과일과 채소를 살 수 있어요.",
+                    "vi": "Đi chợ truyền thống có thể mua được hoa quả và rau củ tươi ngon."
+                  },
+                  {
+                    "ko": "생선이 아주 싱싱해서 회로 먹기 좋아요.",
+                    "vi": "Cá rất tươi ngon nên thích hợp để ăn gỏi sashimi."
+                  }
+                ]
+              },
+              {
+                "ko": "들르다",
+                "hanja": "",
+                "en": "to stop by / drop by",
+                "vi": "ghé qua, tạt vào (trên đường đi)",
+                "examples": [
+                  {
+                    "ko": "퇴근하는 길에 마트에 들러서 우유를 샀어요.",
+                    "vi": "Trên đường tan làm về tôi tiện ghé siêu thị mua sữa."
+                  },
+                  {
+                    "ko": "집에 가는 길에 잠깐 우리 집에 들렀다 갈래?",
+                    "vi": "Trên đường về nhà bạn có muốn tiện ghé qua nhà tôi một lát không?"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "dialogues": [
+          {
+            "shortTitle": "Listening 0",
+            "title": "Listening 0 · Khởi động: Đi tập về và quên tắt đèn phòng (전기 요금과 고지서)",
+            "image": null,
+            "audioText": "샤오밍 학생, 어디 갔다 와요? 네, 아주머니. 운동하고 오는 길에 장 좀 봐 왔어요. 그래요? 방에 불도 켜 있고 텔레비전 소리도 들려서 집에 있는 줄 알았어요. 죄송합니다. 나가면서 불 끄는 걸 잊었네요. 이거 관리비 고지서예요. 보니까 전기 요금이 다른 방보다 많이 나왔네요. 좀 아껴 써야겠어요.",
+            "lines": [
+              {
+                "speaker": "여",
+                "ko": "샤오밍 학생, 어디 갔다 와요?",
+                "vi": "Xiao Ming, em đi đâu về vậy?"
+              },
+              {
+                "speaker": "남",
+                "ko": "네, 아주머니. 운동하고 오는 길에 장 좀 봐 왔어요.",
+                "vi": "Dạ, thưa cô. Trên đường đi tập thể dục về, em tiện mua ít đồ ăn."
+              },
+              {
+                "speaker": "여",
+                "ko": "그래요? 방에 불도 켜 있고 텔레비전 소리도 들려서 집에 있는 줄 알았어요.",
+                "vi": "Vậy à? Thấy đèn trong phòng vẫn bật và nghe tiếng TV nên cô tưởng em đang ở nhà."
+              },
+              {
+                "speaker": "남",
+                "ko": "죄송합니다. 나가면서 불 끄는 걸 잊었네요.",
+                "vi": "Em xin lỗi ạ. Lúc ra ngoài em quên tắt đèn mất."
+              },
+              {
+                "speaker": "여",
+                "ko": "이거 관리비 고지서예요. 보니까 전기 요금이 다른 방보다 많이 나왔네요. 좀 아껴 써야겠어요.",
+                "vi": "Đây là hóa đơn phí quản lý. Xem thì tiền điện của em cao hơn các phòng khác đấy. Em nên tiết kiệm một chút nhé."
+              }
+            ],
+            "notes": [
+              "-는 길에: Diễn tả một hành động tiện thể làm trong lúc đang trên đường di chuyển (운동하고 오는 길에 장 좀 봐 왔어요: Tiện đường tập thể dục về em ghé mua đồ).",
+              "-(으)ㄴ/는 줄 알았다: Tưởng là... (nghĩ sai về một thực tế: 집에 있는 줄 알았어요 - Cô cứ tưởng em đang ở nhà).",
+              "아껴 쓰다: Dùng dè sẻn, tiết kiệm (전기 요금을 아껴 써야겠어요)."
+            ],
+            "vocab": [
+              {
+                "ko": "어디 갔다 오다",
+                "vi": "đi đâu về",
+                "en": "to have been where and returned"
+              },
+              {
+                "ko": "장(을) 보다",
+                "vi": "đi chợ, mua sắm đồ ăn",
+                "en": "to go grocery shopping"
+              },
+              {
+                "ko": "불(을) 끄다",
+                "vi": "tắt đèn",
+                "en": "to turn off the light"
+              },
+              {
+                "ko": "고지서",
+                "vi": "giấy báo nộp tiền, hóa đơn",
+                "en": "bill / payment notice"
+              },
+              {
+                "ko": "전기 요금",
+                "vi": "tiền điện sinh hoạt",
+                "en": "electricity bill"
+              },
+              {
+                "ko": "아껴 쓰다",
+                "vi": "tiết kiệm, dùng dè sẻn",
+                "en": "to use sparingly"
+              },
+              {
+                "ko": "관리비",
+                "vi": "phí quản lý nhà",
+                "en": "maintenance fee"
+              }
+            ],
+            "comprehension": [
+              {
+                "question": "샤오밍은 운동하고 오는 길에 무엇을 했습니까?",
+                "options": [
+                  "마트에서 장을 봐 왔다",
+                  "세탁소에 들러 양복을 찾았다",
+                  "은행에 가서 관리비를 냈다",
+                  "도서관에서 책을 빌렸다"
+                ],
+                "correctIndex": 0,
+                "explanation": "Xiao Ming trả lời rõ ràng: '운동하고 오는 길에 장 좀 봐 왔어요.'"
+              },
+              {
+                "question": "아주머니가 샤오밍에게 한 말 중 맞는 것은 무엇입니까?",
+                "options": [
+                  "불을 잘 끄고 다녀서 칭찬했다",
+                  "전기 요금이 다른 방보다 많이 나왔으니 아껴 써야 한다고 했다",
+                  "이번 달 관리비는 낼 필요가 없다고 했다",
+                  "방을 당장 빼야 한다고 했다"
+                ],
+                "correctIndex": 1,
+                "explanation": "Người cô nhắc nhở: '보니까 전기 요금이 다른 방보다 많이 나왔네요. 좀 아껴 써야겠어요.'"
+              }
+            ]
+          },
+          {
+            "shortTitle": "Listening 1",
+            "title": "Listening 1 · Kelly bị cắt điện do nợ tiền điện 3 tháng (밀린 전기 요금과 연체료)",
+            "image": "images/lesson15/image 1.png",
+            "audioText": "아주머니, 제 방에 전기가 안 들어와요. 전기가 안 들어온다고요? 다른 방은 다 괜찮은데…… 혹시 전기 요금을 안 낸 거 아니에요? 네? 전기 요금을 제가 내야 돼요? 전에 살던 집에서는 관리비에 포함됐는데요. 여기선 따로 내야 돼요. 고지서 못 받았어요? 잠시만요. 이거 말씀인가요? 몇 번 받았는데 무슨 내용인지 몰랐어요. 이게 고지서예요. 전기 요금이 세 달이나 밀렸네요. 그럼 전기가 다시 들어오게 하려면 어떻게 해야 돼요? 밀린 요금을 빨리 내세요. 아마 연체료가 꽤 될걸요. 네, 알겠습니다.",
+            "lines": [
+              {
+                "speaker": "켈리",
+                "ko": "아주머니, 제 방에 전기가 안 들어와요.",
+                "vi": "Cô ơi, phòng của cháu không có điện."
+              },
+              {
+                "speaker": "아주머니",
+                "ko": "전기가 안 들어온다고요? 다른 방은 다 괜찮은데…… 혹시 전기 요금을 안 낸 거 아니에요?",
+                "vi": "Không có điện à? Các phòng khác vẫn bình thường mà… Có khi nào cháu chưa đóng tiền điện không?"
+              },
+              {
+                "speaker": "켈리",
+                "ko": "네? 전기 요금을 제가 내야 돼요? 전에 살던 집에서는 관리비에 포함됐는데요.",
+                "vi": "Dạ? Cháu phải tự đóng tiền điện ạ? Ở nhà trước cháu ở thì tiền điện đã bao gồm trong phí quản lý rồi."
+              },
+              {
+                "speaker": "아주머니",
+                "ko": "여기선 따로 내야 돼요. 고지서 못 받았어요?",
+                "vi": "Ở đây phải đóng riêng chứ. Cháu không nhận được giấy báo à?"
+              },
+              {
+                "speaker": "켈리",
+                "ko": "잠시만요. 이거 말씀인가요? 몇 번 받았는데 무슨 내용인지 몰랐어요.",
+                "vi": "Cô đợi chút. Ý cô là tờ giấy này ạ? Cháu nhận mấy lần rồi nhưng không biết nội dung là gì."
+              },
+              {
+                "speaker": "아주머니",
+                "ko": "이게 고지서예요. 전기 요금이 세 달이나 밀렸네요.",
+                "vi": "Đây chính là giấy báo tiền điện đấy. Tiền điện của cháu bị nợ dồn lại tới tận 3 tháng rồi."
+              },
+              {
+                "speaker": "켈리",
+                "ko": "그럼 전기가 다시 들어오게 하려면 어떻게 해야 돼요?",
+                "vi": "Vậy để làm cho có điện trở lại thì cháu phải làm thế nào ạ?"
+              },
+              {
+                "speaker": "아주머니",
+                "ko": "밀린 요금을 빨리 내세요. 아마 연체료가 꽤 될걸요.",
+                "vi": "Hãy mau đi đóng khoản tiền đang nợ đi. Chắc là tiền phạt trễ hạn cũng khá nhiều đấy."
+              },
+              {
+                "speaker": "켈리",
+                "ko": "네, 알겠습니다.",
+                "vi": "Dạ, cháu hiểu rồi ạ."
+              }
+            ],
+            "notes": [
+              "V/A + 는/(으)ㄴ지, N + 인지: Cấu trúc gián tiếp chỉ sự nghi vấn (무슨 내용인지 몰랐어요: Cháu không biết nội dung là gì).",
+              "V-게 하다: Làm cho / tác động để việc gì diễn ra (전기가 다시 들어오게 하려면: Để làm cho điện có lại thì...).",
+              "A/V-(으)ㄹ걸요: Dự đoán của người nói (연체료가 꽤 될걸요: Chắc là tiền phạt quá hạn cũng khá nhiều đấy)."
+            ],
+            "vocab": [
+              {
+                "ko": "전기가 들어오다",
+                "vi": "có điện lại, điện được cấp vào",
+                "en": "electricity is connected"
+              },
+              {
+                "ko": "혹시",
+                "vi": "có khi nào, liệu rằng",
+                "en": "by any chance"
+              },
+              {
+                "ko": "포함되다",
+                "vi": "được bao gồm",
+                "en": "to be included"
+              },
+              {
+                "ko": "따로 내다",
+                "vi": "đóng riêng, trả riêng",
+                "en": "to pay separately"
+              },
+              {
+                "ko": "말씀인가요",
+                "vi": "ý bác muốn nói là...",
+                "en": "are you referring to..."
+              },
+              {
+                "ko": "밀리다",
+                "vi": "bị nợ dồn đọng lại",
+                "en": "to be in arrears"
+              },
+              {
+                "ko": "세 달이나",
+                "vi": "tận 3 tháng (nhấn mạnh số lượng)",
+                "en": "as many as 3 months"
+              },
+              {
+                "ko": "연체료",
+                "vi": "phí trễ hạn, tiền phạt quá hạn",
+                "en": "late fee"
+              },
+              {
+                "ko": "꽤",
+                "vi": "khá là, tương đối",
+                "en": "quite / fairly"
+              }
+            ],
+            "comprehension": [
+              {
+                "question": "켈리의 방에 전기가 들어오지 않는 원인은 무엇입니까?",
+                "options": [
+                  "태풍 때문에 동네 전체가 정전돼서",
+                  "전기 요금을 석 달 동안 내지 않아서",
+                  "방에 있는 전등이 고장 나서",
+                  "관리실에서 공사를 하고 있어서"
+                ],
+                "correctIndex": 1,
+                "explanation": "Cô chủ nhà xem giấy báo và nói: '전기 요금이 세 달이나 밀렸네요.' (Do nợ tiền điện 3 tháng)."
+              },
+              {
+                "question": "켈리가 전기를 다시 들어오게 하기 위해 해야 할 일은 무엇입니까?",
+                "options": [
+                  "다른 집으로 이사를 간다",
+                  "새 전등을 사서 단다",
+                  "밀린 전기 요금과 연체료를 빨리 낸다",
+                  "부동산에 가서 계약서를 다시 쓴다"
+                ],
+                "correctIndex": 2,
+                "explanation": "Chủ nhà hướng dẫn: '밀린 요금을 빨리 내세요. 아마 연체료가 꽤 될걸요.'"
+              }
+            ]
+          },
+          {
+            "shortTitle": "Listening 2",
+            "title": "Listening 2 · Julien đi giặt lại áo vest cho buổi phỏng vấn (세탁소와 아끼는 양복)",
+            "image": "images/lesson15/image 2.png",
+            "audioText": "이거 지난주에 맡겼던 양복인데, 소매에 이상한 얼룩이 생겼어요. 그래요? 맡기시기 전에는 문제가 없었어요? 네, 산 지 얼마 안 된 옷이에요. 몇 번 입지도 않았고요. 저희 직원이 실수한 모양이네요. 제가 확인했어야 했는데…… 정말 죄송합니다. 다시 세탁해 드리겠습니다. 저 내일 이 옷을 꼭 입지 않으면 안 돼요. 중요한 면접이 있거든요. 무슨 일이 있어도 오늘까지 해 놓을 테니까 저녁에 아무 때나 오세요. 그럼 8시쯤 운동 갔다 오는 길에 들를게요. 아끼는 옷이니까 잘 좀 부탁드립니다.",
+            "lines": [
+              {
+                "speaker": "줄리앙",
+                "ko": "이거 지난주에 맡겼던 양복인데, 소매에 이상한 얼룩이 생겼어요.",
+                "vi": "Đây là bộ vest tôi gửi tuần trước, nhưng ở tay áo lại có vết bẩn lạ."
+              },
+              {
+                "speaker": "세탁소 주인",
+                "ko": "그래요? 맡기시기 전에는 문제가 없었어요?",
+                "vi": "Vậy sao? Trước khi gửi giặt thì không có vấn đề gì chứ ạ?"
+              },
+              {
+                "speaker": "줄리앙",
+                "ko": "네, 산 지 얼마 안 된 옷이에요. 몇 번 입지도 않았고요.",
+                "vi": "Vâng, quần áo mới mua chưa bao lâu mà. Tôi cũng chưa mặc mấy lần."
+              },
+              {
+                "speaker": "세탁소 주인",
+                "ko": "저희 직원이 실수한 모양이네요. 제가 확인했어야 했는데…… 정말 죄송합니다. 다시 세탁해 드리겠습니다.",
+                "vi": "Có vẻ như nhân viên bên tôi đã sơ suất. Đáng lẽ tôi phải kiểm tra lại… Thật sự xin lỗi bạn. Tôi sẽ giặt lại ngay."
+              },
+              {
+                "speaker": "줄리앙",
+                "ko": "저 내일 이 옷을 꼭 입지 않으면 안 돼요. 중요한 면접이 있거든요.",
+                "vi": "Ngày mai tôi nhất định phải mặc bộ này. Tôi có một buổi phỏng vấn quan trọng."
+              },
+              {
+                "speaker": "세탁소 주인",
+                "ko": "무슨 일이 있어도 오늘까지 해 놓을 테니까 저녁에 아무 때나 오세요.",
+                "vi": "Dù có chuyện gì đi nữa tôi cũng sẽ làm xong trong hôm nay, nên tối nay bạn cứ ghé lúc nào cũng được."
+              },
+              {
+                "speaker": "줄리앙",
+                "ko": "그럼 8시쯤 운동 갔다 오는 길에 들를게요. 아끼는 옷이니까 잘 좀 부탁드립니다.",
+                "vi": "Vậy khoảng 8 giờ trên đường đi tập về tôi sẽ ghé qua. Đây là bộ đồ tôi rất quý nên nhờ bác làm cẩn thận giúp nhé."
+              }
+            ],
+            "notes": [
+              "V-지 않으면 안 되다: Bắt buộc phải mặc bộ vest (내일 이 옷을 꼭 입지 않으면 안 돼요).",
+              "V-(으)ㄹ 테니까: Thể hiện sự đảm bảo/ý chí chuẩn bị trước của người nói (오늘까지 해 놓을 테니까).",
+              "V-는 길에: Tiện đường đi tập về (운동 갔다 오는 길에 들를게요)."
+            ],
+            "vocab": [
+              {
+                "ko": "맡기다",
+                "vi": "gửi gắm, giao đồ cho giặt",
+                "en": "to entrust / leave items"
+              },
+              {
+                "ko": "소매",
+                "vi": "tay áo",
+                "en": "sleeve"
+              },
+              {
+                "ko": "얼룩",
+                "vi": "vết bẩn, vết ố",
+                "en": "stain / spot"
+              },
+              {
+                "ko": "산 지 얼마 안 되다",
+                "vi": "mới mua chưa được bao lâu",
+                "en": "haven't been long since bought"
+              },
+              {
+                "ko": "실수한 모양이다",
+                "vi": "dường như đã sơ suất mắc lỗi",
+                "en": "seems to have made a mistake"
+              },
+              {
+                "ko": "면접",
+                "vi": "buổi phỏng vấn",
+                "en": "interview"
+              },
+              {
+                "ko": "해 놓다",
+                "vi": "làm sẵn, chuẩn bị xong trước",
+                "en": "to have done ready"
+              },
+              {
+                "ko": "아무 때나",
+                "vi": "bất cứ lúc nào",
+                "en": "anytime"
+              },
+              {
+                "ko": "들르다",
+                "vi": "ghé qua, tạt vào",
+                "en": "to drop by"
+              },
+              {
+                "ko": "아끼는 옷",
+                "vi": "bộ quần áo trân quý, giữ gìn",
+                "en": "cherished clothing"
+              }
+            ],
+            "comprehension": [
+              {
+                "question": "줄리앙이 세탁소를 다시 찾아간 이유는 무엇입니까?",
+                "options": [
+                  "세탁소에 다른 옷을 맡기러 갔다",
+                  "맡겼던 양복 소매에 이상한 얼룩이 생겨서",
+                  "세탁 비용을 환불받기 위해서",
+                  "세탁소 주인과 면접 준비를 하려고"
+                ],
+                "correctIndex": 1,
+                "explanation": "Julien nói ngay câu mở đầu: '이거 지난주에 맡겼던 양복인데, 소매에 이상한 얼룩이 생겼어요.'"
+              },
+              {
+                "question": "줄리앙은 언제 세탁소에 다시 들르기로 했습니까?",
+                "options": [
+                  "내일 아침 면접을 보러 가는 길에",
+                  "오늘 저녁 8시쯤 운동하고 오는 길에",
+                  "다음 주 주말에 한가할 때",
+                  "세탁소 주인이 집으로 가져다줄 때"
+                ],
+                "correctIndex": 1,
+                "explanation": "Julien chốt lại: '그럼 8시쯤 운동 갔다 오는 길에 들를게요.'"
+              }
+            ]
+          },
+          {
+            "shortTitle": "Listening 3",
+            "title": "Listening 3 · Nhà vệ sinh tầng trên bị rò rỉ nước (화장실 천장 누수와 수리)",
+            "image": "images/lesson15/image 3.png",
+            "audioText": "누구세요? 안녕하세요? 아래층에 사는 사람인데요. 네, 무슨 일이세요? 우리 집 화장실 천장에서 물이 새서 왔어요. 여기 화장실에 무슨 문제가 있는 것 같은데요. 우리 집 화장실은 아무 문제가 없는데요. 우리 집 문제가 아닐걸요. 혹시 하수구가 막힌 건 아닐까요? 그러고 보니 요즘 물이 잘 안 내려가긴 했는데…… 와서 보시면 아시겠지만 천장에서 물이 똑똑 떨어져요. 그 정도예요? 그러면 어떻게 하죠? 수리 기사를 불러서 무슨 문제가 있는지 확인해 주세요. 네, 그럼 바로 전화하겠습니다. 불편하게 해 드려서 죄송합니다. 아니에요. 그럴 수도 있죠. 그럼 부탁드립니다.",
+            "lines": [
+              {
+                "speaker": "남",
+                "ko": "누구세요?",
+                "vi": "Ai vậy ạ?"
+              },
+              {
+                "speaker": "여",
+                "ko": "안녕하세요? 아래층에 사는 사람인데요.",
+                "vi": "Xin chào, tôi là người sống ở tầng dưới."
+              },
+              {
+                "speaker": "남",
+                "ko": "네, 무슨 일이세요?",
+                "vi": "Vâng, có việc gì vậy ạ?"
+              },
+              {
+                "speaker": "여",
+                "ko": "우리 집 화장실 천장에서 물이 새서 왔어요. 여기 화장실에 무슨 문제가 있는 것 같은데요.",
+                "vi": "Trần nhà vệ sinh nhà tôi bị rò nước nên tôi sang đây. Hình như nhà vệ sinh bên này có vấn đề gì đó."
+              },
+              {
+                "speaker": "남",
+                "ko": "우리 집 화장실은 아무 문제가 없는데요. 우리 집 문제가 아닐걸요.",
+                "vi": "Nhà vệ sinh nhà tôi đâu có vấn đề gì. Chắc không phải do nhà tôi đâu."
+              },
+              {
+                "speaker": "여",
+                "ko": "혹시 하수구가 막힌 건 아닐까요?",
+                "vi": "Có khi nào ống cống thoát nước bị tắc không ạ?"
+              },
+              {
+                "speaker": "남",
+                "ko": "그러고 보니 요즘 물이 잘 안 내려가긴 했는데……",
+                "vi": "Nghĩ lại thì dạo gần đây nước cũng không thoát tốt lắm thật..."
+              },
+              {
+                "speaker": "여",
+                "ko": "와서 보시면 아시겠지만 천장에서 물이 똑똑 떨어져요.",
+                "vi": "Bác cứ sang xem thì sẽ biết, nước trên trần nhà đang nhỏ tong tỏng xuống đấy."
+              },
+              {
+                "speaker": "남",
+                "ko": "그 정도예요? 그러면 어떻게 하죠?",
+                "vi": "Nghiêm trọng đến mức đó cơ à? Vậy giờ phải làm sao đây?"
+              },
+              {
+                "speaker": "여",
+                "ko": "수리 기사를 불러서 무슨 문제가 있는지 확인해 주세요.",
+                "vi": "Bác vui lòng gọi thợ sửa chữa đến kiểm tra xem vấn đề là gì giúp tôi với."
+              },
+              {
+                "speaker": "남",
+                "ko": "네, 그럼 바로 전화하겠습니다. 불편하게 해 드려서 죄송합니다.",
+                "vi": "Vâng, vậy tôi sẽ gọi điện ngay. Xin lỗi vì đã làm phiền và gây bất tiện cho bác."
+              },
+              {
+                "speaker": "여",
+                "ko": "아니에요. 그럴 수도 있죠. 그럼 부탁드립니다.",
+                "vi": "Không có gì, chuyện đó trong sinh hoạt cũng có thể xảy ra mà. Vậy nhờ bác nhé."
+              }
+            ],
+            "notes": [
+              "A/V-(으)ㄹ걸요: Diễn tả phỏng đoán của người nói (우리 집 문제가 아닐걸요: Chắc là không phải lỗi do nhà tôi đâu).",
+              "V-게 해 드리다: Kính ngữ của -게 하다 (불편하게 해 드려서 죄송합니다: Thành thật xin lỗi vì đã làm bác bất tiện).",
+              "똑똑 떨어지다: Nước nhỏ giọt tong tỏng."
+            ],
+            "vocab": [
+              {
+                "ko": "아래층",
+                "vi": "tầng dưới",
+                "en": "lower floor / downstairs"
+              },
+              {
+                "ko": "천장",
+                "vi": "trần nhà",
+                "en": "ceiling"
+              },
+              {
+                "ko": "물이 새다",
+                "vi": "rò rỉ nước",
+                "en": "water leaks"
+              },
+              {
+                "ko": "하수구",
+                "vi": "cống, ống thoát nước",
+                "en": "drain / sewer"
+              },
+              {
+                "ko": "물이 내려가다",
+                "vi": "nước chảy rút đi, thoát nước",
+                "en": "water drains"
+              },
+              {
+                "ko": "똑똑 떨어지다",
+                "vi": "nhỏ từng giọt tong tỏng",
+                "en": "drips drop by drop"
+              },
+              {
+                "ko": "그 정도이다",
+                "vi": "đến mức độ đó cơ à",
+                "en": "to that extent"
+              },
+              {
+                "ko": "수리 기사",
+                "vi": "thợ kỹ thuật sửa chữa",
+                "en": "repair technician"
+              },
+              {
+                "ko": "불편하게 하다",
+                "vi": "làm cho bất tiện, phiền hà",
+                "en": "to cause inconvenience"
+              }
+            ],
+            "comprehension": [
+              {
+                "question": "아래층 여자가 위층 남자를 찾아온 이유는 무엇입니까?",
+                "options": [
+                  "위층에서 쿵쿵거리는 소음이 심해서",
+                  "화장실 천장에서 물이 새고 있어서",
+                  "청소 도구를 빌리기 위해서",
+                  "관리비 고지서를 전해주려고"
+                ],
+                "correctIndex": 1,
+                "explanation": "Người phụ nữ giải thích: '우리 집 화장실 천장에서 물이 새서 왔어요.'"
+              },
+              {
+                "question": "대화 내용으로 보아 남자가 앞으로 취할 행동은 무엇입니까?",
+                "options": [
+                  "당장 집주인에게 이사를 가겠다고 말한다",
+                  "바로 수리 기사에게 전화해서 확인을 부탁한다",
+                  "화장실 문을 잠그고 사용하지 않는다",
+                  "경찰에 소음 신고를 한다"
+                ],
+                "correctIndex": 1,
+                "explanation": "Người nam nói: '네, 그럼 바로 전화하겠습니다. (gọi thợ sửa chữa)'"
+              }
+            ]
+          },
+          {
+            "shortTitle": "Listening 4",
+            "title": "Listening 4 · Trả phòng trước hạn hợp đồng và tìm người ở thay (중도 퇴실과 계약 기간)",
+            "image": "images/lesson15/image 4.png",
+            "audioText": "누구세요? 안녕하세요? 저 아래층 사는 학생인데요. 바바라 학생이 무슨 일이에요? 집에 무슨 문제라도 있어요? 저기…… 이번 달까지만 살고 이사해야 될 것 같아서요. 방을 빼겠다고요? 아직 계약 기간도 많이 남았는데…… 이렇게 갑자기 나가겠다고 하면 곤란하죠. 죄송해요. 사정이 생겨서 갑자기 귀국하게 됐어요. 그럼 어쩔 수 없죠. 그런데 대신 들어올 사람을 구해 놓고 나가지 않으면 안 돼요. 그럼 제가 어떻게 하면 될까요? 나도 부동산에 전화하겠지만 바바라 학생도 다른 부동산에 말해 놓으세요. 그리고 인터넷에 광고 글을 올려놓으면 빨리 사람을 구할 수 있을걸요. 네, 알겠습니다. 만약 제가 이사 가기 전까지 사람을 못 구하면 어떻게 되는 거죠? 계약 기간이 끝나기 전에 나가는 거니까 다른 사람이 들어오기 전까지 방세를 내야 돼요. 그래요? 그럼 빨리 서둘러야겠네요.",
+            "lines": [
+              {
+                "speaker": "남",
+                "ko": "누구세요?",
+                "vi": "Ai vậy ạ?"
+              },
+              {
+                "speaker": "여",
+                "ko": "안녕하세요? 저 아래층 사는 학생인데요.",
+                "vi": "Cháu chào bác, cháu là sinh viên ở tầng dưới ạ."
+              },
+              {
+                "speaker": "남",
+                "ko": "바바라 학생이 무슨 일이에요? 집에 무슨 문제라도 있어요?",
+                "vi": "Cháu Barbara có chuyện gì thế? Phòng cháu có vấn đề gì à?"
+              },
+              {
+                "speaker": "여",
+                "ko": "저기…… 이번 달까지만 살고 이사해야 될 것 같아서요.",
+                "vi": "Dạ chuyện là... cháu nghĩ chắc cháu chỉ ở đến hết tháng này rồi phải chuyển đi ạ."
+              },
+              {
+                "speaker": "남",
+                "ko": "방을 빼겠다고요? 아직 계약 기간도 많이 남았는데…… 이렇게 갑자기 나가겠다고 하면 곤란하죠.",
+                "vi": "Cháu định trả phòng ư? Hợp đồng vẫn còn dài mà... Đột ngột nói rời đi thế này thì bác khó xử lắm."
+              },
+              {
+                "speaker": "여",
+                "ko": "죄송해요. 사정이 생겨서 갑자기 귀국하게 됐어요.",
+                "vi": "Cháu xin lỗi bác. Do có việc riêng đột xuất nên cháu phải về nước gấp ạ."
+              },
+              {
+                "speaker": "남",
+                "ko": "그럼 어쩔 수 없죠. 그런데 대신 들어올 사람을 구해 놓고 나가지 않으면 안 돼요.",
+                "vi": "Thế thì cũng đành chịu vậy. Nhưng cháu bắt buộc phải tìm người khác vào ở thay rồi mới được rời đi đấy."
+              },
+              {
+                "speaker": "여",
+                "ko": "그럼 제가 어떻게 하면 될까요?",
+                "vi": "Vậy cháu nên làm thế nào ạ?"
+              },
+              {
+                "speaker": "남",
+                "ko": "나도 부동산에 전화하겠지만 바바라 학생도 다른 부동산에 말해 놓으세요. 그리고 인터넷에 광고 글을 올려놓으면 빨리 사람을 구할 수 있을걸요.",
+                "vi": "Bác cũng sẽ gọi cho văn phòng bất động sản, nhưng cháu cũng hãy đi liên hệ các bên môi giới khác nữa nhé. Và nếu đăng bài quảng cáo lên mạng thì chắc là sẽ nhanh tìm được người thôi."
+              },
+              {
+                "speaker": "여",
+                "ko": "네, 알겠습니다. 만약 제가 이사 가기 전까지 사람을 못 구하면 어떻게 되는 거죠?",
+                "vi": "Dạ cháu hiểu rồi. Nếu trước khi chuyển đi mà cháu vẫn chưa tìm được người thì sẽ thế nào ạ?"
+              },
+              {
+                "speaker": "남",
+                "ko": "계약 기간이 끝나기 전에 나가는 거니까 다른 사람이 들어오기 전까지 방세를 내야 돼요.",
+                "vi": "Vì cháu chuyển đi trước khi hết hạn hợp đồng nên cho đến khi có người khác vào ở thì cháu vẫn phải trả tiền phòng đấy."
+              },
+              {
+                "speaker": "여",
+                "ko": "그래요? 그럼 빨리 서둘러야겠네요.",
+                "vi": "Vậy ạ? Thế thì cháu phải nhanh chóng làm gấp thôi."
+              }
+            ],
+            "notes": [
+              "방을 빼다: Trả phòng thuê, dọn đồ chuyển đi nơi khác.",
+              "V-지 않으면 안 되다: Bắt buộc phải tìm người thay thế (구해 놓고 나가지 않으면 안 돼요).",
+              "A/V-(으)ㄹ걸요: Dự đoán phỏng đoán (빨리 사람을 구할 수 있을걸요: Chắc là sẽ nhanh tìm được người thôi)."
+            ],
+            "vocab": [
+              {
+                "ko": "방을 빼다",
+                "vi": "trả phòng, dọn đồ đi",
+                "en": "to vacate room"
+              },
+              {
+                "ko": "계약 기간",
+                "vi": "thời hạn hợp đồng",
+                "en": "contract term"
+              },
+              {
+                "ko": "곤란하다",
+                "vi": "khó xử, nan giải",
+                "en": "to be difficult / awkward"
+              },
+              {
+                "ko": "귀국하다",
+                "vi": "về nước",
+                "en": "to return to one's home country"
+              },
+              {
+                "ko": "어쩔 수 없다",
+                "vi": "không còn cách nào khác, đành chịu",
+                "en": "cannot be helped"
+              },
+              {
+                "ko": "대신",
+                "vi": "thay thế, người thay",
+                "en": "instead / substitute"
+              },
+              {
+                "ko": "부동산",
+                "vi": "văn phòng môi giới nhà đất",
+                "en": "real estate agency"
+              },
+              {
+                "ko": "광고 글",
+                "vi": "bài đăng quảng cáo",
+                "en": "advertisement post"
+              },
+              {
+                "ko": "방세",
+                "vi": "tiền thuê phòng",
+                "en": "room rent"
+              },
+              {
+                "ko": "서두르다",
+                "vi": "khẩn trương, vội vã làm nhanh",
+                "en": "to hurry / rush"
+              }
+            ],
+            "comprehension": [
+              {
+                "question": "바바라가 계약 기간이 끝나기 전에 갑자기 이사를 가려는 이유는 무엇입니까?",
+                "options": [
+                  "방에 곰팡이가 피어서",
+                  "사정이 생겨서 갑자기 귀국하게 되어서",
+                  "더 싼 집을 찾아서",
+                  "학교 기숙사에 당첨되어서"
+                ],
+                "correctIndex": 1,
+                "explanation": "Barbara giải thích: '사정이 생겨서 갑자기 귀국하게 됐어요.'"
+              },
+              {
+                "question": "이사 가기 전까지 대신 들어올 사람을 구하지 못하면 어떻게 됩니까?",
+                "options": [
+                  "보증금을 2배로 돌려받는다",
+                  "새 사람이 들어올 때까지 방세를 계속 내야 한다",
+                  "주인에게 벌금을 물어야 한다",
+                  "귀국을 할 수 없다"
+                ],
+                "correctIndex": 1,
+                "explanation": "Chủ nhà giải thích quy tắc: '계약 기간이 끝나기 전에 나가는 거니까 다른 사람이 들어오기 전까지 방세를 내야 돼요.'"
+              }
+            ]
+          }
+        ],
+        "speaking": {
+          "title": "Thực hành giao tiếp: Thông báo quy định sinh hoạt & Xử lý sự cố nhà ở",
+          "guide": "Sử dụng các cấu trúc -게 하다, -(으)ㄹ걸요, -지 않으면 안 되다 và -는 길에 để thông báo quy định, xử lý các tình huống nhà ở.",
+          "prompts": [
+            "Tình huống 1: 한국학과 수강 신청 안내 (Đăng ký học phần: 1학년 신입생은 한국사 개론을 포함해서 반드시 3과목 이상 신청해야 합니다).",
+            "Tình huống 2: 쓰레기 분리 배출 안내 (Phân loại rác: 재활용 쓰레기는 종류별로 모아서 버리고, 음식물 쓰레기는 전용 봉투에 담아 버려야 합니다).",
+            "Tình huống 3: 기말 보고서 제출 안내 (Nộp bài cuối kỳ: 7월 10일 오후 6시까지 A4 용지 5페이지 이상 제출하지 않으면 안 됩니다).",
+            "Tình huống 4: 봄철 건강 관리 안내 (Chăm sóc sức khỏe: 과일/채소는 30초 이상 씻어 먹고, 외출 후에는 손을 씻도록 합시다)."
+          ],
+          "sampleAnswer": "A: 안녕하세요, 아주머니. 원룸 계약 기간이 다음 달에 끝나는데 재계약하려면 어떻게 해야 돼요?\nB: 계속 살 거면 계약 만료 1달 전까지 알려 주지 않으면 안 돼요. 다음 주까지는 말씀해 주세요.\nA: 네, 알겠습니다. 그리고 지난주부터 세면대 물이 잘 안 내려가는데 혹시 수리 기사를 불러 주실 수 있을까요?\nB: 그래요? 하수구가 막힌 모양이네요. 오늘 오후에 기사님께 연락해서 바로 확인하게 해 줄게요.\nA: 감사합니다. 오늘 퇴근하는 길에 편의점에 들러서 쓰레기 종량제 봉투도 사 와야겠어요."
+        },
+        "reading": {
+          "title": "Đọc hiểu: Quán cà phê tài chính - Bí quyết tiết kiệm chi phí sinh hoạt (재테크 카페 - 돈을 아끼는 방법)",
+          "image": "images/lesson15/image 5.png",
+          "passageHtml": "\n      <div style=\"font-family:'Malgun Gothic', sans-serif; line-height:1.75; color:#1e293b;\">\n        <div style=\"text-align:center; margin-bottom:18px;\">\n          <span style=\"background:#e0f2fe; color:#0369a1; padding:3px 12px; border-radius:12px; font-size:0.85rem; font-weight:700;\">재테크 카페 (Quán cà phê tài chính)</span>\n          <h3 style=\"font-size:1.4rem; color:#0f172a; margin-top:8px; font-weight:800;\">돈을 아끼는 방법 (Cách tiết kiệm tiền)</h3>\n        </div>\n\n        <p style=\"margin-bottom:12px; text-indent:1em;\">\n          부자가 되려면 작은 돈부터 아껴 써야 합니다. <b>'티끌 모아 태산'</b>이라는 말도 있지요? 그럼 어떻게 해야 돈을 아낄 수 있을까요?\n        </p>\n\n        <div style=\"background:#f8fafc; border-left:4px solid #0284c7; padding:12px 16px; margin-bottom:12px; border-radius:0 8px 8px 0;\">\n          <b style=\"color:#0369a1;\">첫째, 영수증을 모으고 가계부를 씁니다.</b><br>\n          어디에 어떻게 돈을 사용하고 있는지 알아야 돈을 절약할 수 있습니다. 매일 기록하면 불필요한 낭비를 쉽게 찾아낼 수 있습니다.\n        </div>\n\n        <div style=\"background:#f8fafc; border-left:4px solid #10b981; padding:12px 16px; margin-bottom:12px; border-radius:0 8px 8px 0;\">\n          <b style=\"color:#047857;\">둘째, 관리비를 줄이지 않으면 안 됩니다.</b><br>\n          사용하지 않는 전기 <b>플러그</b>를 뽑아 두고, 설거지할 때에는 물을 계속 틀어 놓지 않습니다. 그리고 사람이 없는 방의 불도 끕니다. 특히 겨울철에 가족들에게 <b>내복</b>을 입게 하면 난방비를 크게 아낄 수 있습니다.\n        </div>\n\n        <div style=\"background:#f8fafc; border-left:4px solid #f59e0b; padding:12px 16px; margin-bottom:12px; border-radius:0 8px 8px 0;\">\n          <b style=\"color:#b45309;\">셋째, 알뜰하게 쇼핑합니다.</b><br>\n          퇴근하는 길에 마트에 들러서 <b>세일하는 식품</b>을 사면 식비를 절약할 수 있습니다. 직접 요리해서 먹으면 외식비도 아낄 수 있고 건강에도 좋습니다.\n        </div>\n\n        <p style=\"margin-top:14px; text-indent:1em; color:#334155;\">\n          돈을 아끼는 방법, 모두가 알고 있는 쉬운 것들이지만 <b>실천하기는 쉽지 않습니다</b>. 미리 목표를 정하고 작은 것부터 차근차근 실천합시다!\n        </p>\n\n        <div style=\"margin-top:20px; padding:14px; background:#eff6ff; border-radius:10px; border:1px solid #bfdbfe;\">\n          <h4 style=\"color:#1d4ed8; font-size:1rem; margin-bottom:8px;\">🇻🇳 Bản dịch tiếng Việt</h4>\n          <p style=\"font-size:0.92rem; color:#334155; line-height:1.6; margin-bottom:8px;\">\n            Muốn trở nên giàu có thì trước hết phải biết tiết kiệm từ những khoản tiền nhỏ nhất. Người xưa có câu <i>\"Tích tiểu thành đại\" (티끌 모아 태산)</i> phải không? Vậy thì chúng ta phải làm thế nào để tiết kiệm tiền?\n          </p>\n          <ul style=\"font-size:0.9rem; color:#475569; padding-left:20px; line-height:1.6;\">\n            <li><b>Thứ nhất:</b> Giữ lại hóa đơn và ghi chép sổ chi tiêu (가계부). Phải biết rõ tiền đang được dùng vào việc gì và như thế nào thì mới có thể tiết kiệm được.</li>\n            <li><b>Thứ hai:</b> Bắt buộc phải cắt giảm chi phí sinh hoạt (관리비). Rút phích cắm điện (플러그) khi không dùng, khi rửa bát không để vòi nước xả liên tục, tắt đèn phòng không có người. Đặc biệt vào mùa đông, nếu cho người nhà mặc đồ lót giữ nhiệt (내복) thì sẽ tiết kiệm đáng kể tiền sưởi.</li>\n            <li><b>Thứ ba:</b> Mua sắm thông minh tiết kiệm (알뜰하게). Trên đường tan làm về ghé siêu thị mua thực phẩm giảm giá để tiết kiệm tiền ăn. Tự nấu ăn ở nhà vừa tiết kiệm tiền ăn ngoài (외식비) vừa tốt cho sức khỏe.</li>\n          </ul>\n        </div>\n      </div>\n    ",
+          "questions": [
+            {
+              "question": "글의 내용과 일치하지 않는 것은 무엇입니까?",
+              "options": [
+                "가계부를 쓰면 돈을 어디에 썼는지 파악할 수 있다",
+                "겨울철에 내복을 입으면 난방비를 절약할 수 있다",
+                "세일하는 식품을 사지 말고 비싼 유기농 식품만 사야 한다",
+                "사용하지 않는 전자제품의 플러그는 뽑아 두는 것이 좋다"
+              ],
+              "correctIndex": 2,
+              "explanation": "Bài đọc khuyên '퇴근하는 길에 마트에 들러서 세일하는 식품을 사면 식비를 절약할 수 있습니다' (trên đường về ghé mua đồ giảm giá để tiết kiệm)."
+            },
+            {
+              "question": "'티끌 모아 태산'이라는 속담의 의미로 가장 알맞은 것은?",
+              "options": [
+                "산에 올라가서 먼지를 청소해야 한다",
+                "작은 것을 꾸준히 모으면 나중에 큰 것을 이룰 수 있다",
+                "돈을 많이 벌려면 사업을 크게 해야 한다",
+                "티끌처럼 작은 물건은 버리는 것이 낫다"
+              ],
+              "correctIndex": 1,
+              "explanation": "'티끌 모아 태산' có nghĩa là 'tích tiểu thành đại' — gom từng hạt bụi nhỏ cũng tạo thành ngọn núi lớn."
+            },
+            {
+              "question": "이 글에서 식비를 절약하기 위해 추천한 방법은 무엇입니까?",
+              "options": [
+                "하루 세끼를 모두 굶는다",
+                "항상 유명 식당에서 외식을 한다",
+                "퇴근길 마트 세일 식품을 사고 직접 요리해 먹는다",
+                "배달 음식 쿠폰을 많이 모은다"
+              ],
+              "correctIndex": 2,
+              "explanation": "Tác giả khuyên mua đồ siêu thị giảm giá lúc tan làm và tự nấu ăn tại nhà để giảm chi phí ăn ngoài."
+            }
+          ]
+        },
+        "writing": {
+          "title": "Luyện viết: Bí quyết tiết kiệm tiền sinh hoạt của tôi (나의 생활비 절약 노하우)",
+          "guide": "Viết đoạn văn ngắn khoảng 150-200 từ chia sẻ về thói quen tiết kiệm tiền điện, nước, ga, ăn uống hoặc sổ chi tiêu hằng ngày của bạn.",
+          "frame": [
+            "Mở bài: Giới thiệu tầm quan trọng của việc tiết kiệm trong cuộc sống du học/sinh hoạt (티끌 모아 태산).",
+            "Thân bài: Nêu 2-3 thói quen cụ thể (rút phích cắm khi ra ngoài, tự nấu ăn ở nhà, ghi chép sổ chi tiêu 가계부).",
+            "Kết bài: Cảm nghĩ và quyết tâm duy trì lối sống tiết kiệm, có kế hoạch (작은 것부터 실천하기)."
+          ],
+          "sampleAnswer": "한국에서 혼자 유학 생활을 하면서 생활비를 아끼는 것이 얼마나 중요한지 깨달았습니다. '티끌 모아 태산'이라는 말처럼 저는 작은 것부터 실천하고 있습니다. 첫째, 전기 요금을 아끼기 위해 사용하지 않는 플러그는 반드시 뽑아 두고 외출할 때 불을 꼭 끕니다. 둘째, 퇴근하는 길에 마트에 들러 세일하는 식재료를 사서 직접 요리해 먹습니다. 이렇게 하면 외식비를 크게 줄일 수 있습니다. 셋째, 매일 영수증을 모아 스마트폰 가계부에 지출을 기록합니다. 앞으로도 낭비를 줄이고 알뜰하게 생활하여 목표한 금액을 저축하도록 꾸준히 노력할 것입니다."
+        }
+      },
+
       "16": {
         id: "16",
         course: "3b",
