@@ -1077,65 +1077,466 @@ window.KOREAN_COURSES = {
                 ]
               }
             ]
+          },
+          {
+            category: "Hình học, Không gian & Từ vựng bài học (도형과 모양 · Ghi chú Notion)",
+            words: [
+              {
+                ko: "정사각형",
+                hanja: "正四角形",
+                en: "square",
+                vi: "hình vuông (hình có 4 cạnh bằng nhau và 4 góc vuông)",
+                examples: [
+                  { ko: "손수건을 반듯하게 접으니 예쁜 정사각형 모양이 되었어요.", vi: "Gấp chiếc khăn tay ngay ngắn lại thì thành hình vuông rất đẹp." },
+                  { ko: "정사각형 모양의 타일을 바닥에 빈틈없이 깔았어요.", vi: "Những viên gạch hình vuông được lát khít khao trên mặt sàn." }
+                ]
+              },
+              {
+                ko: "직사각형",
+                hanja: "直四角形",
+                en: "rectangle",
+                vi: "hình chữ nhật (hình có 4 góc vuông, 2 cạnh dài và 2 cạnh ngắn)",
+                examples: [
+                  { ko: "대부분의 스마트폰과 노트북 화면은 직사각형 모양이에요.", vi: "Hầu hết màn hình điện thoại thông minh và laptop đều có hình chữ nhật." },
+                  { ko: "식탁이 긴 직사각형이라서 여러 사람이 넉넉하게 앉을 수 있어요.", vi: "Bàn ăn là hình chữ nhật dài nên nhiều người có thể ngồi thoải mái." }
+                ]
+              },
+              {
+                ko: "부등변사각형",
+                hanja: "不等邊四角形",
+                en: "trapezoid / irregular quadrilateral",
+                vi: "hình thang / hình tứ giác cạnh không đều (부등변 = cạnh không bằng)",
+                examples: [
+                  { ko: "이 토지는 부등변사각형 형태라서 집을 짓기 전에 설계를 잘해야 해요.", vi: "Mảnh đất này có dạng hình thang nên cần phải thiết kế khéo léo trước khi xây nhà." },
+                  { ko: "교과서에서 부등변사각형의 넓이를 구하는 공식에 대해 배웠어요.", vi: "Tôi đã học công thức tính diện tích hình tứ giác không đều trong sách giáo khoa." }
+                ]
+              },
+              {
+                ko: "평행사변형",
+                hanja: "平行四邊形",
+                en: "parallelogram",
+                vi: "hình bình hành (hình có 2 cặp cạnh đối diện song song)",
+                examples: [
+                  { ko: "마주 보는 두 쌍의 변이 평행한 사각형을 평행사변형이라고 해요.", vi: "Hình tứ giác có hai cặp cạnh đối diện song song được gọi là hình bình hành." },
+                  { ko: "건물의 독특한 창문들이 평행사변형 모양으로 비스듬히 배치되어 있어요.", vi: "Những ô cửa sổ độc đáo của tòa nhà được bài trí nghiêng theo hình bình hành." }
+                ]
+              },
+              {
+                ko: "마름모",
+                hanja: "",
+                en: "rhombus / diamond shape",
+                vi: "hình thoi (hình tứ giác có 4 cạnh bằng nhau, 2 đường chéo vuông góc)",
+                image: "image.png",
+                examples: [
+                  { ko: "한국의 전통 연은 보통 마름모 모양이나 네모 모양으로 만들어요.", vi: "Diều truyền thống của Hàn Quốc thường được làm theo hình thoi hoặc hình vuông." },
+                  { ko: "스웨터에 알록달록한 마름모 무늬가 예쁘게 수놓아져 있어요.", vi: "Trên chiếc áo len có thêu hoa văn hình thoi sặc sỡ rất đẹp." }
+                ]
+              },
+              {
+                ko: "동그라미",
+                hanja: "",
+                en: "circle",
+                vi: "hình tròn, vòng tròn (tương tự 'roundy')",
+                examples: [
+                  { ko: "정답이라고 생각하는 번호에 동그라미를 치세요.", vi: "Hãy khoanh tròn vào số mà bạn cho là câu trả lời đúng." },
+                  { ko: "아이들이 손을 잡고 커다란 동그라미를 그리며 춤을 춰요.", vi: "Các em nhỏ nắm tay nhau tạo thành vòng tròn lớn và cùng nhảy múa." }
+                ]
+              },
+              {
+                ko: "타원형",
+                hanja: "楕圓形",
+                en: "oval / ellipse",
+                vi: "hình bầu dục, hình elip",
+                examples: [
+                  { ko: "거실 벽에 걸린 타원형 거울이 방 분위기를 세련되게 만들어 줘요.", vi: "Chiếc gương hình bầu dục treo trên tường phòng khách khiến không gian thêm trang nhã." },
+                  { ko: "지구는 태양 주위를 완벽한 원이 아닌 타원형 궤도로 돌고 있어요.", vi: "Trái Đất quay quanh Mặt Trời theo quỹ đạo hình elip chứ không phải hình tròn hoàn hảo." }
+                ]
+              },
+              {
+                ko: "울퉁불퉁하다",
+                hanja: "",
+                en: "to be rugged / bumpy / uneven",
+                vi: "gồ ghề, khấp khểnh, mấp mô, khúc khuỷu",
+                examples: [
+                  { ko: "산길이 울퉁불퉁해서 운전할 때 속도를 줄여야 해요.", vi: "Đường núi gồ ghề khúc khuỷu nên khi lái xe phải giảm tốc độ." },
+                  { ko: "울퉁불퉁한 돌길을 오래 걸었더니 발바닥이 아파요.", vi: "Đi bộ lâu trên con đường đá lởm chởm gập ghềnh khiến lòng bàn chân tôi đau nhức." }
+                ]
+              },
+              {
+                ko: "손재주가 좋다",
+                hanja: "",
+                en: "to have great dexterity / be handy with one's hands",
+                vi: "khéo tay, tài hoa, giỏi làm đồ thủ công",
+                examples: [
+                  { ko: "친구는 손재주가 좋아서 무엇이든 뚝딱 잘 만들어 내요.", vi: "Bạn tôi rất khéo tay nên hễ làm gì là thoăn thoắt tạo ra ngay." },
+                  { ko: "손재주가 좋은 사람들은 천 조각을 모아 아름다운 조각보를 만들어요.", vi: "Những người khéo tay thường gom các mảnh vải vụn lại để may thành tấm vải chắp vá tuyệt đẹp." }
+                ]
+              },
+              {
+                ko: "참다",
+                hanja: "",
+                en: "to endure / bear / withstand",
+                vi: "nhẫn nại, chịu đựng, kiềm chế",
+                examples: [
+                  { ko: "너무 아팠지만 주사를 맞을 때 소리 내지 않고 꾹 참았어요.", vi: "Dù rất đau nhưng khi tiêm tôi đã cắn răng chịu đựng không hề kêu ca." },
+                  { ko: "웃음이 터져 나오려는 것을 가까스로 참았어요.", vi: "Tôi phải cố lắm mới kìm nén được cơn cười suýt bật ra." }
+                ]
+              },
+              {
+                ko: "야경",
+                hanja: "夜景",
+                en: "night view / nightscape",
+                vi: "cảnh đêm, quang cảnh buổi tối",
+                examples: [
+                  { ko: "남산 서울타워에서 내려다보는 서울의 야경은 정말 환상적이에요.", vi: "Quang cảnh đêm của Seoul nhìn từ tháp Namsan xuống thực sự đẹp huyền ảo." },
+                  { ko: "야경이 아름다운 한강 다리를 건너며 산책을 즐겼어요.", vi: "Tôi tận hưởng chuyến đi dạo khi băng qua cây cầu sông Hàn rực rỡ ánh đèn đêm." }
+                ]
+              },
+              {
+                ko: "평생 함께하다",
+                hanja: "平生",
+                en: "to stay together for a lifetime",
+                vi: "gắn bó cả đời, đi cùng nhau trọn kiếp",
+                examples: [
+                  { ko: "두 사람은 서로를 깊이 사랑하며 평생 함께하기로 약속했어요.", vi: "Hai người yêu thương nhau sâu sắc và hứa sẽ gắn bó bên nhau trọn cuộc đời." },
+                  { ko: "어릴 때부터 키운 반려견과 평생 함께하며 소중한 추억을 쌓았어요.", vi: "Nuôi chú cún từ nhỏ và gắn bó suốt cuộc đời, tôi đã tích lũy biết bao kỷ niệm quý giá." }
+                ]
+              },
+              {
+                ko: "캠핑장",
+                hanja: "",
+                en: "campground / campsite",
+                vi: "khu cắm trại, bãi cắm trại ngoài trời",
+                examples: [
+                  { ko: "주말에 가족들과 함께 공기 맑은 산속 캠핑장에 다녀왔어요.", vi: "Cuối tuần tôi cùng gia đình đi đến khu cắm trại giữa núi rừng không khí trong lành." },
+                  { ko: "한탄강 캠핑장은 시설이 깨끗하고 주변 경치가 좋기로 유명해요.", vi: "Khu cắm trại sông Hantan nổi tiếng với cơ sở vật chất sạch sẽ và cảnh quan xung quanh tuyệt đẹp." }
+                ]
+              },
+              {
+                ko: "래프팅",
+                hanja: "",
+                en: "whitewater rafting",
+                vi: "chèo xuồng / thuyền cao su vượt thác ghềnh",
+                examples: [
+                  { ko: "여름철에 한탄강이나 동강에서 즐기는 래프팅은 스릴이 넘쳐요.", vi: "Chèo thuyền vượt thác ở sông Hantan hay sông Dong vào mùa hè đem lại cảm giác vô cùng phấn khích." },
+                  { ko: "구명조끼를 단단히 입고 친구들과 시원하게 래프팅을 즐겼어요.", vi: "Mặc áo phao cẩn thận, tôi cùng bạn bè thích thú trải nghiệm chèo thuyền vượt thác mát lạnh." }
+                ]
+              }
+            ]
           }
         ],
 
         dialogues: [
           {
-            title: "대화 1 · Yuna và Minho đi xem buổi hòa nhạc truyền thống",
-            audioText: "민호 씨, 저 무대 위에 놓인 길쭉한 악기가 뭐예요? 아, 저건 한국 전통 악기인 가야금이에요. 가야금이 거의 사람 키만 하지요? 와, 정말 생각보다 크네요! 손가락으로 줄을 튕겨서 소리를 내는 거예요? 네, 명주실로 만든 열두 줄을 손가락으로 뜯거나 튕겨서 연주해요. 가야금 선율을 들으면 복잡했던 마음이 편안해지더라고요. 정말 기대돼요! 저도 요즘 스트레스가 많았는데 긴장이 다 풀릴 것 같아요.",
+            shortTitle: "Listening 0 (Khởi động)",
+            title: "Listening 0 · Khởi động: Kế hoạch cuối tuần & Đi cắm trại (주말 캠핑과 낚시)",
+            audioText: "이번 주말에 뭐 해요? 오랜만에 가족하고 캠핑 가기로 했어요. 재미있겠네요. 요즘 날씨가 좋아서 캠핑하면 아주 좋을 거예요. 네. 그동안 일이 많아서 힘들었는데 캠핑 가서 스트레스 다 풀고 오려고요. 민수 씨는 주말에 뭐 해요? 저는 요즘 시간이 나면 낚시하러 가요. 조용하고 경치 좋은 곳에서 낚시를 하면 기분이 정말 좋아져요. 다음에 낚시하러 갈 때 따라가도 돼요? 전부터 낚시를 한번 배워 보고 싶었어요. 좋아요. 그럼 다음에 낚시할 수 있는 곳으로 캠핑을 떠나면 어때요? 그거 좋은 생각인데요.",
             lines: [
-              { speaker: "유나", ko: "민호 씨, 저 무대 위에 놓인 길쭉한 악기가 뭐예요?", vi: "Anh Minho ơi, cái nhạc cụ dáng thon dài đặt trên sân khấu kia là gì thế ạ?" },
-              { speaker: "민호", ko: "아, 저건 한국 전통 악기인 가야금이에요. 가야금이 거의 사람 키만 하지요?", vi: "À, đó là đàn Gayageum - nhạc cụ truyền thống của Hàn Quốc đấy. Cây đàn to gần bằng cả chiều cao người đúng không?" },
-              { speaker: "유나", ko: "와, 정말 생각보다 크네요! 손가락으로 줄을 튕겨서 소리를 내는 거예요?", vi: "Oa, công nhận to hơn em tưởng nhiều! Người ta gảy dây bằng ngón tay để phát ra âm thanh hả anh?" },
-              { speaker: "민호", ko: "네, 명주실로 만든 열두 줄을 손가락으로 뜯거나 튕겨서 연주해요. 가야금 선율을 들으면 복잡했던 마음이 편안해지더라고요.", vi: "Đúng rồi, người ta dùng ngón tay búng hoặc gảy 12 dây làm bằng tơ tằm. Nghe giai điệu đàn Gayageum thấy lòng dạ đang rối bời bỗng trở nên thanh thản, nhẹ nhõm hẳn đấy." },
-              { speaker: "유나", ko: "정말 기대돼요! 저도 요즘 스트레스가 많았는데 긴장이 다 풀릴 것 같아요.", vi: "Em háo hức quá! Dạo này em cũng bị nhiều áp lực, chắc nghe xong là giải tỏa hết căng thẳng luôn." }
+              { speaker: "남", ko: "이번 주말에 뭐 해요?", vi: "Cuối tuần này bạn làm gì?" },
+              { speaker: "여", ko: "오랜만에 가족하고 캠핑 가기로 했어요.", vi: "Lâu rồi nên mình quyết định đi cắm trại với gia đình." },
+              { speaker: "남", ko: "재미있겠네요. 요즘 날씨가 좋아서 캠핑하면 아주 좋을 거예요.", vi: "Nghe vui đấy. Dạo này thời tiết đẹp nên đi cắm trại sẽ rất tuyệt." },
+              { speaker: "여", ko: "네. 그동안 일이 많아서 힘들었는데 캠핑 가서 스트레스 다 풀고 오려고요. 민수 씨는 주말에 뭐 해요?", vi: "Vâng. Dạo này công việc nhiều nên hơi mệt, mình muốn đi cắm trại để giải tỏa hết stress. Còn bạn Min-su cuối tuần làm gì?" },
+              { speaker: "남", ko: "저는 요즘 시간이 나면 낚시하러 가요. 조용하고 경치 좋은 곳에서 낚시를 하면 기분이 정말 좋아져요.", vi: "Dạo này khi có thời gian thì tôi đi câu cá. Nếu câu cá ở nơi yên tĩnh và có cảnh đẹp thì tâm trạng sẽ rất tốt." },
+              { speaker: "여", ko: "다음에 낚시하러 갈 때 따라가도 돼요? 전부터 낚시를 한번 배워 보고 싶었어요.", vi: "Lần sau bạn đi câu cá, mình đi theo được không? Mình muốn thử học câu cá từ lâu rồi." },
+              { speaker: "남", ko: "좋아요. 그럼 다음에 낚시할 수 있는 곳으로 캠핑을 떠나면 어때요?", vi: "Được thôi. Vậy lần sau mình đi cắm trại ở nơi có thể câu cá thì sao?" },
+              { speaker: "여", ko: "그거 좋은 생각인데요.", vi: "Ý đó hay đấy." }
+            ],
+            notes: [
+              "V-기로 했다: Quyết định, định sẽ, hứa sẽ làm việc gì đó (thể hiện quyết tâm). Ví dụ: 출퇴근 시간에는 차가 밀리니까 조금 일찍 나가기로 해요.",
+              "V + (으)려고 하다: Có ý định làm gì (dự định tương lai, chưa chắc chắn). Ví dụ: 내일부터 운동을 시작하려고 해요.",
+              "(으)러 가다/오다/다니다: Đi/đến đâu để làm việc gì. Ví dụ: 백화점에 선물을 사러 가요 (Tôi đến tiệm bách hóa để mua quà)."
+            ],
+            vocab: [
+              { ko: "낚시하다", vi: "câu cá", en: "to go fishing" },
+              { ko: "낚다", vi: "câu được cá, bắt được cá", en: "to hook, catch fish" },
+              { ko: "시간이 나다", vi: "có thời gian rảnh", en: "to have free time" },
+              { ko: "따라가다", vi: "đi theo, cùng đi theo", en: "to follow, accompany" },
+              { ko: "전부터", vi: "từ trước tới nay, bấy lâu nay", en: "for a long time, from before" },
+              { ko: "떠나다", vi: "lên đường, khởi hành, rời đi", en: "to set off, leave" },
+              { ko: "그거 좋은 생각인데요", vi: "Ý kiến đó hay đấy", en: "That's a good idea" },
+              { ko: "스트레스를 풀다", vi: "giải tỏa căng thẳng, xả stress", en: "to relieve stress" },
+              { ko: "캠핑장", vi: "khu cắm trại", en: "campsite, campground" }
             ],
             comprehension: [
               {
-                question: "가야금에 대한 설명으로 알맞지 않은 것은 무엇입니까?",
+                question: "여자는 이번 주말에 무엇을 하기로 했습니까?",
                 options: [
-                  "길이가 거의 사람 키만 하다.",
-                  "열두 개의 줄을 손가락으로 튕겨서 연주한다.",
-                  "채로 쳐서 소리를 내는 타악기이다.",
-                  "한국의 대표적인 전통 현악기이다."
+                  "오랜만에 가족과 함께 캠핑을 가기로 했다",
+                  "혼자 조용히 낚시를 배우러 가기로 했다",
+                  "회사에 출근해서 밀린 일을 하기로 했다",
+                  "백화점에 선물을 사러 가기로 했다"
                 ],
-                correctIndex: 2,
-                explanation: "가야금은 손가락으로 줄을 뜯거나 튕겨서 연주하는 현악기이며, 채로 치는 타악기가 아닙니다."
+                correctIndex: 0,
+                explanation: "Người nữ chia sẻ: '오랜만에 가족하고 캠핑 가기로 했어요.'"
               },
               {
-                question: "민호 씨는 가야금 연주를 들으면 마음이 어떻게 된다고 했습니까?",
+                question: "두 사람이 다음에 함께 하기로 계획한 것은 무엇입니까?",
                 options: [
-                  "더 긴장되고 가슴이 뛴다.",
-                  "복잡했던 마음이 편안해진다.",
-                  "졸리고 지루해진다.",
-                  "화가 나고 답답해진다."
+                  "집에서 영화를 보기로 했다",
+                  "낚시를 할 수 있는 곳으로 캠핑을 떠나기로 했다",
+                  "백화점에서 쇼핑을 하기로 했다",
+                  "음악 콘서트에 가기로 했다"
                 ],
                 correctIndex: 1,
-                explanation: "Minho chia sẻ: '가야금 선율을 들으면 복잡했던 마음이 편안해지더라고요.'"
+                explanation: "Người nam đề nghị: '그럼 다음에 낚시할 수 있는 곳으로 캠핑을 떠나면 어때요?' và người nữ đồng ý '그거 좋은 생각인데요.'"
               }
             ]
           },
           {
-            title: "대화 2 · Trải nghiệm học đánh đàn và trị liệu tâm lý",
-            audioText: "수진 씨, 주말에 가야금 원데이 클래스를 다녀왔다면서요? 어땠어요? 처음에는 손가락 끝이 얼얼해서 제대로 탈 생각도 못 했어요. 그런데 한 시간쯤 지나니까 쉬운 아리랑 한 곡을 연주할 수 있게 되었어요. 와, 정말 뿌듯했겠어요! 네, 짧은 곡이지만 제 손으로 직접 연주해 내니까 가슴이 벅차고 신이 나더라고요. 일상생활의 스트레스를 잊기에 정말 추천할 만해요.",
+            shortTitle: "Listening 1",
+            title: "Listening 1 · Đàn Gayageum và Ali mù âm nhạc (가야금 배우기)",
+            image: "image 3.png",
+            audioText: "줄리앙 씨는 주말에 보통 뭐 해요? 요즘 가야금 배우러 다니는데 무척 재미있어요. 가야금요? 그게 뭐예요? 한국 전통 악기예요. 긴 네모 모양 나무판 위에 줄이 12개 있어요. 아, 본 적이 있어요. 그거 크기가 꽤 큰 것 같던데…… 네, 사람 키만 해요. 그런데 연주는 어떻게 해요? 손가락으로 줄을 누르거나 튕겨서 소리를 내요. 소리가 참 좋은데 알리 씨도 배워 볼래요? 아유, 전 음치라서 악기는 배울 생각도 못 해요.",
             lines: [
-              { speaker: "마이클", ko: "수진 씨, 주말에 가야금 원데이 클래스를 다녀왔다면서요? 어땠어요?", vi: "Sujin ơi, nghe bảo cuối tuần bạn đi học lớp trải nghiệm đàn Gayageum 1 buổi à? Thế nào rồi?" },
-              { speaker: "수진", ko: "처음에는 손가락 끝이 얼얼해서 제대로 탈 생각도 못 했어요. 그런데 한 시간쯤 지나니까 쉬운 아리랑 한 곡을 연주할 수 있게 되었어요.", vi: "Lúc đầu mấy đầu ngón tay tê buốt nên mình thậm chí chẳng dám nghĩ là sẽ gảy được ra hồn. Thế nhưng qua tầm một tiếng là mình đã tự chơi được trọn vẹn một bài Arirang đơn giản rồi đấy." },
-              { speaker: "마이클", ko: "와, 직접 곡을 완성하다니 정말 뿌듯했겠어요!", vi: "Oa, tự tay hoàn thành một bài nhạc thì hẳn là cảm thấy tự hào và mãn nguyện lắm nhỉ!" },
-              { speaker: "수진", ko: "네, 짧은 곡이지만 제 손으로 직접 연주해 내니까 가슴이 벅차고 신이 나더라고요. 일상생활의 스트레스를 잊기에 정말 추천할 만해요.", vi: "Đúng thế, dù là bài ngắn nhưng tự tay mình tấu lên được thì thấy lòng rộn ràng và phấn chấn lạ lùng. Thật sự rất đáng để thử nếu muốn quên đi những muộn phiền thường nhật." }
+              { speaker: "알리", ko: "줄리앙 씨는 주말에 보통 뭐 해요?", vi: "Cuối tuần thì anh Julien thường làm gì?" },
+              { speaker: "줄리앙", ko: "요즘 가야금 배우러 다니는데 무척 재미있어요.", vi: "Dạo này tôi đang đi học đàn gayageum, rất là thú vị." },
+              { speaker: "알리", ko: "가야금요? 그게 뭐예요?", vi: "Gayageum à? Đó là gì vậy?" },
+              { speaker: "줄리앙", ko: "한국 전통 악기예요. 긴 네모 모양 나무판 위에 줄이 12개 있어요.", vi: "Là nhạc cụ truyền thống của Hàn Quốc. Trên một tấm gỗ hình chữ nhật có 12 dây." },
+              { speaker: "알리", ko: "아, 본 적이 있어요. 그거 크기가 꽤 큰 것 같던데……", vi: "À, tôi đã từng thấy rồi. Cái đó có vẻ khá to nhỉ…" },
+              { speaker: "줄리앙", ko: "네, 사람 키만 해요.", vi: "Vâng, cao gần bằng người." },
+              { speaker: "알리", ko: "그런데 연주는 어떻게 해요?", vi: "Nhưng chơi như thế nào?" },
+              { speaker: "줄리앙", ko: "손가락으로 줄을 누르거나 튕겨서 소리를 내요. 소리가 참 좋은데 알리 씨도 배워 볼래요?", vi: "Dùng ngón tay nhấn hoặc gảy dây để tạo ra âm thanh. Âm thanh rất hay, Ali cũng thử học không?" },
+              { speaker: "알리", ko: "아유, 전 음치라서 악기는 배울 생각도 못 해요.", vi: "Ôi, tôi bị mù nhạc nên đến việc học nhạc cụ cũng không dám nghĩ tới." }
+            ],
+            notes: [
+              "N만 하다: So sánh kích thước hoặc mức độ bằng với danh từ. Ví dụ: '사람 키만 해요' (to/cao gần bằng cả chiều cao người).",
+              "V-(으)ㄹ 생각도 못 하다: Thậm chí không dám nghĩ tới. Ví dụ: '음치라서 악기는 배울 생각도 못 해요' (Vì mù nhạc nên đến việc học nhạc cụ cũng không dám nghĩ tới)."
+            ],
+            vocab: [
+              { ko: "가야금", vi: "đàn Gayageum (đàn tranh 12 dây truyền thống)", en: "gayageum (Korean 12-string zither)" },
+              { ko: "네모 모양", vi: "hình chữ nhật / hình tứ giác", en: "rectangular shape" },
+              { ko: "나무판", vi: "tấm ván gỗ", en: "wooden board" },
+              { ko: "크기", vi: "kích thước, cỡ", en: "size" },
+              { ko: "사람 키만 하다", vi: "to/cao bằng người", en: "as tall as a person" },
+              { ko: "연주하다", vi: "biểu diễn nhạc cụ", en: "to perform, play instrument" },
+              { ko: "누르다", vi: "nhấn, ấn ngón tay", en: "to press" },
+              { ko: "튕기다", vi: "gảy, búng dây đàn", en: "to pluck, flick string" },
+              { ko: "음치", vi: "người mù âm nhạc, hát lệch tông", en: "tone-deaf person" },
+              { ko: "배우러 다니다", vi: "đi học thường xuyên", en: "to attend classes" },
+              { ko: "무척", vi: "vô cùng, rất", en: "very, extremely" }
             ],
             comprehension: [
               {
-                question: "수진 씨가 가야금을 배우고 나서 느낀 감정은 무엇입니까?",
+                question: "가야금의 모양과 크기에 대한 설명으로 맞는 것은 무엇입니까?",
                 options: [
-                  "가슴이 벅차고 뿌듯했다.",
-                  "너무 어려워서 후회스러웠다.",
-                  "지루해서 하품이 나왔다.",
-                  "손가락이 아파서 화가 났다."
+                  "긴 네모 모양 나무판 위에 줄이 12개 있고 사람 키만 하다",
+                  "둥근 플라스틱 판 위에 줄이 6개 있고 손바닥만 하다",
+                  "세모난 쇠판 위에 줄이 20개 있고 방 전체만 하다",
+                  "작고 납작해서 주머니에 넣고 다닐 수 있다"
                 ],
                 correctIndex: 0,
-                explanation: "Sujin nói: '가슴이 벅차고 신이 나더라고요', cảm thấy vô cùng 뿌듯 (tự hào, mãn nguyện)."
+                explanation: "Julien nói: '긴 네모 모양 나무판 위에 줄이 12개 있어요... 사람 키만 해요.'"
+              },
+              {
+                question: "알리 씨가 가야금을 배울 생각도 못 하는 이유는 무엇입니까?",
+                options: [
+                  "시간이 없어서",
+                  "음치라서",
+                  "손가락이 아파서",
+                  "가야금이 너무 비싸서"
+                ],
+                correctIndex: 1,
+                explanation: "Ali bảo: '아유, 전 음치라서 악기는 배울 생각도 못 해요.'"
+              }
+            ]
+          },
+          {
+            shortTitle: "Listening 2",
+            title: "Listening 2 · Leo núi Naejangsan & Cắm trại sông Hantan (내장산 등산과 캠핑)",
+            image: "Screenshot_2026-05-03_210240.png",
+            audioText: "이번 연휴에 내장산으로 등산 갈까? 내장산은 처음 듣는데 서울 근처야? 아니, 전라도에 있는데 단풍이 아름답기로 유명해. 등산도 좋지만 캠핑은 어때? 난 캠핑 생각만 해도 마음이 설레. 캠핑은 왠지 힘들 것 같아. 잠자리도 불편하고 준비할 것도 많잖아. 그래도 자연 속에서 하룻밤을 보내면 마음이 얼마나 편안해지는데…. 고향에서나 여행할 때마다 텐트를 차에 싣고 다녔어. 너 진짜 캠핑 좋아하는구나. 캠핑장은 좀 알아봤어? 당연하지. 한탄강 캠핑장이 좋다고 들었어. 래프팅도 정말 해 볼 만하대.",
+            lines: [
+              { speaker: "정우", ko: "이번 연휴에 내장산으로 등산 갈까?", vi: "Dịp nghỉ này đi leo núi Naejangsan nhé?" },
+              { speaker: "스티븐", ko: "내장산은 처음 듣는데 서울 근처야?", vi: "Naejangsan à? Tôi chưa nghe bao giờ, gần Seoul không?" },
+              { speaker: "정우", ko: "아니, 전라도에 있는데 단풍이 아름답기로 유명해.", vi: "Không, ở Jeolla, nổi tiếng vì lá đỏ rất đẹp." },
+              { speaker: "스티븐", ko: "등산도 좋지만 캠핑은 어때? 난 캠핑 생각만 해도 마음이 설레.", vi: "Leo núi cũng tốt nhưng đi cắm trại thì sao? Chỉ cần nghĩ đến camping thôi là tôi đã thấy háo hức rồi." },
+              { speaker: "정우", ko: "캠핑은 왠지 힘들 것 같아. 잠자리도 불편하고 준비할 것도 많잖아.", vi: "Cắm trại có vẻ hơi vất vả. Chỗ ngủ cũng bất tiện, mà còn phải chuẩn bị nhiều thứ nữa." },
+              { speaker: "스티븐", ko: "그래도 자연 속에서 하룻밤을 보내면 마음이 얼마나 편안해지는데…. 고향에서나 여행할 때마다 텐트를 차에 싣고 다녔어.", vi: "Nhưng nếu ở trong thiên nhiên một đêm thì tâm trạng sẽ thoải mái biết bao…. Ở quê hay mỗi lần đi du lịch tôi đều chở lều theo xe." },
+              { speaker: "정우", ko: "너 진짜 캠핑 좋아하는구나. 캠핑장은 좀 알아봤어?", vi: "Cậu đúng là thích camping thật đấy. Đã tìm hiểu khu cắm trại chưa?" },
+              { speaker: "스티븐", ko: "당연하지. 한탄강 캠핑장이 좋다고 들었어. 래프팅도 정말 해 볼 만하대.", vi: "Tất nhiên rồi. Tôi nghe nói khu cắm trại sông Hantan rất tốt. Người ta nói rằng chèo thuyền vượt thác cũng rất đáng để thử." }
+            ],
+            notes: [
+              "A/V-기로 유명하다: Nổi tiếng vì một đặc điểm nào đó. Ví dụ: '단풍이 아름답기로 유명해' (nổi tiếng vì lá phong mùa thu rất đẹp).",
+              "~생각만 해도: Chỉ nghĩ đến thôi cũng... Ví dụ: '난 캠핑 생각만 해도 마음이 설레' (Tôi chỉ cần nghĩ đến cắm trại thôi là lòng đã rộn ràng).",
+              "~구나 / ~군요: Cảm thán khi nhận ra điều gì mới. Ví dụ: '너 진짜 캠핑 좋아하는구나!' (Hóa ra cậu thích cắm trại thật đấy nhỉ!), '한국말을 잘하는군요!'",
+              "V-(으)ㄹ 만하다: Đáng làm việc gì đó. Ví dụ: '래프팅도 정말 해 볼 만하대' (Nghe nói chèo thuyền vượt thác rất đáng thử)."
+            ],
+            vocab: [
+              { ko: "연휴", vi: "kỳ nghỉ dài ngày liên tiếp", en: "long weekend, consecutive holidays" },
+              { ko: "내장산", vi: "núi Naejangsan (nổi tiếng lá đỏ ở Jeolla)", en: "Naejangsan mountain" },
+              { ko: "단풍", vi: "lá phong đỏ, lá mùa thu", en: "autumn leaves, fall foliage" },
+              { ko: "마음이 설레다", vi: "lòng rạo rực, xao xuyến, háo hức", en: "heart flutters with excitement" },
+              { ko: "왠지", vi: "không hiểu sao, có vẻ như", en: "somehow, for some reason" },
+              { ko: "잠자리", vi: "chỗ ngủ qua đêm", en: "sleeping place, bed" },
+              { ko: "불편하다", vi: "bất tiện, khó chịu", en: "uncomfortable, inconvenient" },
+              { ko: "하룻밤을 보내다", vi: "trải qua một đêm", en: "to spend a night" },
+              { ko: "텐트를 차에 싣다", vi: "chất lều lên ô tô", en: "to load tent in car" },
+              { ko: "한탄강 캠핑장", vi: "khu cắm trại sông Hantan", en: "Hantan River campground" },
+              { ko: "래프팅", vi: "chèo xuồng vượt ghềnh thác", en: "whitewater rafting" },
+              { ko: "당연하지", vi: "đương nhiên rồi", en: "of course, naturally" },
+              { ko: "빙어 낚시", vi: "câu cá băng (ở Gangwon-do)", en: "ice fishing (smelt)" },
+              { ko: "스킨스쿠버", vi: "lặn biển (ở Jeju)", en: "scuba diving" },
+              { ko: "수상스키", vi: "lướt ván nước (ở hồ Cheongpyeong, sông Hàn)", en: "waterskiing" }
+            ],
+            comprehension: [
+              {
+                question: "정우가 처음에 가자고 제안한 내장산의 특징은 무엇입니까?",
+                options: [
+                  "단풍이 아름답기로 유명하다",
+                  "바다가 가깝기로 유명하다",
+                  "스킨스쿠버를 할 수 있다",
+                  "서울 한가운데에 위치해 있다"
+                ],
+                correctIndex: 0,
+                explanation: "Jungwoo nói: '전라도에 있는데 단풍이 아름답기로 유명해.'"
+              },
+              {
+                question: "스티븐이 추천한 한탄강 캠핑장에서 해 볼 만한 활동은 무엇입니까?",
+                options: [
+                  "래프팅",
+                  "빙어 낚시",
+                  "스킨스쿠버",
+                  "수상스키"
+                ],
+                correctIndex: 0,
+                explanation: "Steven nói: '한탄강 캠핑장이 좋다고 들었어. 래프팅도 정말 해 볼 만하대.'"
+              }
+            ]
+          },
+          {
+            shortTitle: "Listening 3",
+            title: "Listening 3 · Quên ổ cứng ngoài ở nhà (외장 하드 디스크 찾기)",
+            image: "image 5.png",
+            audioText: "여보세요. 엄마, 지금 어디 계세요? 집이세요? 응, 집인데. 엄마, 저 좀 도와주세요. 시간이 없어서 그래요. 왜? 뭐 두고 갔니? 엄마, 어떻게 아셨어요? 아이고, 내가 왜 몰라. 네가 원래 깜빡 잘 잊어버리기로 유명하잖니? 네, 보고서를 깜빡 잊고 집에 두고 왔어요. 오늘까지 내야 하는데…… 그래? 어떡하니? 내가 갖다 줄까? 아니요, 외장 하드 디스크를 안 가져 왔으니까 우선 하드 디스크 좀 찾아 봐 주세요. 제 방 책상 위에 있을 거예요. 하드 디스크? 컴퓨터 말이니? 그게 아니고요. 엄마, 책상 위 노트북 옆에 긴 네모 모양의 물건이 하나 있을 거예요. 색깔은 까만색이고 크기는 휴대폰만 한데 휴대폰보다는 좀 두꺼워요. 짧은 전선이 달려 있고요. 까맣고 휴대폰만 한 물건이라고 했지? 그래, 여기 있구나. 디스크라고 해서 둥근 모양인 줄 알았더니 사각형이네. 이걸 어떻게 할까? 엄마, 거기에 있는 파일 하나만 이메일로 보내 주세요. 파일? 얘, 내가 파일은 한 번도 안 보내 봤는데…… 어떻게 하는 거니? 아! 할 수 없네요. 그냥 두세요. 제가 갈게요.",
+            lines: [
+              { speaker: "아들", ko: "여보세요. 엄마, 지금 어디 계세요? 집이세요?", vi: "Alo. Mẹ ơi, mẹ đang ở đâu? Ở nhà không ạ?" },
+              { speaker: "어머니", ko: "응, 집인데.", vi: "Ừ, mẹ đang ở nhà." },
+              { speaker: "아들", ko: "엄마, 저 좀 도와주세요. 시간이 없어서 그래요.", vi: "Mẹ ơi, giúp con với. Con không có thời gian." },
+              { speaker: "어머니", ko: "왜? 뭐 두고 갔니?", vi: "Sao vậy? Con để quên gì à?" },
+              { speaker: "아들", ko: "엄마, 어떻게 아셨어요?", vi: "Mẹ, sao mẹ biết vậy?" },
+              { speaker: "어머니", ko: "아이고, 내가 왜 몰라. 네가 원래 깜빡 잘 잊어버리기로 유명하잖니?", vi: "Trời ơi, sao mẹ không biết. Con vốn nổi tiếng hay đãng trí hay quên mà." },
+              { speaker: "아들", ko: "네, 보고서를 깜빡 잊고 집에 두고 왔어요. 오늘까지 내야 하는데……", vi: "Dạ, con quên báo cáo và để ở nhà. Hôm nay phải nộp rồi…" },
+              { speaker: "어머니", ko: "그래? 어떡하니? 내가 갖다 줄까?", vi: "Vậy à? Làm sao đây? Mẹ mang cho con nhé?" },
+              { speaker: "아들", ko: "아니요, 외장 하드 디스크를 안 가져 왔으니까 우선 하드 디스크 좀 찾아 봐 주세요. 제 방 책상 위에 있을 거예요.", vi: "Không ạ, con không mang ổ cứng ngoài. Mẹ tìm giúp con cái ổ cứng trước nhé. Nó ở trên bàn trong phòng con." },
+              { speaker: "어머니", ko: "하드 디스크? 컴퓨터 말이니?", vi: "Ổ cứng à? Máy tính hả con?" },
+              { speaker: "아들", ko: "그게 아니고요. 엄마, 책상 위 노트북 옆에 긴 네모 모양의 물건이 하나 있을 거예요. 색깔은 까만색이고 크기는 휴대폰만 한데 휴대폰보다는 좀 두꺼워요. 짧은 전선이 달려 있고요.", vi: "Không phải ạ. Trên bàn cạnh laptop có một vật hình chữ nhật dài. Màu đen, cỡ bằng điện thoại nhưng dày hơn điện thoại một chút. Có một đoạn dây ngắn gắn kèm." },
+              { speaker: "어머니", ko: "까맣고 휴대폰만 한 물건이라고 했지? 그래, 여기 있구나. 디스크라고 해서 둥근 모양인 줄 알았더니 사각형이네. 이걸 어떻게 할까?", vi: "Vật màu đen cỡ điện thoại đúng không? Ừ, thấy ở đây rồi. Tưởng “đĩa” là hình tròn, hóa ra là hình chữ nhật. Giờ làm gì với cái này?" },
+              { speaker: "아들", ko: "엄마, 거기에 있는 파일 하나만 이메일로 보내 주세요.", vi: "Mẹ gửi giúp con một file trong đó qua email nhé." },
+              { speaker: "어머니", ko: "파일? 얘, 내가 파일은 한 번도 안 보내 봤는데…… 어떻게 하는 거니?", vi: "File à? Mẹ chưa gửi file bao giờ… làm sao đây con?" },
+              { speaker: "아들", ko: "아! 할 수 없네요. 그냥 두세요. 제가 갈게요.", vi: "À! Không còn cách nào khác rồi. Mẹ cứ để đó đi, con tự chạy về lấy." }
+            ],
+            notes: [
+              "N만 하다: So sánh kích thước cỡ như. Ví dụ: '크기는 휴대폰만 한데' (kích thước to cỡ bằng chiếc điện thoại).",
+              "-기로 유명하다: Nổi tiếng với thói quen/tính cách. Ví dụ: '네가 원래 깜빡 잘 잊어버리기로 유명하잖니?' (Con vốn nổi tiếng hay quên khuấy mà).",
+              "-았/었더니: Tưởng là... làm gì thì hóa ra. Ví dụ: '디스크라고 해서 둥근 모양인 줄 알았더니 사각형이네' (Tưởng đĩa là hình tròn hóa ra lại là hình chữ nhật)."
+            ],
+            vocab: [
+              { ko: "외장 하드 디스크", vi: "ổ cứng di động gắn ngoài", en: "external hard drive" },
+              { ko: "두고 오다 / 두고 가다", vi: "để quên ở đâu", en: "to leave behind" },
+              { ko: "깜빡 잊어버리다", vi: "quên khuấy mất, lơ đễnh quên", en: "to completely forget, slip one's mind" },
+              { ko: "내다", vi: "nộp (báo cáo, bài tập)", en: "to submit, hand in" },
+              { ko: "갖다 주다", vi: "mang đến cho", en: "to bring and give" },
+              { ko: "긴 네모 모양", vi: "hình chữ nhật dài", en: "long rectangular shape" },
+              { ko: "까만색", vi: "màu đen", en: "black color" },
+              { ko: "두껍다", vi: "dày dặn", en: "thick" },
+              { ko: "전선", vi: "dây điện, dây cáp nối", en: "cable, wire" },
+              { ko: "달려 있다", vi: "được gắn kèm theo", en: "to be attached, hung" },
+              { ko: "둥근 모양", vi: "hình tròn", en: "round shape" },
+              { ko: "사각형", vi: "hình chữ nhật, tứ giác", en: "quadrangle, rectangle" },
+              { ko: "파일", vi: "tệp tin, file", en: "file" },
+              { ko: "이메일로 보내다", vi: "gửi qua email", en: "to send via email" },
+              { ko: "그냥 두다", vi: "cứ để nguyên như vậy", en: "to leave it as it is" }
+            ],
+            comprehension: [
+              {
+                question: "아들이 찾는 외장 하드 디스크의 생김새는 어떻습니까?",
+                options: [
+                  "까만색이고 휴대폰만 한 긴 네모 모양이며 전선이 달려 있다",
+                  "하얗고 동전만 한 둥근 모양이다",
+                  "빨간색이고 책처럼 크고 얇은 네모 모양이다",
+                  "노트북 안에 내장되어 있는 부품이다"
+                ],
+                correctIndex: 0,
+                explanation: "Người con miêu tả: '책상 위 노트북 옆에 긴 네모 모양... 색깔은 까만색이고 크기는 휴대폰만 한데... 짧은 전선이 달려 있고요.'"
+              },
+              {
+                question: "대화의 마지막에 아들이 집으로 직접 가겠다고 한 이유는 무엇입니까?",
+                options: [
+                  "어머니가 파일을 이메일로 보내 본 적이 없어서",
+                  "어머니가 집에 안 계셔서",
+                  "하드 디스크가 고장 났다고 해서",
+                  "휴대폰 배터리가 다 닳아서"
+                ],
+                correctIndex: 0,
+                explanation: "Mẹ nói: '내가 파일은 한 번도 안 보내 봤는데…… 어떻게 하는 거니?' nên người con bảo: '할 수 없네요. 그냥 두세요. 제가 갈게요.'"
+              }
+            ]
+          },
+          {
+            shortTitle: "Listening 4",
+            title: "Listening 4 · Trò chơi thả diều truyền thống (연 만들기와 연날리기)",
+            image: "image 6.png",
+            audioText: "오늘은 연을 만들어 보겠어요. 한국에서 연을 만들어 본 적이 있어요? 아니요. 하지만 한강공원에서 아이들이 연날리기 하는 걸 본 적이 있어요. 연이 마름모 모양이고 꼬리가 길던데요? 한국의 연은 다 그렇게 생겼나요? 그렇지 않아요. 세모, 네모, 마름모 등 여러 가지 모양이 있어요. 오늘은 이 연을 만들어 봐요. 이건 네모 모양이네요. 그래요. 이제 만들어 볼까요? 먼저 종이 가운데 동그랗게 구멍을 내세요. 연에 구멍을 만들어 주면 연이 잘 날거든요. 구멍은 얼마나 크게 만들어야 해요? 이 음악 CD만 하게 만들면 돼요. CD를 줄 테니까 종이 위에 놓고 동그라미를 그린 후에 자르세요. 이렇게 하면 돼요? 네, 좋아요. 이제 뒤쪽에 대나무를 붙이고 실을 묶으면 돼요. 어서 날려 보고 싶어요. 그럼 나가서 한번 날려 봐요. 누가 연날리기를 잘하는지 볼까요? 제가 이길걸요. 제가 고향에서 연날리기 잘하기로 유명했거든요.",
+            lines: [
+              { speaker: "선생님", ko: "오늘은 연을 만들어 보겠어요. 한국에서 연을 만들어 본 적이 있어요?", vi: "Hôm nay chúng ta sẽ làm diều. Bạn đã từng làm diều ở Hàn Quốc chưa?" },
+              { speaker: "학생", ko: "아니요. 하지만 한강공원에서 아이들이 연날리기 하는 걸 본 적이 있어요. 연이 마름모 모양이고 꼬리가 길던데요? 한국의 연은 다 그렇게 생겼나요?", vi: "Chưa ạ. Nhưng em đã từng thấy các bạn nhỏ thả diều ở công viên sông Hàn. Diều có hình thoi và có chiếc đuôi rất dài. Diều ở Hàn Quốc đều có hình như vậy phải không ạ?" },
+              { speaker: "선생님", ko: "그렇지 않아요. 세모, 네모, 마름모 등 여러 가지 모양이 있어요. 오늘은 이 연을 만들어 봐요.", vi: "Không phải đâu. Có nhiều hình dạng khác nhau như hình tam giác, hình vuông, hình thoi... Hôm nay chúng ta sẽ làm chiếc diều này." },
+              { speaker: "학생", ko: "이건 네모 모양이네요.", vi: "Chiếc này có hình vuông nhỉ." },
+              { speaker: "선생님", ko: "그래요. 이제 만들어 볼까요? 먼저 종이 가운데 동그랗게 구멍을 내세요. 연에 구멍을 만들어 주면 연이 잘 날거든요.", vi: "Đúng rồi. Bây giờ chúng ta bắt đầu làm nhé. Trước tiên hãy khoét một lỗ hình tròn ở giữa tờ giấy. Nếu làm một cái lỗ trên diều thì diều sẽ bay tốt hơn." },
+              { speaker: "학생", ko: "구멍은 얼마나 크게 만들어야 해요?", vi: "Em phải làm cái lỗ to cỡ nào ạ?" },
+              { speaker: "선생님", ko: "이 음악 CD만 하게 만들면 돼요. CD를 줄 테니까 종이 위에 놓고 동그라미를 그린 후에 자르세요.", vi: "Chỉ cần làm bằng kích thước của chiếc đĩa CD ca nhạc này là được. Cô sẽ đưa em chiếc CD, em đặt nó lên tờ giấy, vẽ theo hình tròn rồi cắt ra nhé." },
+              { speaker: "학생", ko: "이렇게 하면 돼요?", vi: "Làm như thế này được chưa ạ?" },
+              { speaker: "선생님", ko: "네, 좋아요. 이제 뒤쪽에 대나무를 붙이고 실을 묶으면 돼요.", vi: "Được rồi, tốt lắm. Bây giờ chỉ cần gắn thanh tre vào mặt sau và buộc dây là xong." },
+              { speaker: "학생", ko: "어서 날려 보고 싶어요.", vi: "Em muốn thử thả ngay quá." },
+              { speaker: "선생님", ko: "그럼 나가서 한번 날려 봐요. 누가 연날리기를 잘하는지 볼까요?", vi: "Vậy chúng ta ra ngoài thả thử nhé. Xem ai là người thả diều giỏi hơn nào." },
+              { speaker: "학생", ko: "제가 이길걸요. 제가 고향에서 연날리기 잘하기로 유명했거든요.", vi: "Chắc chắn em sẽ thắng thôi. Vì hồi ở quê em nổi tiếng là thả diều rất giỏi mà." }
+            ],
+            notes: [
+              "N만 하게 만들다: Tạo ra kích thước bằng với danh từ. Ví dụ: '이 음악 CD만 하게 만들면 돼요' (Chỉ cần làm to bằng chiếc đĩa CD này là được).",
+              "-기로 유명했다: Từng nổi tiếng vì làm việc gì đó rất cừ. Ví dụ: '제가 고향에서 연날리기 잘하기로 유명했거든요.'",
+              "-(으)ㄹ걸요: Dự đoán tự tin hoặc dự liệu chắc chắn. Ví dụ: '제가 이길걸요' (Chắc em sẽ thắng thôi mà)."
+            ],
+            vocab: [
+              { ko: "연", vi: "con diều", en: "kite" },
+              { ko: "날리다", vi: "thả bay, cho bay lên", en: "to fly, make fly" },
+              { ko: "연날리기", vi: "trò chơi thả diều", en: "kite flying" },
+              { ko: "마름모", vi: "hình thoi", en: "rhombus, diamond shape" },
+              { ko: "꼬리가 길다", vi: "đuôi dài", en: "long tail" },
+              { ko: "세모", vi: "hình tam giác", en: "triangle" },
+              { ko: "네모", vi: "hình vuông, hình tứ giác", en: "square, quadrangle" },
+              { ko: "가운데", vi: "ở giữa, trung tâm", en: "middle, center" },
+              { ko: "구멍을 내다", vi: "khoét lỗ, đục lỗ", en: "to make a hole" },
+              { ko: "잘 날다", vi: "bay lượn tốt", en: "to fly well" },
+              { ko: "음악 CD", vi: "đĩa CD ca nhạc", en: "music CD" },
+              { ko: "동그라미", vi: "hình tròn", en: "circle" },
+              { ko: "자르다", vi: "cắt bằng kéo", en: "to cut" },
+              { ko: "대나무", vi: "thanh tre, cây tre", en: "bamboo stick" },
+              { ko: "실을 묶다", vi: "buộc dây chỉ", en: "to tie thread" },
+              { ko: "어서", vi: "mau mau, nhanh chóng", en: "promptly, quickly" },
+              { ko: "이길걸요", vi: "chắc chắn sẽ thắng", en: "will probably win" }
+            ],
+            comprehension: [
+              {
+                question: "연 가운데에 동그랗게 구멍을 뚫는 이유는 무엇입니까?",
+                options: [
+                  "연이 바람을 타고 잘 날기 위해서",
+                  "반대쪽을 내다보기 위해서",
+                  "연의 무게를 가볍게 줄이기 위해서",
+                  "종이 재료를 아끼기 위해서"
+                ],
+                correctIndex: 0,
+                explanation: "Giáo viên nói: '연에 구멍을 만들어 주면 연이 잘 날거든요.'"
+              },
+              {
+                question: "선생님은 종이에 뚫을 구멍 크기를 어떻게 하라고 했습니까?",
+                options: [
+                  "음악 CD 크기만 하게",
+                  "사과 크기만 하게",
+                  "축구공 크기만 하게",
+                  "휴대폰 크기만 하게"
+                ],
+                correctIndex: 0,
+                explanation: "Giáo viên hướng dẫn: '이 음악 CD만 하게 만들면 돼요.'"
               }
             ]
           }
@@ -1153,30 +1554,56 @@ window.KOREAN_COURSES = {
         },
 
         reading: {
-          title: "Đọc hiểu: Nghệ thuật truyền thống và Sự chữa lành tâm hồn (소리와 마음의 치유)",
-          passage: "현대인들은 치열한 경쟁과 복잡한 인간관계 속에서 살아가며 늘 심리적인 피로와 스트레스를 겪고 있습니다. 바쁜 일상에 쫓기다 보면 마음의 여유를 가질 생각도 못 하는 경우가 많습니다. 이러한 현대인들 사이에서 최근 국악이나 클래식 악기를 직접 배우며 마음을 치유하는 '힐링(Healing) 취미'가 큰 인기를 얻고 있습니다.\n\n특히 전통 현악기인 가야금은 오동나무로 만든 긴 몸체 위에 명주실을 얹어 손가락으로 튕기며 연주하는 악기입니다. 길이가 사람 키만 한 가야금은 자연에서 얻은 재료로 만들어졌기 때문에 그 음색이 인위적이지 않고 매우 부드럽고 맑기로 유명합니다. 연주자들은 손끝으로 줄을 튕길 때 전해지는 미세한 진동을 느끼며 복잡했던 머릿속이 맑아지고 마음이 편안해진다고 말합니다. 네모난 사무실과 스마트폰 화면에서 벗어나 자연의 소리에 귀를 기울이는 것만으로도 지친 마음을 달래는 데 큰 도움이 됩니다.",
+          title: "Đọc hiểu: Công viên sông Hàn & Nghệ thuật Jogakbo truyền thống (한강공원과 조각보)",
+          passageHtml: `
+            <div style="margin-bottom:24px;">
+              <h3 style="color:#17523d; font-size:1.15rem; margin-bottom:10px;">1. 한강공원: 도심 속 야외 활동의 천국</h3>
+              <p style="margin-bottom:12px; line-height:1.8;">
+                서울 시민의 산책 장소로 <b>유명한</b> 한강공원이 <b>야외 활동의 천국</b>이라는 사실을 아는 사람은 많지 않다. 도시에서는 <b>생각도 못 했던</b> 활동들을 한강에서는 즐길 수 있다. 서울시는 이번 봄에 한강공원에서 즐길 수 있는 특별한 활동을 <b>추천하고 있다</b>.
+              </p>
+              <div style="background:#f8faf9; border-left:3px solid var(--primary); padding:10px 14px; border-radius:6px; font-size:0.9rem; margin-bottom:16px;">
+                <b>Từ vựng nổi bật:</b> 야외 (ngoài trời), 천국 (thiên đường), 추천하다 (giới thiệu, đề xuất), 뚝섬 (Ttukseom), 인공 암벽장 (tường leo núi nhân tạo), 성수기/비수기 (mùa cao điểm/thấp điểm), 광나루 (Gwangnaru), 레일 바이크 (xe đạp đường ray), 만 6세 미만 (dưới 6 tuổi).
+              </div>
+            </div>
+
+            <div style="margin-bottom:20px;">
+              <h3 style="color:#17523d; font-size:1.15rem; margin-bottom:10px;">2. 조각보: 알록달록 한국의 전통 예술품</h3>
+              <div style="text-align:center; margin-bottom:14px;">
+                <img src="image%207.png" style="max-width:100%; max-height:260px; border-radius:10px; border:1px solid #d1d5db;" alt="조각보">
+              </div>
+              <p style="margin-bottom:12px; line-height:1.8;">
+                조각보는 <b>주로</b> 물건을 <b>싸</b>거나 <b>선물을 포장</b>할 때 <b>썼지만</b>, 음식을 <b>덮어 두</b>거나 창문에 걸어 <b>햇빛을 가리</b>는 등 다양하게 사용되었습니다. 조각보는 물건의 모양이나 크기에 <b>관계없이</b> 쓸 수 있고 보관도 쉽다는 장점이 있습니다.
+              </p>
+              <p style="margin-bottom:12px; line-height:1.8;">
+                천 <b>조각을 이</b>어서 예쁜 조각보를 만들었습니다. 옷을 만들고 남은 천을 사용했기 때문에 자연스럽게 <b>세모, 네모, 마름모</b> 무늬가 만들어졌습니다. 그 아름다운 색깔과 모양 때문에 조각보는 현재까지도 <b>뛰어난</b> 예술품으로 사랑받고 있습니다.
+              </p>
+              <div style="background:#f8faf9; border-left:3px solid var(--primary); padding:10px 14px; border-radius:6px; font-size:0.9rem;">
+                <b>Từ vựng nổi bật:</b> 싸다/포장하다 (gói, bọc quà), 덮어 두다 (đậy, phủ lên), 햇빛을 가리다 (che ánh nắng), 관계없이 (bất kể, không phụ thuộc vào), 천 조각 (mảnh vải), 잇다 (nối ghép), 세모/네모/마름모 무늬 (họa tiết tam giác, vuông, thoi), 뛰어난 예술품 (tác phẩm nghệ thuật xuất sắc).
+              </div>
+            </div>
+          `,
           questions: [
             {
-              question: "최근 현대인들 사이에서 전통 악기를 배우는 취미가 인기를 끄는 이유는 무엇입니까?",
+              question: "한강공원에 대한 설명으로 본문의 내용과 맞는 것은 무엇입니까?",
               options: [
-                "취업할 때 가산점을 받을 수 있어서",
-                "바쁜 일상에서 벗어나 마음을 치유하고 스트레스를 해소하기 위해",
-                "스마트폰보다 악기가 가격이 훨씬 저렴해서",
-                "직장에서 의무적으로 악기 연주를 시켜서"
+                "도심에서는 생각도 못 했던 다양한 야외 활동을 즐길 수 있는 천국이다.",
+                "실내 운동 시설만 있어서 겨울철에만 인기가 많다.",
+                "만 6세 미만의 어린이는 입장할 수 없다.",
+                "조각보를 만드는 공예 교실만 열리고 있다."
               ],
-              correctIndex: 1,
-              explanation: "Bài đọc nêu rõ: '마음을 치유하는 힐링 취mi가 큰 인기를 얻고 있습니다... 마음이 편안해진다고 말합니다.'"
+              correctIndex: 0,
+              explanation: "Bài đọc nêu: '한강공원이 야외 활동의 천국이라는 사실... 도시에서는 생각도 못 했던 활동들을 한강에서는 즐길 수 있다.'"
             },
             {
-              question: "본문에서 설명한 가야금의 특징과 일치하는 것은 무엇입니까?",
+              question: "조각보에 대한 설명으로 알맞지 않은 것은 무엇입니까?",
               options: [
-                "쇠로 만든 줄을 플라스틱 채로 쳐서 소리를 낸다.",
-                "크기가 작아서 손바닥만 한 크기이다.",
-                "오동나무와 명주실 등 자연 재료로 만들어 음색이 맑고 부드럽기로 유명하다.",
-                "도심의 소음을 크게 흉내 내는 악기이다."
+                "비싼 새 비단만을 특별히 주문해서 네모 반듯하게만 만든다.",
+                "물건을 싸거나 음식을 덮어 두고, 창문에 걸어 햇빛을 가리는 데 썼다.",
+                "옷을 만들고 남은 천 조각들을 이어서 세모, 네모, 마름모 무늬가 자연스럽게 생겼다.",
+                "물건의 모양이나 크기에 관계없이 쓸 수 있고 보관이 쉽다."
               ],
-              correctIndex: 2,
-              explanation: "Bài đọc nêu: '오동나무로 만든 긴 몸체 위에 명주실을 얹어... 자연에서 얻은 재료로 만들어졌기 때문에 그 음색이 ... 부드럽고 맑기로 유명합니다.'"
+              correctIndex: 0,
+              explanation: "조각보는 옷을 만들고 남은 천 조각을 이어서 만든 알뜰한 전통 공예품이며, 새 비단만을 특별 주문한 것이 아닙니다."
             }
           ]
         },

@@ -485,23 +485,138 @@
     /* Dialogue & Listening */
     .dialogue-select-bar {
       display: flex;
-      gap: 10px;
+      flex-wrap: wrap;
+      gap: 8px;
       margin-bottom: 18px;
       border-bottom: 2px solid #eef2ef;
-      padding-bottom: 10px;
+      padding-bottom: 12px;
     }
     .dialogue-btn {
-      padding: 8px 16px;
+      padding: 8px 14px;
       border-radius: 8px;
-      border: 1px solid transparent;
+      border: 1px solid #d1e5d8;
       background: #edf5f0;
       color: #17523d;
       font-weight: 600;
+      font-size: 0.9rem;
       cursor: pointer;
+      transition: all 0.15s ease;
+      white-space: nowrap;
+    }
+    .dialogue-btn:hover {
+      background: #dcf2e5;
     }
     .dialogue-btn.active {
       background: var(--primary);
       color: white;
+      border-color: var(--primary);
+      box-shadow: 0 2px 6px rgba(4, 120, 87, 0.25);
+    }
+    .dialogue-header-info {
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-radius: 10px;
+      padding: 12px 16px;
+      margin-bottom: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .dialogue-header-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #166534;
+    }
+    .dialogue-header-sub {
+      font-size: 0.92rem;
+      color: #15803d;
+      font-weight: 500;
+    }
+    .dialogue-image-container {
+      text-align: center;
+      margin: 14px 0 18px;
+    }
+    .dialogue-img {
+      max-width: 100%;
+      max-height: 280px;
+      border-radius: 12px;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      object-fit: contain;
+      background: #ffffff;
+    }
+    .dialogue-notion-card {
+      background: #fbfdfc;
+      border: 1px solid #cce5d6;
+      border-left: 4px solid var(--primary);
+      border-radius: 10px;
+      padding: 16px 18px;
+      margin: 20px 0;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.02);
+    }
+    .notion-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 700;
+      font-size: 1rem;
+      color: #17523d;
+      margin-bottom: 12px;
+    }
+    .notion-grammar-box {
+      background: #f0fdf4;
+      border: 1px dashed #86efac;
+      border-radius: 8px;
+      padding: 10px 14px;
+      margin-bottom: 14px;
+      font-size: 0.92rem;
+      line-height: 1.6;
+      color: #166534;
+    }
+    .notion-note-item {
+      margin-bottom: 6px;
+    }
+    .notion-note-item:last-child {
+      margin-bottom: 0;
+    }
+    .notion-vocab-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 10px;
+    }
+    .notion-vocab-item {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 10px 12px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+      transition: transform 0.1s, border-color 0.1s;
+    }
+    .notion-vocab-item:hover {
+      border-color: #86efac;
+      transform: translateY(-1px);
+    }
+    .notion-vocab-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 4px;
+    }
+    .notion-ko {
+      font-weight: 700;
+      font-size: 1rem;
+      color: #111827;
+    }
+    .notion-vi {
+      font-size: 0.88rem;
+      color: #374151;
+      line-height: 1.4;
+    }
+    .notion-en {
+      font-size: 0.8rem;
+      color: #6b7280;
+      font-style: italic;
+      margin-top: 2px;
     }
     .dialogue-controls {
       display: flex;
@@ -1545,7 +1660,7 @@
       lesson.dialogues.forEach((d, idx) => {
         const btn = document.createElement('button');
         btn.className = `dialogue-btn ${idx === state.dialogueIndex ? 'active' : ''}`;
-        btn.textContent = d.title.split('·')[0].trim();
+        btn.textContent = d.shortTitle || d.title.split('·')[0].trim() || `Đoạn thoại ${idx + 1}`;
         btn.onclick = () => {
           state.dialogueIndex = idx;
           renderDialogue(lesson);
@@ -1560,8 +1675,30 @@
         speakText(curDialogue.audioText);
       };
 
-      // Render lines
+      // Clear container
       elements.dialogueChatContainer.innerHTML = '';
+
+      // Title & Subtitle banner
+      if (curDialogue.title) {
+        const headerInfo = document.createElement('div');
+        headerInfo.className = 'dialogue-header-info';
+        const parts = curDialogue.title.split('·');
+        headerInfo.innerHTML = `
+          <div class="dialogue-header-title">${parts[0] ? parts[0].trim() : curDialogue.title}</div>
+          ${parts[1] ? `<div class="dialogue-header-sub">${parts[1].trim()}</div>` : ''}
+        `;
+        elements.dialogueChatContainer.appendChild(headerInfo);
+      }
+
+      // Illustration image if available
+      if (curDialogue.image) {
+        const imgWrap = document.createElement('div');
+        imgWrap.className = 'dialogue-image-container';
+        imgWrap.innerHTML = `<img src="${encodeURI(curDialogue.image)}" class="dialogue-img" alt="Minh họa bài nghe" onerror="this.style.display='none'">`;
+        elements.dialogueChatContainer.appendChild(imgWrap);
+      }
+
+      // Dialogue chat lines
       curDialogue.lines.forEach(line => {
         const bubble = document.createElement('div');
         bubble.className = 'chat-bubble';
@@ -1578,6 +1715,51 @@
         `;
         elements.dialogueChatContainer.appendChild(bubble);
       });
+
+      // Notion Notes card: Grammar points & Vocabulary for this listening dialogue
+      if ((curDialogue.vocab && curDialogue.vocab.length > 0) || (curDialogue.notes && curDialogue.notes.length > 0)) {
+        const notionCard = document.createElement('div');
+        notionCard.className = 'dialogue-notion-card';
+        
+        let notesHtml = '';
+        if (curDialogue.notes && curDialogue.notes.length > 0) {
+          notesHtml = `
+            <div class="notion-grammar-box">
+              <div style="font-weight:700; color:#166534; margin-bottom:6px;">💡 Điểm ngữ pháp & Cấu trúc cần nhớ:</div>
+              ${curDialogue.notes.map(n => `<div class="notion-note-item">• ${n}</div>`).join('')}
+            </div>
+          `;
+        }
+
+        let vocabHtml = '';
+        if (curDialogue.vocab && curDialogue.vocab.length > 0) {
+          vocabHtml = `
+            <div style="font-weight:700; color:#17523d; margin-bottom:8px; font-size:0.95rem;">📝 Từ vựng & Biểu hiện trong đoạn nghe:</div>
+            <div class="notion-vocab-grid">
+              ${curDialogue.vocab.map(v => `
+                <div class="notion-vocab-item">
+                  <div class="notion-vocab-top">
+                    <span class="notion-ko">${v.ko}</span>
+                    <button class="btn-audio-sm" onclick="speakText('${v.ko.replace(/'/g, "\\'")}')" title="Phát âm từ này">🔊</button>
+                  </div>
+                  <div class="notion-vi">${v.vi}</div>
+                  ${v.en ? `<div class="notion-en">${v.en}</div>` : ''}
+                </div>
+              `).join('')}
+            </div>
+          `;
+        }
+
+        notionCard.innerHTML = `
+          <div class="notion-header">
+            <span class="notion-icon">📌</span>
+            <span>Từ vựng & Chú thích đoạn nghe (Ghi chú bài học)</span>
+          </div>
+          ${notesHtml}
+          ${vocabHtml}
+        `;
+        elements.dialogueChatContainer.appendChild(notionCard);
+      }
 
       // Render Dialogue Quiz
       elements.dialogueQuizContainer.innerHTML = '';
@@ -1647,7 +1829,11 @@
     function renderReading(lesson) {
       if (!lesson.reading) return;
       elements.readingTitle.textContent = lesson.reading.title;
-      elements.readingPassage.textContent = lesson.reading.passage;
+      if (lesson.reading.passageHtml) {
+        elements.readingPassage.innerHTML = lesson.reading.passageHtml;
+      } else {
+        elements.readingPassage.innerHTML = (lesson.reading.passage || '').replace(/\n\n/g, '<br><br>').replace(/\n/g, '<br>');
+      }
 
       elements.readingQuizContainer.innerHTML = '';
       if (lesson.reading.questions) {
