@@ -1313,6 +1313,36 @@ window.KOREAN_COURSES = {
                 ]
               },
               {
+                ko: "소문을 퍼뜨리다",
+                hanja: "所聞을 퍼뜨리다",
+                en: "to spread / circulate a rumor widely",
+                vi: "lan truyền tin đồn, phát tán tin tức rộng rãi",
+                examples: [
+                  { ko: "근거 없는 거짓 소문을 악의적으로 퍼뜨리면 법적인 처벌을 받을 수 있어요.", vi: "Nếu ác ý phát tán những tin đồn dối trá vô căn cứ thì có thể bị xử lý theo pháp luật." },
+                  { ko: "누가 그런 엉뚱한 소문을 퍼뜨렸는지 도무지 알 수가 없네요.", vi: "Chẳng thể nào biết nổi ai đã đi lan truyền cái tin đồn vô lý quái đản như thế nữa." }
+                ]
+              },
+              {
+                ko: "믿어지지 않다",
+                hanja: "",
+                en: "to be unbelievable / hard to believe",
+                vi: "không thể tin được, khó mà tin nổi",
+                examples: [
+                  { ko: "두 사람이 그렇게 다정했는데 헤어졌다니 정말 믿어지지 않아요.", vi: "Hai người họ từng tình tứ mặn nồng đến thế mà lại chia tay, thật khó mà tin nổi." },
+                  { ko: "내가 꿈꾸던 대학에 최종 합격했다는 소식이 아직도 믿어지지 않아요.", vi: "Tin tức tôi đã chính thức trúng tuyển vào trường đại học mơ ước đến giờ tôi vẫn chưa dám tin." }
+                ]
+              },
+              {
+                ko: "소문이 사실이다",
+                hanja: "所聞이 事實이다",
+                en: "the rumor turns out to be true",
+                vi: "tin đồn là sự thật",
+                examples: [
+                  { ko: "소문이 사실인지 아닌지 확인하기 전까지는 섣불리 판단하지 마세요.", vi: "Trước khi xác minh tin đồn có phải là sự thật hay không thì đừng vội vàng phán xét." },
+                  { ko: "동네에 돌던 재개발 소문이 결국 사실로 밝혀져 주민들이 기뻐했어요.", vi: "Tin đồn quy hoạch râm ran trong khu phố cuối cùng đã là sự thật khiến người dân mừng rỡ." }
+                ]
+              },
+              {
                 ko: "헛소문",
                 hanja: "",
                 en: "groundless rumor / false gossip",
@@ -1426,6 +1456,36 @@ window.KOREAN_COURSES = {
                 examples: [
                   { ko: "인터넷에 퍼진 악성 루머에 대해 회사가 공식 자료를 내고 해명했어요.", vi: "Công ty đã phát hành tài liệu chính thức để thanh minh về những tin đồn ác ý lan tràn trên mạng." },
                   { ko: "억울한 누명을 벗기 위해 직접 기자회견을 열고 사실관계를 해명했어요.", vi: "Để rũ bỏ nỗi oan ức, anh ấy đã đích thân mở họp báo làm sáng tỏ mọi ngọn ngành sự việc." }
+                ]
+              },
+              {
+                ko: "당황하다",
+                hanja: "唐惶하다",
+                en: "to be flustered / perplexed / taken aback",
+                vi: "bối rối, ngỡ ngàng, hoang mang",
+                examples: [
+                  { ko: "자신에 대한 엉뚱한 열애설 기사를 보고 무척 당황했어요.", vi: "Nhìn thấy bài báo tin đồn hẹn hò vô căn cứ về mình, tôi thấy vô cùng bối rối." },
+                  { ko: "예상치 못한 질문을 받았을 때 당황하지 않고 침착하게 대답했어요.", vi: "Khi nhận được câu hỏi ngoài dự kiến, tôi không hề lúng túng mà bình tĩnh trả lời." }
+                ]
+              },
+              {
+                ko: "부인하다",
+                hanja: "否認하다",
+                en: "to deny / disclaim",
+                vi: "phủ nhận, chối bỏ",
+                examples: [
+                  { ko: "그 연예인은 인터뷰에서 열애설에 대해 사실무근이라며 강력히 부인했어요.", vi: "Trong bài phỏng vấn, ngôi sao đó kịch liệt phủ nhận tin đồn hẹn hò và khẳng định hoàn toàn vô căn cứ." },
+                  { ko: "자신의 잘못을 무조건 부인하기보다는 솔직하게 반성해야 해요.", vi: "Thay vì khăng khăng phủ nhận lỗi lầm của mình, bạn nên thành khẩn kiểm điểm bản thân." }
+                ]
+              },
+              {
+                ko: "인정하다",
+                hanja: "認定하다",
+                en: "to admit / acknowledge",
+                vi: "thừa nhận, công nhận",
+                examples: [
+                  { ko: "두 사람은 오랜 열애설 끝에 공식적으로 연인 관계임을 인정했어요.", vi: "Sau thời gian dài dính tin đồn hẹn hò, hai người họ đã chính thức thừa nhận mối quan hệ yêu đương." },
+                  { ko: "자신의 부족함을 겸허히 인정하고 남의 조언을 귀담아들으세요.", vi: "Hãy khiêm tốn thừa nhận sự thiếu sót của bản thân và lắng nghe lời khuyên của người khác." }
                 ]
               }
             ]
