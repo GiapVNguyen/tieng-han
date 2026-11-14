@@ -1366,7 +1366,11 @@
                   </div>
                 </div>
 
-                <div style="text-align:center; margin-top:24px;">
+                <div style="margin-top:18px; padding:10px 14px; background:#eff6ff; border:1px solid #bfdbfe; border-radius:8px; font-size:0.85rem; color:#1e40af; line-height:1.45; text-align:left;">
+                  <b>💡 Thuật toán Lặp lại Thông minh:</b> Hệ thống tự động ưu tiên <b>100% các từ bạn từng làm sai hoặc chưa thuộc</b> vào các bài kiểm tra mới cho đến khi bạn nhớ hoàn toàn!
+                </div>
+
+                <div style="text-align:center; margin-top:16px;">
                   <button class="btn-action" id="btnStartVocabQuiz" style="font-size:1.05rem; padding:12px 28px; width:100%; border-radius:10px;">
                     🚀 Bắt đầu làm bài kiểm tra
                   </button>
@@ -2879,17 +2883,53 @@
         return;
       }
 
-      const shuffled = [...pool].sort(() => Math.random() - 0.5);
       let numQ = state.vocabQuiz.count;
-      if (numQ === 'max' || parseInt(numQ, 10) > shuffled.length) {
-        numQ = shuffled.length;
+      if (numQ === 'max' || parseInt(numQ, 10) > pool.length) {
+        numQ = pool.length;
       } else {
         numQ = parseInt(numQ, 10);
       }
 
-      const selectedWords = shuffled.slice(0, numQ);
+      // THUẬT TOÁN THÔNG MINH (Smart Spaced Repetition):
+      // Ưu tiên 1: Các từ bạn từng làm sai (review) -> Chắc chắn 100% được đưa vào bài test mới!
+      // Ưu tiên 2: Các từ mới chưa học (new).
+      // Ưu tiên 3: Các từ đã thuộc (mastered) để ôn luyện củng cố.
+      let selectedWords = [];
+
+      if (state.vocabQuiz.scope === 'review') {
+        const shuffledReview = pool.sort(() => Math.random() - 0.5);
+        selectedWords = shuffledReview.slice(0, numQ);
+      } else if (state.vocabQuiz.scope === 'new') {
+        const shuffledNew = pool.sort(() => Math.random() - 0.5);
+        selectedWords = shuffledNew.slice(0, numQ);
+      } else {
+        const reviewWords = pool.filter(w => getVocabStatus(w.ko) === 'review').sort(() => Math.random() - 0.5);
+        const newWords = pool.filter(w => getVocabStatus(w.ko) === 'new').sort(() => Math.random() - 0.5);
+        const masteredWords = pool.filter(w => getVocabStatus(w.ko) === 'mastered').sort(() => Math.random() - 0.5);
+
+        // Đưa toàn bộ các từ từng sai vào trước
+        selectedWords = [...reviewWords];
+
+        // Lấy tiếp các từ mới
+        if (selectedWords.length < numQ) {
+          const needed = numQ - selectedWords.length;
+          selectedWords = selectedWords.concat(newWords.slice(0, needed));
+        }
+
+        // Lấy tiếp các từ đã thuộc nếu còn thiếu chỗ
+        if (selectedWords.length < numQ) {
+          const needed = numQ - selectedWords.length;
+          selectedWords = selectedWords.concat(masteredWords.slice(0, needed));
+        }
+
+        selectedWords = selectedWords.slice(0, numQ);
+
+        // Xáo trộn ngẫu nhiên thứ tự câu hỏi để người học không bị đoán trước vị trí
+        selectedWords = selectedWords.sort(() => Math.random() - 0.5);
+      }
 
       state.vocabQuiz.questions = selectedWords.map(targetWord => {
+        const isReviewWord = (getVocabStatus(targetWord.ko) === 'review');
         let qType = state.vocabQuiz.type;
         if (qType === 'mixed') {
           const types = ['ko2vi', 'vi2ko'];
@@ -2946,6 +2986,7 @@
 
         return {
           targetWord,
+          isReviewWord,
           qType,
           typeBadge,
           questionText,
@@ -2979,7 +3020,12 @@
       const percent = Math.round(((state.vocabQuiz.currentIndex) / total) * 100);
       document.getElementById('vqProgressBarFill').style.width = `${percent}%`;
 
-      document.getElementById('vqQuestionTypeBadge').textContent = q.typeBadge;
+      const typeBadgeEl = document.getElementById('vqQuestionTypeBadge');
+      if (q.isReviewWord) {
+        typeBadgeEl.innerHTML = `${q.typeBadge} <span style="background:#fee2e2; color:#b91c1c; border:1px solid #fca5a5; padding:2px 7px; border-radius:6px; font-size:0.75rem; font-weight:700; margin-left:6px;">⚡ Từng làm sai (Cần ôn)</span>`;
+      } else {
+        typeBadgeEl.textContent = q.typeBadge;
+      }
       document.getElementById('vqQuestionTitle').textContent = q.questionText;
       document.getElementById('vqQuestionSub').textContent = q.questionSub;
 
@@ -3046,7 +3092,12 @@
         feedbackBox.style.background = '#dcfce7';
         feedbackBox.style.border = '1px solid #86efac';
         feedbackBox.style.color = '#15803d';
-        feedbackBox.innerHTML = `<b>✓ Chính xác!</b> Từ <b>${q.targetWord.ko}</b>: ${q.targetWord.vi}.`;
+        let reviewNote = '';
+        if (q.isReviewWord) {
+          setVocabStatus(q.targetWord.ko, 'mastered');
+          reviewNote = `<div style="margin-top:6px; font-size:0.85rem; color:#166534; font-weight:600;">🎉 Tuyệt vời! Bạn đã vượt qua từ từng làm sai (Hệ thống đã nâng cấp sang "Đã thuộc").</div>`;
+        }
+        feedbackBox.innerHTML = `<b>✓ Chính xác!</b> Từ <b>${q.targetWord.ko}</b>: ${q.targetWord.vi}.${reviewNote}`;
         speakText(q.targetWord.ko);
       } else {
         setVocabStatus(q.targetWord.ko, 'review');
