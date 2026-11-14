@@ -657,6 +657,124 @@
       transform: scale(1.05);
     }
 
+    /* Vocabulary Quiz CSS */
+    .vq-container {
+      max-width: 640px;
+      margin: 10px auto 30px;
+    }
+    .vq-card {
+      background: #ffffff;
+      border: 1px solid #cce5d6;
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 4px 16px rgba(23,82,61,0.06);
+    }
+    .vq-option-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      margin-top: 18px;
+    }
+    .vq-opt-btn {
+      padding: 12px 16px;
+      border-radius: 10px;
+      border: 1.5px solid #e2e8f0;
+      background: #f8fafc;
+      color: #1e293b;
+      font-size: 1rem;
+      font-weight: 600;
+      text-align: left;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      user-select: none;
+    }
+    .vq-opt-btn:hover:not(:disabled) {
+      border-color: var(--primary);
+      background: #f0fdf4;
+      transform: translateX(3px);
+    }
+    .vq-opt-btn.correct {
+      background: #dcfce7 !important;
+      border-color: #22c55e !important;
+      color: #15803d !important;
+    }
+    .vq-opt-btn.wrong {
+      background: #fee2e2 !important;
+      border-color: #ef4444 !important;
+      color: #b91c1c !important;
+    }
+    .vq-opt-prefix {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: #e2e8f0;
+      color: #475569;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.82rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .vq-opt-btn.correct .vq-opt-prefix {
+      background: #22c55e;
+      color: white;
+    }
+    .vq-opt-btn.wrong .vq-opt-prefix {
+      background: #ef4444;
+      color: white;
+    }
+    .vq-setup-group {
+      margin-bottom: 20px;
+    }
+    .vq-setup-label {
+      font-weight: 700;
+      font-size: 0.92rem;
+      color: #17523d;
+      margin-bottom: 8px;
+      display: block;
+    }
+    .vq-radio-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .vq-chip {
+      padding: 8px 14px;
+      border: 1.5px solid #cbd5e1;
+      border-radius: 10px;
+      background: white;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: #475569;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .vq-chip:hover {
+      border-color: var(--primary);
+    }
+    .vq-chip.active {
+      border-color: var(--primary);
+      background: #ecfdf5;
+      color: var(--primary);
+      box-shadow: 0 1px 4px rgba(4, 120, 87, 0.15);
+    }
+    .vq-progress-bar {
+      height: 6px;
+      background: #e2e8f0;
+      border-radius: 4px;
+      overflow: hidden;
+      margin: 12px 0 16px;
+    }
+    .vq-progress-fill {
+      height: 100%;
+      background: var(--primary);
+      transition: width 0.25s ease;
+    }
+
     /* Vocabulary Table */
     .vocab-table {
       width: 100%;
@@ -1112,6 +1230,7 @@
             <div class="vocab-view-toggle">
               <button class="view-btn active" id="btnViewList">Tra cứu danh sách</button>
               <button class="view-btn" id="btnViewFlashcard">Thẻ Flashcard</button>
+              <button class="view-btn" id="btnViewQuiz">🎯 Kiểm tra từ vựng</button>
             </div>
           </div>
 
@@ -1206,6 +1325,110 @@
           <!-- Table View -->
           <div id="vocabTableArea">
             <div id="vocabCategoriesContainer"></div>
+          </div>
+
+          <!-- 3. Vocabulary Quiz View -->
+          <div id="vocabQuizArea" style="display:none;">
+            <div class="vq-container">
+              <!-- Screen 1: Setup -->
+              <div id="vqSetupScreen" class="vq-card">
+                <div style="text-align:center; margin-bottom:20px;">
+                  <div style="font-size:2.2rem; margin-bottom:6px;">🎯</div>
+                  <h3 style="color:#17523d; font-size:1.3rem; margin-bottom:6px;">Kiểm tra Từ vựng</h3>
+                  <p style="color:#64748b; font-size:0.9rem;">Thử thách trí nhớ và đánh giá độ thuộc từ vựng với các câu hỏi trắc nghiệm tương tác.</p>
+                </div>
+
+                <div class="vq-setup-group">
+                  <span class="vq-setup-label">1. Phạm vi từ vựng kiểm tra:</span>
+                  <div class="vq-radio-chips" id="vqScopeChips">
+                    <button type="button" class="vq-chip active" data-scope="all">📋 Tất cả từ trong bài (<span id="vqCountAll">0</span>)</button>
+                    <button type="button" class="vq-chip" data-scope="review">⚡ Chỉ từ Cần ôn lại (<span id="vqCountReview">0</span>)</button>
+                    <button type="button" class="vq-chip" data-scope="new">○ Chỉ từ Mới chưa học (<span id="vqCountNew">0</span>)</button>
+                  </div>
+                </div>
+
+                <div class="vq-setup-group">
+                  <span class="vq-setup-label">2. Kiểu câu hỏi:</span>
+                  <div class="vq-radio-chips" id="vqTypeChips">
+                    <button type="button" class="vq-chip active" data-type="mixed">🔄 Hỗn hợp (Khuyên dùng)</button>
+                    <button type="button" class="vq-chip" data-type="ko2vi">🇰🇷 ➔ 🇻🇳 Hàn sang Việt</button>
+                    <button type="button" class="vq-chip" data-type="vi2ko">🇻🇳 ➔ 🇰🇷 Việt sang Hàn</button>
+                    <button type="button" class="vq-chip" data-type="cloze">📝 Điền câu ví dụ</button>
+                  </div>
+                </div>
+
+                <div class="vq-setup-group">
+                  <span class="vq-setup-label">3. Số lượng câu hỏi:</span>
+                  <div class="vq-radio-chips" id="vqCountChips">
+                    <button type="button" class="vq-chip active" data-count="10">10 câu (Nhanh)</button>
+                    <button type="button" class="vq-chip" data-count="20">20 câu (Tiêu chuẩn)</button>
+                    <button type="button" class="vq-chip" data-count="max">Tất cả từ</button>
+                  </div>
+                </div>
+
+                <div style="text-align:center; margin-top:24px;">
+                  <button class="btn-action" id="btnStartVocabQuiz" style="font-size:1.05rem; padding:12px 28px; width:100%; border-radius:10px;">
+                    🚀 Bắt đầu làm bài kiểm tra
+                  </button>
+                </div>
+              </div>
+
+              <!-- Screen 2: Playing Quiz -->
+              <div id="vqPlayScreen" class="vq-card" style="display:none;">
+                <div style="display:flex; justify-content:space-between; align-items:center;">
+                  <span id="vqQuestionProgress" style="font-weight:700; color:#17523d; font-size:0.95rem;">Câu 1 / 10</span>
+                  <div style="display:flex; gap:10px; align-items:center;">
+                    <span id="vqCurrentScoreBadge" style="background:#dcfce7; color:#15803d; font-size:0.85rem; font-weight:700; padding:3px 10px; border-radius:12px;">Đúng: 0</span>
+                    <button class="btn-text-sm" id="btnQuitVocabQuiz" style="color:#ef4444;">Thoát</button>
+                  </div>
+                </div>
+
+                <div class="vq-progress-bar">
+                  <div class="vq-progress-fill" id="vqProgressBarFill" style="width:10%;"></div>
+                </div>
+
+                <!-- Question Prompt Box -->
+                <div id="vqPromptBox" style="background:#f8faf9; border:1px solid #dcf0e4; border-radius:12px; padding:18px; margin-bottom:18px; text-align:center;">
+                  <div id="vqQuestionTypeBadge" style="display:inline-block; font-size:0.75rem; font-weight:700; color:#047857; background:#e1f5eb; padding:2px 8px; border-radius:6px; margin-bottom:8px; text-transform:uppercase;">Hàn ➔ Việt</div>
+                  
+                  <div id="vqImageWrap" style="display:none; margin-bottom:10px;">
+                    <img id="vqQuestionImg" src="" style="max-height:100px; max-width:180px; object-fit:cover; border-radius:8px; border:1px solid #d1fae5;" alt="Minh họa">
+                  </div>
+
+                  <div id="vqQuestionTitle" style="font-size:1.8rem; font-weight:700; color:#0f172a; margin-bottom:6px;">단어</div>
+                  <div id="vqQuestionSub" style="font-size:0.92rem; color:#475569;">Chọn đáp án đúng nhất:</div>
+                  <button class="btn-audio" id="vqQuestionAudioBtn" style="margin-top:6px;" title="Nghe phát âm">🔊 Nghe</button>
+                </div>
+
+                <!-- 4 Options Grid -->
+                <div class="vq-option-grid" id="vqOptionsContainer"></div>
+
+                <!-- Feedback & Next Button -->
+                <div id="vqFeedbackBox" style="display:none; margin-top:16px; padding:12px 14px; border-radius:8px; font-size:0.92rem;"></div>
+
+                <div style="margin-top:18px; display:flex; justify-content:flex-end;">
+                  <button class="btn-action" id="btnNextVocabQuestion" style="display:none;">Câu tiếp theo →</button>
+                </div>
+              </div>
+
+              <!-- Screen 3: Results -->
+              <div id="vqResultScreen" class="vq-card" style="display:none; text-align:center;">
+                <div id="vqResultTrophy" style="font-size:3rem; margin-bottom:8px;">🏆</div>
+                <h3 id="vqResultTitle" style="color:#17523d; font-size:1.35rem; margin-bottom:4px;">Hoàn thành bài kiểm tra!</h3>
+                <div id="vqResultScore" style="font-size:2.2rem; font-weight:800; color:var(--primary); margin:12px 0 6px;">8 / 10</div>
+                <p id="vqResultSubtitle" style="color:#475569; font-size:0.95rem; margin-bottom:20px;">Khá lắm! Bạn đã nắm vững phần lớn từ vựng của bài.</p>
+
+                <!-- Detailed Breakdown List -->
+                <div style="text-align:left; background:#f8faf9; border:1px solid #e2e8f0; border-radius:12px; padding:16px; margin-bottom:22px; max-height:280px; overflow-y:auto;" id="vqResultBreakdown"></div>
+
+                <!-- Action buttons -->
+                <div style="display:flex; gap:10px; justify-content:center; flex-wrap:wrap;">
+                  <button class="btn-action" id="btnRetryVocabQuiz">🔄 Làm bài mới</button>
+                  <button class="btn-pill" id="btnRetryWrongOnly" style="display:none; background:#fee2e2; color:#b91c1c; border-color:#fca5a5;">⚡ Kiểm tra lại câu sai</button>
+                  <button class="btn-pill" id="btnBackToFlashcard">🎴 Học qua Flashcard</button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -1326,7 +1549,18 @@
       flashcardAllList: [],
       flashcardList: [],
       flashcardFilter: 'all',
-      isFlipped: false
+      isFlipped: false,
+      vocabQuiz: {
+        active: false,
+        scope: 'all',
+        type: 'mixed',
+        count: '10',
+        questions: [],
+        currentIndex: 0,
+        score: 0,
+        results: [],
+        answered: false
+      }
     };
 
     // DOM Elements
@@ -1352,8 +1586,10 @@
       grammarListContainer: document.getElementById('grammarListContainer'),
       btnViewList: document.getElementById('btnViewList'),
       btnViewFlashcard: document.getElementById('btnViewFlashcard'),
+      btnViewQuiz: document.getElementById('btnViewQuiz'),
       flashcardArea: document.getElementById('flashcardArea'),
       vocabTableArea: document.getElementById('vocabTableArea'),
+      vocabQuizArea: document.getElementById('vocabQuizArea'),
       vocabCategoriesContainer: document.getElementById('vocabCategoriesContainer'),
       flashcardElement: document.getElementById('flashcardElement'),
       fcWordKo: document.getElementById('fcWordKo'),
@@ -2537,20 +2773,412 @@
       }
     });
 
-    // View Toggle for Vocabulary
-    elements.btnViewList.onclick = () => {
-      elements.btnViewList.classList.add('active');
-      elements.btnViewFlashcard.classList.remove('active');
-      elements.vocabTableArea.style.display = 'block';
-      elements.flashcardArea.style.display = 'none';
-    };
-    elements.btnViewFlashcard.onclick = () => {
-      elements.btnViewFlashcard.classList.add('active');
-      elements.btnViewList.classList.remove('active');
-      elements.vocabTableArea.style.display = 'none';
-      elements.flashcardArea.style.display = 'block';
-      updateFlashcardView();
-    };
+    // View Toggle for Vocabulary (List / Flashcard / Quiz)
+    function switchVocabView(viewMode) {
+      elements.btnViewList.classList.toggle('active', viewMode === 'list');
+      elements.btnViewFlashcard.classList.toggle('active', viewMode === 'flashcard');
+      if (elements.btnViewQuiz) elements.btnViewQuiz.classList.toggle('active', viewMode === 'quiz');
+
+      elements.vocabTableArea.style.display = viewMode === 'list' ? 'block' : 'none';
+      elements.flashcardArea.style.display = viewMode === 'flashcard' ? 'block' : 'none';
+      if (elements.vocabQuizArea) elements.vocabQuizArea.style.display = viewMode === 'quiz' ? 'block' : 'none';
+
+      if (viewMode === 'flashcard') {
+        updateFlashcardView();
+      } else if (viewMode === 'quiz') {
+        initVocabQuizView();
+      }
+    }
+
+    elements.btnViewList.onclick = () => switchVocabView('list');
+    elements.btnViewFlashcard.onclick = () => switchVocabView('flashcard');
+    if (elements.btnViewQuiz) elements.btnViewQuiz.onclick = () => switchVocabView('quiz');
+
+    // Vocabulary Quiz Implementation
+    function initVocabQuizView() {
+      const setupScreen = document.getElementById('vqSetupScreen');
+      const playScreen = document.getElementById('vqPlayScreen');
+      const resultScreen = document.getElementById('vqResultScreen');
+      if (setupScreen) setupScreen.style.display = 'block';
+      if (playScreen) playScreen.style.display = 'none';
+      if (resultScreen) resultScreen.style.display = 'none';
+
+      const total = state.flashcardAllList.length;
+      const countReview = state.flashcardAllList.filter(w => getVocabStatus(w.ko) === 'review').length;
+      const countNew = state.flashcardAllList.filter(w => getVocabStatus(w.ko) === 'new').length;
+
+      const cAll = document.getElementById('vqCountAll');
+      const cRev = document.getElementById('vqCountReview');
+      const cNew = document.getElementById('vqCountNew');
+      if (cAll) cAll.textContent = total;
+      if (cRev) cRev.textContent = countReview;
+      if (cNew) cNew.textContent = countNew;
+    }
+
+    // Setup screen chips
+    document.querySelectorAll('#vqScopeChips .vq-chip').forEach(btn => {
+      btn.onclick = () => {
+        document.querySelectorAll('#vqScopeChips .vq-chip').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        state.vocabQuiz.scope = btn.dataset.scope;
+      };
+    });
+
+    document.querySelectorAll('#vqTypeChips .vq-chip').forEach(btn => {
+      btn.onclick = () => {
+        document.querySelectorAll('#vqTypeChips .vq-chip').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        state.vocabQuiz.type = btn.dataset.type;
+      };
+    });
+
+    document.querySelectorAll('#vqCountChips .vq-chip').forEach(btn => {
+      btn.onclick = () => {
+        document.querySelectorAll('#vqCountChips .vq-chip').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        state.vocabQuiz.count = btn.dataset.count;
+      };
+    });
+
+    const btnStartQuiz = document.getElementById('btnStartVocabQuiz');
+    if (btnStartQuiz) {
+      btnStartQuiz.onclick = startVocabQuiz;
+    }
+
+    const btnQuitQuiz = document.getElementById('btnQuitVocabQuiz');
+    if (btnQuitQuiz) {
+      btnQuitQuiz.onclick = () => {
+        if (confirm('Bạn có chắc muốn dừng bài kiểm tra này không?')) {
+          initVocabQuizView();
+        }
+      };
+    }
+
+    const btnRetryQuiz = document.getElementById('btnRetryVocabQuiz');
+    if (btnRetryQuiz) {
+      btnRetryQuiz.onclick = initVocabQuizView;
+    }
+
+    const btnBackFC = document.getElementById('btnBackToFlashcard');
+    if (btnBackFC) {
+      btnBackFC.onclick = () => switchVocabView('flashcard');
+    }
+
+    function startVocabQuiz() {
+      let pool = [];
+      if (state.vocabQuiz.scope === 'review') {
+        pool = state.flashcardAllList.filter(w => getVocabStatus(w.ko) === 'review');
+      } else if (state.vocabQuiz.scope === 'new') {
+        pool = state.flashcardAllList.filter(w => getVocabStatus(w.ko) === 'new');
+      } else {
+        pool = [...state.flashcardAllList];
+      }
+
+      if (pool.length < 2) {
+        alert('Phạm vi đã chọn có quá ít từ vựng để tạo bài kiểm tra (cần ít nhất 2 từ). Vui lòng chọn phạm vi "Tất cả từ trong bài".');
+        return;
+      }
+
+      const shuffled = [...pool].sort(() => Math.random() - 0.5);
+      let numQ = state.vocabQuiz.count;
+      if (numQ === 'max' || parseInt(numQ, 10) > shuffled.length) {
+        numQ = shuffled.length;
+      } else {
+        numQ = parseInt(numQ, 10);
+      }
+
+      const selectedWords = shuffled.slice(0, numQ);
+
+      state.vocabQuiz.questions = selectedWords.map(targetWord => {
+        let qType = state.vocabQuiz.type;
+        if (qType === 'mixed') {
+          const types = ['ko2vi', 'vi2ko'];
+          if (Array.isArray(targetWord.examples) && targetWord.examples.length > 0) {
+            types.push('cloze');
+          }
+          qType = types[Math.floor(Math.random() * types.length)];
+        } else if (qType === 'cloze' && (!targetWord.examples || targetWord.examples.length === 0)) {
+          qType = 'ko2vi';
+        }
+
+        const otherWords = state.flashcardAllList.filter(w => w.ko !== targetWord.ko).sort(() => Math.random() - 0.5);
+        const distractors = otherWords.slice(0, 3);
+
+        let questionText = '';
+        let questionSub = '';
+        let correctOption = '';
+        let options = [];
+        let typeBadge = '';
+        let audioKo = targetWord.ko;
+        let image = targetWord.image || null;
+
+        if (qType === 'ko2vi') {
+          typeBadge = '🇰🇷 ➔ 🇻🇳 Hàn sang Việt';
+          questionText = targetWord.ko;
+          questionSub = targetWord.hanja ? `Âm Hán: ${targetWord.hanja} · Chọn nghĩa tiếng Việt đúng:` : 'Chọn nghĩa tiếng Việt đúng:';
+          correctOption = targetWord.vi;
+          options = [targetWord.vi, ...distractors.map(d => d.vi)];
+        } else if (qType === 'vi2ko') {
+          typeBadge = '🇻🇳 ➔ 🇰🇷 Việt sang Hàn';
+          questionText = targetWord.vi;
+          questionSub = targetWord.en ? `English: ${targetWord.en} · Chọn từ tiếng Hàn đúng:` : 'Chọn từ tiếng Hàn đúng:';
+          correctOption = targetWord.ko;
+          options = [targetWord.ko, ...distractors.map(d => d.ko)];
+          audioKo = null;
+        } else if (qType === 'cloze') {
+          typeBadge = '📝 Điền câu ví dụ';
+          const ex = targetWord.examples[0];
+          const wordStem = targetWord.ko.replace(/(다|하다|되다|거리다)$/, '');
+          let clozeKo = ex.ko;
+          if (wordStem.length >= 2 && clozeKo.includes(wordStem)) {
+            clozeKo = clozeKo.split(wordStem).join('[ _____ ]');
+          } else {
+            clozeKo = `[ _____ ] : ${ex.ko}`;
+          }
+          questionText = clozeKo;
+          questionSub = `Dịch nghĩa: "${ex.vi}" · Chọn từ phù hợp:`;
+          correctOption = targetWord.ko;
+          options = [targetWord.ko, ...distractors.map(d => d.ko)];
+          audioKo = null;
+        }
+
+        options = options.sort(() => Math.random() - 0.5);
+
+        return {
+          targetWord,
+          qType,
+          typeBadge,
+          questionText,
+          questionSub,
+          audioKo,
+          image,
+          correctOption,
+          options
+        };
+      });
+
+      state.vocabQuiz.currentIndex = 0;
+      state.vocabQuiz.score = 0;
+      state.vocabQuiz.results = [];
+      state.vocabQuiz.answered = false;
+
+      document.getElementById('vqSetupScreen').style.display = 'none';
+      document.getElementById('vqResultScreen').style.display = 'none';
+      document.getElementById('vqPlayScreen').style.display = 'block';
+
+      renderVocabQuizQuestion();
+    }
+
+    function renderVocabQuizQuestion() {
+      const q = state.vocabQuiz.questions[state.vocabQuiz.currentIndex];
+      const total = state.vocabQuiz.questions.length;
+      state.vocabQuiz.answered = false;
+
+      document.getElementById('vqQuestionProgress').textContent = `Câu ${state.vocabQuiz.currentIndex + 1} / ${total}`;
+      document.getElementById('vqCurrentScoreBadge').textContent = `Đúng: ${state.vocabQuiz.score}`;
+      const percent = Math.round(((state.vocabQuiz.currentIndex) / total) * 100);
+      document.getElementById('vqProgressBarFill').style.width = `${percent}%`;
+
+      document.getElementById('vqQuestionTypeBadge').textContent = q.typeBadge;
+      document.getElementById('vqQuestionTitle').textContent = q.questionText;
+      document.getElementById('vqQuestionSub').textContent = q.questionSub;
+
+      const audioBtn = document.getElementById('vqQuestionAudioBtn');
+      if (q.audioKo) {
+        audioBtn.style.display = 'inline-flex';
+        audioBtn.onclick = () => speakText(q.audioKo);
+      } else {
+        audioBtn.style.display = 'none';
+      }
+
+      const imgWrap = document.getElementById('vqImageWrap');
+      const qImg = document.getElementById('vqQuestionImg');
+      if (q.image) {
+        qImg.src = q.image;
+        imgWrap.style.display = 'block';
+      } else {
+        imgWrap.style.display = 'none';
+      }
+
+      const optContainer = document.getElementById('vqOptionsContainer');
+      optContainer.innerHTML = '';
+      const letters = ['A', 'B', 'C', 'D'];
+
+      q.options.forEach((optText, optIdx) => {
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'vq-opt-btn';
+        btn.innerHTML = `
+          <span class="vq-opt-prefix">${letters[optIdx]}</span>
+          <span style="flex:1;">${optText}</span>
+        `;
+        btn.onclick = () => handleVocabQuizAnswer(optIdx, optText, q);
+        optContainer.appendChild(btn);
+      });
+
+      document.getElementById('vqFeedbackBox').style.display = 'none';
+      document.getElementById('btnNextVocabQuestion').style.display = 'none';
+    }
+
+    function handleVocabQuizAnswer(chosenIdx, chosenText, q) {
+      if (state.vocabQuiz.answered) return;
+      state.vocabQuiz.answered = true;
+
+      const isCorrect = (chosenText === q.correctOption);
+      const optButtons = document.querySelectorAll('.vq-opt-btn');
+
+      optButtons.forEach(btn => {
+        btn.disabled = true;
+        const text = btn.querySelector('span:nth-child(2)').textContent;
+        if (text === q.correctOption) {
+          btn.classList.add('correct');
+        } else if (text === chosenText && !isCorrect) {
+          btn.classList.add('wrong');
+        }
+      });
+
+      const feedbackBox = document.getElementById('vqFeedbackBox');
+      feedbackBox.style.display = 'block';
+
+      if (isCorrect) {
+        state.vocabQuiz.score++;
+        document.getElementById('vqCurrentScoreBadge').textContent = `Đúng: ${state.vocabQuiz.score}`;
+        feedbackBox.style.background = '#dcfce7';
+        feedbackBox.style.border = '1px solid #86efac';
+        feedbackBox.style.color = '#15803d';
+        feedbackBox.innerHTML = `<b>✓ Chính xác!</b> Từ <b>${q.targetWord.ko}</b>: ${q.targetWord.vi}.`;
+        speakText(q.targetWord.ko);
+      } else {
+        setVocabStatus(q.targetWord.ko, 'review');
+        feedbackBox.style.background = '#fee2e2';
+        feedbackBox.style.border = '1px solid #fca5a5';
+        feedbackBox.style.color = '#991b1b';
+        feedbackBox.innerHTML = `
+          <b>✗ Chưa chính xác.</b><br>
+          Đáp án đúng là: <b style="color:#15803d;">${q.correctOption}</b><br>
+          <span style="font-size:0.85rem; color:#475569;">(${q.targetWord.ko} = ${q.targetWord.vi}) ➔ Đã tự động đánh dấu ⚡ "Cần ôn lại" vào Anki.</span>
+        `;
+        speakText(q.targetWord.ko);
+      }
+
+      state.vocabQuiz.results.push({
+        word: q.targetWord,
+        qType: q.qType,
+        isCorrect,
+        chosenText,
+        correctOption: q.correctOption
+      });
+
+      const nextBtn = document.getElementById('btnNextVocabQuestion');
+      const isLast = (state.vocabQuiz.currentIndex >= state.vocabQuiz.questions.length - 1);
+      nextBtn.textContent = isLast ? 'Hoàn thành bài thi 🏆' : 'Câu tiếp theo →';
+      nextBtn.style.display = 'inline-block';
+      nextBtn.onclick = () => {
+        if (isLast) {
+          finishVocabQuiz();
+        } else {
+          state.vocabQuiz.currentIndex++;
+          renderVocabQuizQuestion();
+        }
+      };
+    }
+
+    function finishVocabQuiz() {
+      document.getElementById('vqPlayScreen').style.display = 'none';
+      document.getElementById('vqResultScreen').style.display = 'block';
+
+      const total = state.vocabQuiz.questions.length;
+      const score = state.vocabQuiz.score;
+      const percent = Math.round((score / total) * 100);
+
+      document.getElementById('vqResultScore').textContent = `${score} / ${total} (${percent}%)`;
+
+      const trophy = document.getElementById('vqResultTrophy');
+      const title = document.getElementById('vqResultTitle');
+      const sub = document.getElementById('vqResultSubtitle');
+
+      if (percent >= 90) {
+        trophy.textContent = '🏆';
+        title.textContent = 'Xuất sắc tuyệt đối!';
+        sub.textContent = 'Bạn đã làm chủ gần như toàn bộ từ vựng của bài học này. Hãy tiếp tục giữ vững phong độ nhé!';
+      } else if (percent >= 70) {
+        trophy.textContent = '🎉';
+        title.textContent = 'Kết quả rất tốt!';
+        sub.textContent = 'Bạn nhớ được phần lớn từ vựng. Hãy xem lại các câu chưa đúng bên dưới để hoàn thiện 100% nhé.';
+      } else {
+        trophy.textContent = '💪';
+        title.textContent = 'Cần cố gắng thêm!';
+        sub.textContent = 'Có một số từ vựng bạn hay quên. Hệ thống đã đánh dấu chúng vào danh sách "Cần ôn lại" để bạn ôn qua Flashcard.';
+      }
+
+      const breakdown = document.getElementById('vqResultBreakdown');
+      breakdown.innerHTML = '';
+
+      const wrongItems = state.vocabQuiz.results.filter(r => !r.isCorrect);
+      const retryWrongBtn = document.getElementById('btnRetryWrongOnly');
+      if (wrongItems.length > 0) {
+        retryWrongBtn.style.display = 'inline-block';
+        retryWrongBtn.textContent = `⚡ Làm lại ${wrongItems.length} câu sai`;
+        retryWrongBtn.onclick = () => {
+          state.vocabQuiz.questions = wrongItems.map(r => {
+            const targetWord = r.word;
+            const otherWords = state.flashcardAllList.filter(w => w.ko !== targetWord.ko).sort(() => Math.random() - 0.5);
+            const distractors = otherWords.slice(0, 3);
+            let options = [targetWord.vi, ...distractors.map(d => d.vi)].sort(() => Math.random() - 0.5);
+            return {
+              targetWord,
+              qType: 'ko2vi',
+              typeBadge: '⚡ Ôn lại câu sai',
+              questionText: targetWord.ko,
+              questionSub: 'Chọn nghĩa tiếng Việt đúng:',
+              audioKo: targetWord.ko,
+              image: targetWord.image || null,
+              correctOption: targetWord.vi,
+              options
+            };
+          });
+          state.vocabQuiz.currentIndex = 0;
+          state.vocabQuiz.score = 0;
+          state.vocabQuiz.results = [];
+          state.vocabQuiz.answered = false;
+          document.getElementById('vqResultScreen').style.display = 'none';
+          document.getElementById('vqPlayScreen').style.display = 'block';
+          renderVocabQuizQuestion();
+        };
+      } else {
+        retryWrongBtn.style.display = 'none';
+      }
+
+      state.vocabQuiz.results.forEach((r, idx) => {
+        const item = document.createElement('div');
+        item.style.padding = '8px 12px';
+        item.style.marginBottom = '6px';
+        item.style.borderRadius = '8px';
+        item.style.fontSize = '0.9rem';
+        item.style.display = 'flex';
+        item.style.justifyContent = 'space-between';
+        item.style.alignItems = 'center';
+        item.style.background = r.isCorrect ? '#f0fdf4' : '#fef2f2';
+        item.style.border = r.isCorrect ? '1px solid #bbf7d0' : '1px solid #fecaca';
+
+        item.innerHTML = `
+          <div style="display:flex; align-items:center; gap:8px;">
+            <span style="font-weight:700; color:${r.isCorrect ? '#166534' : '#991b1b'};">${r.isCorrect ? '✓' : '✗'} ${idx + 1}.</span>
+            <button class="btn-audio" style="width:20px; height:20px; font-size:0.65rem;" onclick="speakText('${r.word.ko.replace(/'/g, "\\'")}')">🔊</button>
+            <b style="color:#0f172a;">${r.word.ko}</b>
+            <span style="color:#475569;">(${r.word.vi})</span>
+          </div>
+          <div>
+            ${r.isCorrect ? `<span style="color:#15803d; font-size:0.82rem; font-weight:600;">Chính xác</span>` : `<span style="color:#b91c1c; font-size:0.82rem;">Bạn chọn: ${r.chosenText}</span>`}
+          </div>
+        `;
+        breakdown.appendChild(item);
+      });
+
+      applyFlashcardFilter();
+      const lesson = getLesson(state.course, state.lessonId);
+      if (lesson) renderVocabulary(lesson, false);
+    }
 
     // Dialogue Controls
     elements.btnStopAudio.onclick = stopSpeaking;
