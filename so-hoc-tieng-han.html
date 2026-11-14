@@ -2868,6 +2868,92 @@
       btnBackFC.onclick = () => switchVocabView('flashcard');
     }
 
+
+    // Helper functions for Hangul parsing and Cloze blanking
+    function decomposeHangul(char) {
+      const code = char.charCodeAt(0) - 0xAC00;
+      if (code < 0 || code > 11171) return null;
+      return {
+        initial: Math.floor(code / (21 * 28)),
+        medial: Math.floor((code % (21 * 28)) / 28),
+        final: code % 28
+      };
+    }
+
+    function composeHangul(initial, medial, final = 0) {
+      return String.fromCharCode(0xAC00 + (initial * 21 * 28) + (medial * 28) + final);
+    }
+
+    function getHangulStems(ko) {
+      const stems = new Set();
+      const raw = ko.replace(/(다|하다|되다|거리다|나다)$/, '').trim();
+      if (raw) stems.add(raw);
+      if (raw.length >= 2) stems.add(raw.slice(0, -1));
+
+      // 1. Remove final batchim from last char (e.g. 껍 -> 꺼)
+      if (raw.length > 0) {
+        const lastChar = raw[raw.length - 1];
+        const d = decomposeHangul(lastChar);
+        if (d && d.final !== 0) {
+          const noFinal = raw.slice(0, -1) + composeHangul(d.initial, d.medial, 0);
+          stems.add(noFinal);
+        }
+      }
+
+      // 2. 르 irregular (서두르 -> 서둘)
+      if (raw.endsWith('르') && raw.length >= 2) {
+        const prevChar = raw[raw.length - 2];
+        const d = decomposeHangul(prevChar);
+        if (d && d.final === 0) {
+          const withR = raw.slice(0, -2) + composeHangul(d.initial, d.medial, 8);
+          stems.add(withR);
+        }
+      }
+
+      // 3. Multi-word phrases
+      const parts = ko.split(/\s+/);
+      parts.forEach(p => {
+        const s = p.replace(/(다|하다|되다|을|를|이|가|에|의)$/, '').trim();
+        if (s.length >= 1) stems.add(s);
+      });
+
+      return Array.from(stems);
+    }
+
+    function generateClozeSentence(targetWord) {
+      if (!targetWord.examples || targetWord.examples.length === 0) return null;
+      const ex = targetWord.examples[0];
+      const sentence = ex.ko;
+      const blankSpan = '<span style="color:#0284c7; font-weight:800; background:#e0f2fe; padding:2px 10px; border-radius:6px; border:2px dashed #0284c7;">[ ______ ]</span>';
+
+      if (sentence.includes(targetWord.ko)) {
+        return { clozeKo: sentence.replace(targetWord.ko, blankSpan), ex };
+      }
+
+      const stems = getHangulStems(targetWord.ko);
+      const tokens = sentence.split(/([\s,.!?;:]+)/);
+
+      for (const s of stems) {
+        if (!s) continue;
+        for (let i = 0; i < tokens.length; i++) {
+          const t = tokens[i].trim();
+          if (!t) continue;
+          if (t === s || t.startsWith(s)) {
+            tokens[i] = blankSpan;
+            return { clozeKo: tokens.join(''), ex };
+          }
+        }
+      }
+
+      for (const s of stems) {
+        if (s.length >= 2 && sentence.includes(s)) {
+          return { clozeKo: sentence.replace(s, blankSpan), ex };
+        }
+      }
+
+      return null;
+    }
+
     function startVocabQuiz() {
       let pool = [];
       if (state.vocabQuiz.scope === 'review') {
@@ -2966,20 +3052,33 @@
           options = [targetWord.ko, ...distractors.map(d => d.ko)];
           audioKo = null;
         } else if (qType === 'cloze') {
-          typeBadge = '📝 Điền câu ví dụ';
-          const ex = targetWord.examples[0];
-          const wordStem = targetWord.ko.replace(/(다|하다|되다|거리다)$/, '');
-          let clozeKo = ex.ko;
-          if (wordStem.length >= 2 && clozeKo.includes(wordStem)) {
-            clozeKo = clozeKo.split(wordStem).join('[ _____ ]');
+          const clozeData = generateClozeSentence(targetWord);
+          if (clozeData) {
+            typeBadge = '📝 Điền từ vào câu ví dụ';
+            const ex = clozeData.ex;
+            questionText = clozeData.clozeKo;
+            questionSub = `
+              <div style="margin-top:6px; font-size:0.95rem; color:#0f172a;">
+                👉 <b>Nghĩa của từ cần điền:</b> <span style="display:inline-block; font-weight:700; color:#0369a1; background:#e0f2fe; padding:2px 10px; border-radius:6px; font-size:1.02rem;">"${targetWord.vi}"</span>
+              </div>
+              <div style="margin-top:5px; font-size:0.86rem; color:#64748b; line-height:1.45;">
+                💬 <b>Dịch cả câu:</b> "${ex.vi}"
+              </div>
+              <div style="margin-top:4px; font-size:0.85rem; font-weight:600; color:#0f766e;">
+                Chọn từ tiếng Hàn nguyên thể phù hợp để điền vào chỗ trống:
+              </div>
+            `;
+            correctOption = targetWord.ko;
+            options = [targetWord.ko, ...distractors.map(d => d.ko)];
+            audioKo = null;
           } else {
-            clozeKo = `[ _____ ] : ${ex.ko}`;
+            qType = 'ko2vi';
+            typeBadge = '🇰🇷 ➔ 🇻🇳 Hàn sang Việt';
+            questionText = targetWord.ko;
+            questionSub = targetWord.hanja ? `Âm Hán: ${targetWord.hanja} · Chọn nghĩa tiếng Việt đúng:` : 'Chọn nghĩa tiếng Việt đúng:';
+            correctOption = targetWord.vi;
+            options = [targetWord.vi, ...distractors.map(d => d.vi)];
           }
-          questionText = clozeKo;
-          questionSub = `Dịch nghĩa: "${ex.vi}" · Chọn từ phù hợp:`;
-          correctOption = targetWord.ko;
-          options = [targetWord.ko, ...distractors.map(d => d.ko)];
-          audioKo = null;
         }
 
         options = options.sort(() => Math.random() - 0.5);
@@ -3026,8 +3125,29 @@
       } else {
         typeBadgeEl.textContent = q.typeBadge;
       }
-      document.getElementById('vqQuestionTitle').textContent = q.questionText;
-      document.getElementById('vqQuestionSub').textContent = q.questionSub;
+      const titleEl = document.getElementById('vqQuestionTitle');
+      const subEl = document.getElementById('vqQuestionSub');
+      titleEl.innerHTML = q.questionText;
+      subEl.innerHTML = q.questionSub;
+
+      if (q.qType === 'cloze') {
+        titleEl.style.fontSize = '1.25rem';
+        titleEl.style.lineHeight = '1.6';
+        titleEl.style.textAlign = 'left';
+        titleEl.style.padding = '8px 12px';
+        titleEl.style.background = '#f8fafc';
+        titleEl.style.borderRadius = '8px';
+        titleEl.style.border = '1px solid #e2e8f0';
+        subEl.style.textAlign = 'left';
+      } else {
+        titleEl.style.fontSize = '1.8rem';
+        titleEl.style.lineHeight = '1.3';
+        titleEl.style.textAlign = 'center';
+        titleEl.style.padding = '0';
+        titleEl.style.background = 'transparent';
+        titleEl.style.border = 'none';
+        subEl.style.textAlign = 'center';
+      }
 
       const audioBtn = document.getElementById('vqQuestionAudioBtn');
       if (q.audioKo) {
@@ -3097,17 +3217,26 @@
           setVocabStatus(q.targetWord.ko, 'mastered');
           reviewNote = `<div style="margin-top:6px; font-size:0.85rem; color:#166534; font-weight:600;">🎉 Tuyệt vời! Bạn đã vượt qua từ từng làm sai (Hệ thống đã nâng cấp sang "Đã thuộc").</div>`;
         }
-        feedbackBox.innerHTML = `<b>✓ Chính xác!</b> Từ <b>${q.targetWord.ko}</b>: ${q.targetWord.vi}.${reviewNote}`;
+        let sentenceNote = '';
+        if (q.qType === 'cloze' && q.targetWord.examples && q.targetWord.examples[0]) {
+          sentenceNote = `<div style="margin-top:6px; font-size:0.88rem; color:#166534; background:#f0fdf4; padding:6px 10px; border-radius:6px; border:1px solid #bbf7d0;">💬 <b>Câu đầy đủ:</b> ${q.targetWord.examples[0].ko}</div>`;
+        }
+        feedbackBox.innerHTML = `<b>✓ Chính xác!</b> Từ <b>${q.targetWord.ko}</b>: ${q.targetWord.vi}.${sentenceNote}${reviewNote}`;
         speakText(q.targetWord.ko);
       } else {
         setVocabStatus(q.targetWord.ko, 'review');
         feedbackBox.style.background = '#fee2e2';
         feedbackBox.style.border = '1px solid #fca5a5';
         feedbackBox.style.color = '#991b1b';
+        let sentenceWrongNote = '';
+        if (q.qType === 'cloze' && q.targetWord.examples && q.targetWord.examples[0]) {
+          sentenceWrongNote = `<div style="margin-top:6px; font-size:0.88rem; color:#991b1b; background:#fef2f2; padding:6px 10px; border-radius:6px; border:1px solid #fecaca;">💬 <b>Câu đầy đủ:</b> ${q.targetWord.examples[0].ko}</div>`;
+        }
         feedbackBox.innerHTML = `
           <b>✗ Chưa chính xác.</b><br>
-          Đáp án đúng là: <b style="color:#15803d;">${q.correctOption}</b><br>
+          Đáp án đúng là: <b style="color:#15803d; font-size:1.05rem;">${q.correctOption}</b><br>
           <span style="font-size:0.85rem; color:#475569;">(${q.targetWord.ko} = ${q.targetWord.vi}) ➔ Đã tự động đánh dấu ⚡ "Cần ôn lại" vào Anki.</span>
+          ${sentenceWrongNote}
         `;
         speakText(q.targetWord.ko);
       }
