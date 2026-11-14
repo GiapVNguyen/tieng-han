@@ -448,6 +448,215 @@
       background: #f1f5f9;
     }
 
+    /* Anki Flashcard Dashboard & Controls */
+    .anki-dashboard {
+      background: #f8faf9;
+      border: 1px solid #dcf0e4;
+      border-radius: 12px;
+      padding: 14px 16px;
+      margin-bottom: 16px;
+    }
+    .anki-filter-bar {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+    .anki-filter-btn {
+      padding: 6px 14px;
+      border-radius: 20px;
+      border: 1px solid #d1d5db;
+      background: #ffffff;
+      color: #374151;
+      font-size: 0.88rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.15s ease;
+    }
+    .anki-filter-btn:hover {
+      border-color: var(--primary);
+      background: #f0fdf4;
+    }
+    .anki-filter-btn.active {
+      background: var(--primary);
+      color: #ffffff;
+      border-color: var(--primary);
+      box-shadow: 0 2px 6px rgba(4, 120, 87, 0.2);
+    }
+    .anki-filter-btn .badge-count {
+      font-size: 0.75rem;
+      padding: 1px 7px;
+      border-radius: 10px;
+      background: #f1f5f9;
+      color: #475569;
+      font-weight: 700;
+    }
+    .anki-filter-btn.active .badge-count {
+      background: rgba(255,255,255,0.25);
+      color: #ffffff;
+    }
+    .badge-count.count-review {
+      background: #fee2e2;
+      color: #b91c1c;
+    }
+    .badge-count.count-mastered {
+      background: #dcfce7;
+      color: #15803d;
+    }
+    .badge-count.count-new {
+      background: #f1f5f9;
+      color: #64748b;
+    }
+    .anki-progress-bar-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .anki-progress-bar {
+      height: 9px;
+      background: #e2e8f0;
+      border-radius: 6px;
+      overflow: hidden;
+      display: flex;
+    }
+    .progress-segment {
+      height: 100%;
+      transition: width 0.3s ease;
+    }
+    .seg-mastered {
+      background: #22c55e;
+    }
+    .seg-review {
+      background: #ef4444;
+    }
+    .seg-new {
+      background: #cbd5e1;
+    }
+    .anki-stats-text {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.82rem;
+      color: #64748b;
+      font-weight: 500;
+    }
+    .btn-text-sm {
+      background: none;
+      border: none;
+      color: #047857;
+      font-size: 0.82rem;
+      cursor: pointer;
+      text-decoration: underline;
+      padding: 0;
+      font-weight: 600;
+    }
+    .btn-text-sm:hover {
+      color: #065f46;
+    }
+    .fc-status-pill {
+      position: absolute;
+      top: 14px;
+      right: 16px;
+      font-size: 0.74rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      z-index: 2;
+    }
+    .status-mastered {
+      background: #dcfce7;
+      color: #15803d;
+      border: 1px solid #86efac;
+    }
+    .status-review {
+      background: #fee2e2;
+      color: #b91c1c;
+      border: 1px solid #fca5a5;
+    }
+    .status-new {
+      background: #f1f5f9;
+      color: #64748b;
+      border: 1px solid #cbd5e1;
+    }
+    .anki-action-bar {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      margin-top: 14px;
+      max-width: 520px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .anki-action-btn {
+      flex: 1;
+      padding: 10px 16px;
+      border-radius: 10px;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      transition: all 0.15s ease;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    }
+    .anki-action-btn:active {
+      transform: scale(0.97);
+    }
+    .btn-again {
+      background: #fff5f5;
+      border: 1.5px solid #fca5a5;
+      color: #991b1b;
+    }
+    .btn-again:hover {
+      background: #fee2e2;
+      border-color: #ef4444;
+    }
+    .btn-good {
+      background: #f0fdf4;
+      border: 1.5px solid #86efac;
+      color: #166534;
+    }
+    .btn-good:hover {
+      background: #dcfce7;
+      border-color: #22c55e;
+    }
+    .anki-btn-text {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      line-height: 1.25;
+    }
+    .anki-main {
+      font-size: 0.96rem;
+      font-weight: 700;
+    }
+    .anki-sub {
+      font-size: 0.72rem;
+      opacity: 0.85;
+      font-weight: 500;
+    }
+    .tbl-status-badge {
+      display: inline-block;
+      padding: 3px 9px;
+      border-radius: 12px;
+      font-size: 0.74rem;
+      font-weight: 700;
+      cursor: pointer;
+      user-select: none;
+      transition: all 0.15s ease;
+      white-space: nowrap;
+    }
+    .tbl-status-badge:hover {
+      filter: brightness(0.93);
+      transform: scale(1.05);
+    }
+
     /* Vocabulary Table */
     .vocab-table {
       width: 100%;
@@ -908,28 +1117,89 @@
 
           <!-- Flashcard View -->
           <div id="flashcardArea" style="display:none;">
-            <div class="flashcard-wrapper">
-              <div class="flashcard" id="flashcardElement" title="Bấm để lật thẻ">
-                <div class="card-face card-front">
-                  <img id="fcImageFront" class="card-img" style="display:none; max-height:100px; max-width:180px; object-fit:cover; border-radius:8px; margin-bottom:8px; box-shadow:0 2px 8px rgba(0,0,0,0.1);" alt="Minh họa">
-                  <div class="word-ko" id="fcWordKo">단어</div>
-                  <button class="btn-audio" id="fcAudioBtn" title="Phát âm">🔊</button>
-                  <p class="word-hint" style="margin-top:10px;">(Nhấp vào thẻ để xem nghĩa tiếng Việt & ví dụ)</p>
+            <!-- Anki Dashboard & Filter Bar -->
+            <div class="anki-dashboard">
+              <div class="anki-filter-bar">
+                <button class="anki-filter-btn active" data-filter="all" id="btnFilterAll">
+                  📋 Tất cả <span class="badge-count" id="countAll">0</span>
+                </button>
+                <button class="anki-filter-btn" data-filter="review" id="btnFilterReview">
+                  ⚡ Cần ôn lại <span class="badge-count count-review" id="countReview">0</span>
+                </button>
+                <button class="anki-filter-btn" data-filter="mastered" id="btnFilterMastered">
+                  ✓ Đã thuộc <span class="badge-count count-mastered" id="countMastered">0</span>
+                </button>
+                <button class="anki-filter-btn" data-filter="new" id="btnFilterNew">
+                  ○ Chưa học <span class="badge-count count-new" id="countNew">0</span>
+                </button>
+              </div>
+              <div class="anki-progress-bar-wrapper">
+                <div class="anki-progress-bar">
+                  <div class="progress-segment seg-mastered" id="barMastered" style="width:0%;"></div>
+                  <div class="progress-segment seg-review" id="barReview" style="width:0%;"></div>
+                  <div class="progress-segment seg-new" id="barNew" style="width:100%;"></div>
                 </div>
-                <div class="card-face card-back" style="overflow-y:auto; justify-content:flex-start; padding:18px 20px;">
-                  <img id="fcImageBack" class="card-img" style="display:none; max-height:80px; max-width:150px; object-fit:cover; border-radius:8px; margin-bottom:6px; box-shadow:0 2px 8px rgba(0,0,0,0.1);" alt="Minh họa">
-                  <div class="word-vi" id="fcWordVi">Ý nghĩa</div>
-                  <div class="word-en" id="fcWordEn" style="font-size:0.95rem; color:#1d4ed8; font-weight:600; margin-bottom:4px;">English</div>
-                  <div class="word-hanja" id="fcWordHanja">Hán Hàn</div>
-                  <div class="word-examples-container" id="fcWordExamples" style="font-size:0.86rem; text-align:left; width:100%; margin-top:8px;"></div>
+                <div class="anki-stats-text">
+                  <span id="ankiPercentMastered">0% đã thuộc (0 / 0 từ)</span>
+                  <button class="btn-text-sm" id="btnResetProgress" title="Đặt lại tiến độ ghi nhớ bài này">🔄 Đặt lại tiến độ bài</button>
                 </div>
               </div>
             </div>
-            <div class="flashcard-nav">
-              <button class="btn-card" id="fcPrev">← Thẻ trước</button>
-              <span id="fcCounter" style="font-size:0.9rem; font-weight:600; color:var(--text-muted);">1 / 10</span>
-              <button class="btn-card" id="fcNext">Thẻ tiếp →</button>
-              <button class="btn-card" id="fcShuffle">Xáo trộn</button>
+
+            <!-- Empty State if filter has 0 cards -->
+            <div id="fcEmptyState" style="display:none; text-align:center; padding:30px 20px; background:#f9fafb; border-radius:14px; border:2px dashed #cbd5e1; margin:20px 0;">
+              <div style="font-size:2rem; margin-bottom:8px;">🎉</div>
+              <h3 style="font-size:1.1rem; color:#17523d; margin-bottom:6px;" id="fcEmptyTitle">Không có thẻ nào</h3>
+              <p style="color:#64748b; font-size:0.9rem; margin-bottom:14px;" id="fcEmptySub">Bạn đã hoàn thành mục này hoặc chưa có từ nào.</p>
+              <button class="btn-action" id="btnEmptyViewAll">Xem tất cả thẻ</button>
+            </div>
+
+            <!-- Card Body Container -->
+            <div id="fcCardContainer">
+              <div class="flashcard-wrapper">
+                <div class="flashcard" id="flashcardElement" title="Bấm để lật thẻ (hoặc phím Space)">
+                  <div class="card-face card-front">
+                    <span class="fc-status-pill status-new" id="fcStatusPillFront">○ Chưa học</span>
+                    <img id="fcImageFront" class="card-img" style="display:none; max-height:100px; max-width:180px; object-fit:cover; border-radius:8px; margin-bottom:8px; box-shadow:0 2px 8px rgba(0,0,0,0.1);" alt="Minh họa">
+                    <div class="word-ko" id="fcWordKo">단어</div>
+                    <button class="btn-audio" id="fcAudioBtn" title="Phát âm">🔊</button>
+                    <p class="word-hint" style="margin-top:10px;">(Bấm vào thẻ hoặc phím Space để xem nghĩa & ví dụ)</p>
+                  </div>
+                  <div class="card-face card-back" style="overflow-y:auto; justify-content:flex-start; padding:18px 20px;">
+                    <span class="fc-status-pill status-new" id="fcStatusPillBack">○ Chưa học</span>
+                    <img id="fcImageBack" class="card-img" style="display:none; max-height:80px; max-width:150px; object-fit:cover; border-radius:8px; margin-bottom:6px; box-shadow:0 2px 8px rgba(0,0,0,0.1);" alt="Minh họa">
+                    <div class="word-vi" id="fcWordVi">Ý nghĩa</div>
+                    <div class="word-en" id="fcWordEn" style="font-size:0.95rem; color:#1d4ed8; font-weight:600; margin-bottom:4px;">English</div>
+                    <div class="word-hanja" id="fcWordHanja">Hán Hàn</div>
+                    <div class="word-examples-container" id="fcWordExamples" style="font-size:0.86rem; text-align:left; width:100%; margin-top:8px;"></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Anki Action Bar: Đánh giá thẻ -->
+              <div class="anki-action-bar" id="ankiActionBar">
+                <button class="anki-action-btn btn-again" id="btnAgain" title="Chưa thuộc - Đưa vào danh sách Cần ôn lại (Phím 1)">
+                  <span class="anki-icon">🔴</span>
+                  <div class="anki-btn-text">
+                    <span class="anki-main">Chưa thuộc</span>
+                    <span class="anki-sub">Cần ôn lại (Phím 1)</span>
+                  </div>
+                </button>
+                <button class="anki-action-btn btn-good" id="btnGood" title="Đã nhớ rõ - Đánh dấu Đã thuộc (Phím 2)">
+                  <span class="anki-icon">🟢</span>
+                  <div class="anki-btn-text">
+                    <span class="anki-main">Đã thuộc</span>
+                    <span class="anki-sub">Thuộc rồi (Phím 2)</span>
+                  </div>
+                </button>
+              </div>
+
+              <div class="flashcard-nav">
+                <button class="btn-card" id="fcPrev">← Thẻ trước</button>
+                <span id="fcCounter" style="font-size:0.9rem; font-weight:600; color:var(--text-muted);">1 / 10</span>
+                <button class="btn-card" id="fcNext">Thẻ tiếp →</button>
+                <button class="btn-card" id="fcShuffle">Xáo trộn</button>
+              </div>
             </div>
           </div>
 
@@ -1053,7 +1323,9 @@
       isAllGrammarView: false,
       dialogueIndex: 0,
       flashcardIndex: 0,
+      flashcardAllList: [],
       flashcardList: [],
+      flashcardFilter: 'all',
       isFlipped: false
     };
 
@@ -1096,6 +1368,28 @@
       fcPrev: document.getElementById('fcPrev'),
       fcNext: document.getElementById('fcNext'),
       fcShuffle: document.getElementById('fcShuffle'),
+      btnFilterAll: document.getElementById('btnFilterAll'),
+      btnFilterReview: document.getElementById('btnFilterReview'),
+      btnFilterMastered: document.getElementById('btnFilterMastered'),
+      btnFilterNew: document.getElementById('btnFilterNew'),
+      countAll: document.getElementById('countAll'),
+      countReview: document.getElementById('countReview'),
+      countMastered: document.getElementById('countMastered'),
+      countNew: document.getElementById('countNew'),
+      barMastered: document.getElementById('barMastered'),
+      barReview: document.getElementById('barReview'),
+      barNew: document.getElementById('barNew'),
+      ankiPercentMastered: document.getElementById('ankiPercentMastered'),
+      btnResetProgress: document.getElementById('btnResetProgress'),
+      fcEmptyState: document.getElementById('fcEmptyState'),
+      fcEmptyTitle: document.getElementById('fcEmptyTitle'),
+      fcEmptySub: document.getElementById('fcEmptySub'),
+      btnEmptyViewAll: document.getElementById('btnEmptyViewAll'),
+      fcCardContainer: document.getElementById('fcCardContainer'),
+      fcStatusPillFront: document.getElementById('fcStatusPillFront'),
+      fcStatusPillBack: document.getElementById('fcStatusPillBack'),
+      btnAgain: document.getElementById('btnAgain'),
+      btnGood: document.getElementById('btnGood'),
       dialogueSelectBar: document.getElementById('dialogueSelectBar'),
       btnPlayFullDialogue: document.getElementById('btnPlayFullDialogue'),
       btnStopAudio: document.getElementById('btnStopAudio'),
@@ -1538,10 +1832,155 @@
       }
     };
 
+    // Anki Vocab Storage & Status Management
+    function getWordKey(wordKo, lessonId, course) {
+      return `${course || state.course}_${lessonId || state.lessonId}_${wordKo}`;
+    }
+
+    function getAllVocabStatus() {
+      try {
+        return JSON.parse(localStorage.getItem('korean_anki_vocab_status') || '{}');
+      } catch (e) {
+        return {};
+      }
+    }
+
+    function getVocabStatus(wordKo) {
+      const all = getAllVocabStatus();
+      return all[getWordKey(wordKo)] || 'new';
+    }
+
+    function setVocabStatus(wordKo, status) {
+      try {
+        const all = getAllVocabStatus();
+        all[getWordKey(wordKo)] = status;
+        localStorage.setItem('korean_anki_vocab_status', JSON.stringify(all));
+      } catch (e) {}
+    }
+
+    window.toggleWordStatus = function(wordKo) {
+      const current = getVocabStatus(wordKo);
+      let next = 'new';
+      if (current === 'new') next = 'review';
+      else if (current === 'review') next = 'mastered';
+      else if (current === 'mastered') next = 'new';
+
+      setVocabStatus(wordKo, next);
+      const lesson = getLesson(state.course, state.lessonId);
+      if (lesson) renderVocabulary(lesson, false);
+      applyFlashcardFilter();
+    };
+
+    function resetCurrentLessonVocabStatus() {
+      if (!confirm('Bạn có chắc muốn đặt lại toàn bộ tiến độ ghi nhớ Anki của bài học này?')) return;
+      try {
+        const all = getAllVocabStatus();
+        state.flashcardAllList.forEach(w => {
+          delete all[getWordKey(w.ko)];
+        });
+        localStorage.setItem('korean_anki_vocab_status', JSON.stringify(all));
+        applyFlashcardFilter();
+        const lesson = getLesson(state.course, state.lessonId);
+        if (lesson) renderVocabulary(lesson, false);
+      } catch (e) {}
+    }
+
+    function applyFlashcardFilter(filterName) {
+      if (filterName) state.flashcardFilter = filterName;
+
+      let countMastered = 0;
+      let countReview = 0;
+      let countNew = 0;
+      const total = state.flashcardAllList.length;
+
+      state.flashcardAllList.forEach(w => {
+        const st = getVocabStatus(w.ko);
+        if (st === 'mastered') countMastered++;
+        else if (st === 'review') countReview++;
+        else countNew++;
+      });
+
+      if (elements.countAll) elements.countAll.textContent = total;
+      if (elements.countReview) elements.countReview.textContent = countReview;
+      if (elements.countMastered) elements.countMastered.textContent = countMastered;
+      if (elements.countNew) elements.countNew.textContent = countNew;
+
+      const pMastered = total > 0 ? Math.round((countMastered / total) * 100) : 0;
+      const pReview = total > 0 ? Math.round((countReview / total) * 100) : 0;
+      const pNew = 100 - pMastered - pReview;
+
+      if (elements.barMastered) elements.barMastered.style.width = `${pMastered}%`;
+      if (elements.barReview) elements.barReview.style.width = `${pReview}%`;
+      if (elements.barNew) elements.barNew.style.width = `${pNew}%`;
+      if (elements.ankiPercentMastered) {
+        elements.ankiPercentMastered.textContent = `${pMastered}% đã thuộc (${countMastered} / ${total} từ)`;
+      }
+
+      if (state.flashcardFilter === 'review') {
+        state.flashcardList = state.flashcardAllList.filter(w => getVocabStatus(w.ko) === 'review');
+      } else if (state.flashcardFilter === 'mastered') {
+        state.flashcardList = state.flashcardAllList.filter(w => getVocabStatus(w.ko) === 'mastered');
+      } else if (state.flashcardFilter === 'new') {
+        state.flashcardList = state.flashcardAllList.filter(w => getVocabStatus(w.ko) === 'new');
+      } else {
+        state.flashcardList = [...state.flashcardAllList];
+      }
+
+      const filterBtns = document.querySelectorAll('.anki-filter-btn');
+      filterBtns.forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.filter === state.flashcardFilter);
+      });
+
+      state.flashcardIndex = 0;
+      updateFlashcardView();
+    }
+
+    function markCardStatus(status) {
+      if (!state.flashcardList || state.flashcardList.length === 0) return;
+      const cur = state.flashcardList[state.flashcardIndex];
+      if (!cur) return;
+
+      setVocabStatus(cur.ko, status);
+
+      // Re-filter or advance
+      if (state.flashcardFilter !== 'all') {
+        applyFlashcardFilter(state.flashcardFilter);
+      } else {
+        let countMastered = 0, countReview = 0, countNew = 0;
+        const total = state.flashcardAllList.length;
+        state.flashcardAllList.forEach(w => {
+          const st = getVocabStatus(w.ko);
+          if (st === 'mastered') countMastered++;
+          else if (st === 'review') countReview++;
+          else countNew++;
+        });
+        if (elements.countAll) elements.countAll.textContent = total;
+        if (elements.countReview) elements.countReview.textContent = countReview;
+        if (elements.countMastered) elements.countMastered.textContent = countMastered;
+        if (elements.countNew) elements.countNew.textContent = countNew;
+        const pMastered = total > 0 ? Math.round((countMastered / total) * 100) : 0;
+        const pReview = total > 0 ? Math.round((countReview / total) * 100) : 0;
+        const pNew = 100 - pMastered - pReview;
+        if (elements.barMastered) elements.barMastered.style.width = `${pMastered}%`;
+        if (elements.barReview) elements.barReview.style.width = `${pReview}%`;
+        if (elements.barNew) elements.barNew.style.width = `${pNew}%`;
+        if (elements.ankiPercentMastered) {
+          elements.ankiPercentMastered.textContent = `${pMastered}% đã thuộc (${countMastered} / ${total} từ)`;
+        }
+
+        state.flashcardIndex++;
+        updateFlashcardView();
+      }
+
+      const lesson = getLesson(state.course, state.lessonId);
+      if (lesson) renderVocabulary(lesson, false);
+    }
+
     // Render Vocabulary Tab
-    function renderVocabulary(lesson) {
-      // Build flattened list for flashcards
-      state.flashcardList = [];
+    function renderVocabulary(lesson, shouldResetFilter = true) {
+      if (shouldResetFilter) {
+        state.flashcardAllList = [];
+      }
       elements.vocabCategoriesContainer.innerHTML = '';
 
       if (!lesson.vocabulary) return;
@@ -1552,8 +1991,10 @@
 
         let rowsHtml = '';
         cat.words.forEach(w => {
-          state.flashcardList.push(w);
-          
+          if (shouldResetFilter) {
+            state.flashcardAllList.push(w);
+          }
+
           let examplesHtml = '-';
           if (Array.isArray(w.examples) && w.examples.length > 0) {
             examplesHtml = w.examples.map((ex, i) => `
@@ -1566,6 +2007,17 @@
             `).join('');
           } else if (w.example) {
             examplesHtml = `<div style="font-size:0.88rem; color:#4b5563;">${w.example}</div>`;
+          }
+
+          const st = getVocabStatus(w.ko);
+          let stLabel = '○ Chưa học';
+          let stBadgeClass = 'status-new';
+          if (st === 'mastered') {
+            stLabel = '✓ Đã thuộc';
+            stBadgeClass = 'status-mastered';
+          } else if (st === 'review') {
+            stLabel = '⚡ Cần ôn';
+            stBadgeClass = 'status-review';
           }
 
           rowsHtml += `
@@ -1581,6 +2033,11 @@
               <td style="color:#2563eb; font-weight:600; font-size:0.92rem; vertical-align:top;">${w.en || '-'}</td>
               <td style="color:#15803d; font-weight:600; font-size:0.92rem; vertical-align:top;">${w.vi}</td>
               <td style="vertical-align:top;">${examplesHtml}</td>
+              <td style="text-align:center; vertical-align:top;">
+                <span class="tbl-status-badge ${stBadgeClass}" onclick="toggleWordStatus('${w.ko.replace(/'/g, "\\'")}')" title="Bấm để chuyển trạng thái (Chưa học / Cần ôn / Đã thuộc)">
+                  ${stLabel}
+                </span>
+              </td>
             </tr>
           `;
         });
@@ -1592,10 +2049,11 @@
           <table class="vocab-table">
             <thead>
               <tr>
-                <th style="width:24%;">Từ vựng</th>
-                <th style="width:18%;">Tiếng Anh</th>
-                <th style="width:22%;">Nghĩa tiếng Việt</th>
-                <th style="width:36%;">Ví dụ áp dụng (2 câu)</th>
+                <th style="width:22%;">Từ vựng</th>
+                <th style="width:16%;">Tiếng Anh</th>
+                <th style="width:20%;">Nghĩa tiếng Việt</th>
+                <th style="width:30%;">Ví dụ áp dụng (2 câu)</th>
+                <th style="width:12%; text-align:center;">Trạng thái Anki</th>
               </tr>
             </thead>
             <tbody>${rowsHtml}</tbody>
@@ -1604,11 +2062,40 @@
         elements.vocabCategoriesContainer.appendChild(catBlock);
       });
 
-      updateFlashcardView();
+      if (shouldResetFilter) {
+        state.flashcardFilter = 'all';
+        applyFlashcardFilter();
+      }
     }
 
     function updateFlashcardView() {
-      if (state.flashcardList.length === 0) return;
+      const emptyState = document.getElementById('fcEmptyState');
+      const cardContainer = document.getElementById('fcCardContainer');
+
+      if (!state.flashcardList || state.flashcardList.length === 0) {
+        if (cardContainer) cardContainer.style.display = 'none';
+        if (emptyState) {
+          emptyState.style.display = 'block';
+          if (state.flashcardFilter === 'review') {
+            document.getElementById('fcEmptyTitle').textContent = 'Không có từ cần ôn lại! 🎉';
+            document.getElementById('fcEmptySub').textContent = 'Bạn đã ghi nhớ hết các từ vựng cần ôn trong bài học này.';
+          } else if (state.flashcardFilter === 'mastered') {
+            document.getElementById('fcEmptyTitle').textContent = 'Chưa có từ nào đã thuộc';
+            document.getElementById('fcEmptySub').textContent = 'Hãy lật thẻ và bấm nút "Đã thuộc" để đưa từ vựng vào đây.';
+          } else if (state.flashcardFilter === 'new') {
+            document.getElementById('fcEmptyTitle').textContent = 'Đã học hết từ mới! 👏';
+            document.getElementById('fcEmptySub').textContent = 'Tất cả từ vựng trong bài đã được phân loại vào Đã thuộc hoặc Cần ôn lại.';
+          } else {
+            document.getElementById('fcEmptyTitle').textContent = 'Không có từ vựng nào';
+            document.getElementById('fcEmptySub').textContent = 'Bài học này chưa có dữ liệu từ vựng.';
+          }
+        }
+        return;
+      }
+
+      if (emptyState) emptyState.style.display = 'none';
+      if (cardContainer) cardContainer.style.display = 'block';
+
       if (state.flashcardIndex >= state.flashcardList.length) state.flashcardIndex = 0;
       if (state.flashcardIndex < 0) state.flashcardIndex = state.flashcardList.length - 1;
 
@@ -1618,6 +2105,29 @@
       elements.fcWordEn.textContent = cur.en ? `Tiếng Anh: ${cur.en}` : '';
       elements.fcWordHanja.textContent = cur.hanja ? `Âm Hán Hàn: ${cur.hanja}` : '';
       elements.fcCounter.textContent = `${state.flashcardIndex + 1} / ${state.flashcardList.length}`;
+
+      // Update status pill on card
+      const st = getVocabStatus(cur.ko);
+      let stText = '○ Chưa học';
+      let stClass = 'status-new';
+      if (st === 'mastered') {
+        stText = '✓ Đã thuộc';
+        stClass = 'status-mastered';
+      } else if (st === 'review') {
+        stText = '⚡ Cần ôn lại';
+        stClass = 'status-review';
+      }
+
+      const pillFront = document.getElementById('fcStatusPillFront');
+      const pillBack = document.getElementById('fcStatusPillBack');
+      if (pillFront) {
+        pillFront.textContent = stText;
+        pillFront.className = `fc-status-pill ${stClass}`;
+      }
+      if (pillBack) {
+        pillBack.textContent = stText;
+        pillBack.className = `fc-status-pill ${stClass}`;
+      }
 
       if (Array.isArray(cur.examples) && cur.examples.length > 0) {
         elements.fcWordExamples.innerHTML = cur.examples.map((ex, i) => `
@@ -1946,7 +2456,7 @@
       }
     };
 
-    // Flashcard Interactions
+    // Flashcard & Anki Interactions
     elements.flashcardElement.onclick = () => {
       state.isFlipped = !state.isFlipped;
       elements.flashcardElement.classList.toggle('flipped', state.isFlipped);
@@ -1972,6 +2482,60 @@
       state.flashcardIndex = 0;
       updateFlashcardView();
     };
+
+    // Anki Action Buttons
+    if (elements.btnAgain) {
+      elements.btnAgain.onclick = () => markCardStatus('review');
+    }
+    if (elements.btnGood) {
+      elements.btnGood.onclick = () => markCardStatus('mastered');
+    }
+
+    // Anki Filter Bar
+    if (elements.btnFilterAll) {
+      elements.btnFilterAll.onclick = () => applyFlashcardFilter('all');
+    }
+    if (elements.btnFilterReview) {
+      elements.btnFilterReview.onclick = () => applyFlashcardFilter('review');
+    }
+    if (elements.btnFilterMastered) {
+      elements.btnFilterMastered.onclick = () => applyFlashcardFilter('mastered');
+    }
+    if (elements.btnFilterNew) {
+      elements.btnFilterNew.onclick = () => applyFlashcardFilter('new');
+    }
+    if (elements.btnResetProgress) {
+      elements.btnResetProgress.onclick = resetCurrentLessonVocabStatus;
+    }
+    if (elements.btnEmptyViewAll) {
+      elements.btnEmptyViewAll.onclick = () => applyFlashcardFilter('all');
+    }
+
+    // Keyboard Shortcuts for Anki (Desktop & Laptop)
+    document.addEventListener('keydown', (e) => {
+      if (state.activeTab !== 'vocabulary' || elements.flashcardArea.style.display === 'none') return;
+      if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+
+      if (e.code === 'Space') {
+        e.preventDefault();
+        state.isFlipped = !state.isFlipped;
+        elements.flashcardElement.classList.toggle('flipped', state.isFlipped);
+      } else if (e.key === '1') {
+        e.preventDefault();
+        markCardStatus('review');
+      } else if (e.key === '2') {
+        e.preventDefault();
+        markCardStatus('mastered');
+      } else if (e.key === 'ArrowRight') {
+        e.preventDefault();
+        state.flashcardIndex++;
+        updateFlashcardView();
+      } else if (e.key === 'ArrowLeft') {
+        e.preventDefault();
+        state.flashcardIndex--;
+        updateFlashcardView();
+      }
+    });
 
     // View Toggle for Vocabulary
     elements.btnViewList.onclick = () => {
