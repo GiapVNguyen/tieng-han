@@ -1,0 +1,3 @@
+# Bo qua cac file PDF giao trinh dung luong lon de repository nhe va upload nhanh
+*.pdf
+.tmp.*
