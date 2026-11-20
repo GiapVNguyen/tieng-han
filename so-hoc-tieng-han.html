@@ -1135,6 +1135,211 @@
     .btn-danger:hover {
       background: #991b1b;
     }
+
+    /* === USER HIGHLIGHT & FLOATING TOOLBAR === */
+    .user-highlight {
+      border-radius: 4px;
+      cursor: pointer;
+      padding: 1px 3px;
+      transition: filter 0.15s, box-shadow 0.15s;
+      position: relative;
+    }
+    .user-highlight:hover {
+      filter: brightness(0.92);
+      box-shadow: 0 0 0 2px rgba(0,0,0,0.1);
+    }
+    .user-highlight.hl-yellow {
+      background-color: #fef08a !important;
+      border-bottom: 2px solid #eab308;
+      color: #713f12 !important;
+    }
+    .user-highlight.hl-green {
+      background-color: #bbf7d0 !important;
+      border-bottom: 2px solid #22c55e;
+      color: #14532d !important;
+    }
+    .user-highlight.hl-pink {
+      background-color: #fbcfe8 !important;
+      border-bottom: 2px solid #ec4899;
+      color: #831843 !important;
+    }
+    .user-highlight-badge {
+      display: inline-block;
+      font-size: 0.7rem;
+      vertical-align: super;
+      margin-left: 2px;
+      cursor: pointer;
+    }
+
+    #floatingHighlightToolbar {
+      position: absolute;
+      z-index: 99999;
+      display: none;
+      background: #0f172a;
+      color: #ffffff;
+      padding: 6px 12px;
+      border-radius: 30px;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4), 0 8px 10px -6px rgba(0, 0, 0, 0.3);
+      align-items: center;
+      gap: 8px;
+      transform: translate(-50%, -100%);
+      margin-top: -12px;
+      font-family: inherit;
+    }
+    .hl-tool-btn {
+      background: transparent;
+      border: none;
+      color: white;
+      padding: 5px 9px;
+      border-radius: 16px;
+      cursor: pointer;
+      font-size: 0.82rem;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      transition: background 0.15s;
+    }
+    .hl-tool-btn:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+    .hl-color-dot {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      cursor: pointer;
+      border: 2px solid white;
+      transition: transform 0.15s;
+      flex-shrink: 0;
+    }
+    .hl-color-dot:hover {
+      transform: scale(1.22);
+    }
+    .hl-color-dot.yellow { background: #fef08a; }
+    .hl-color-dot.green { background: #86efac; }
+    .hl-color-dot.pink { background: #f472b6; }
+
+    /* Modal for Notes */
+    .note-modal-overlay {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(15, 23, 42, 0.6);
+      backdrop-filter: blur(4px);
+      z-index: 100000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+    }
+    .note-modal-box {
+      background: white;
+      border-radius: 16px;
+      width: 100%;
+      max-width: 480px;
+      padding: 24px;
+      box-shadow: 0 20px 25px -5px rgba(0,0,0,0.2);
+      animation: modalFade 0.2s ease-out;
+    }
+    @keyframes modalFade {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    /* TOPIK Section Styles */
+    .topik-container {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: var(--shadow);
+      margin-bottom: 30px;
+    }
+    .topik-pill-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 22px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid #e2e8f0;
+    }
+    .topik-sub-btn {
+      background: #f1f5f9;
+      border: 1px solid #cbd5e1;
+      color: #334155;
+      padding: 7px 15px;
+      border-radius: 20px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .topik-sub-btn:hover {
+      background: #e2e8f0;
+    }
+    .topik-sub-btn.active {
+      background: #059669;
+      border-color: #059669;
+      color: white;
+    }
+    .topik-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 14px;
+    }
+    .topik-table th, .topik-table td {
+      padding: 12px 14px;
+      border-bottom: 1px solid #e2e8f0;
+      text-align: left;
+    }
+    .topik-table th {
+      background: #f8fafc;
+      color: #475569;
+      font-weight: 700;
+      font-size: 0.88rem;
+    }
+    .topik-table tr:hover {
+      background: #f8fafc;
+    }
+    .topik-reading-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 14px;
+      padding: 20px;
+      margin-bottom: 26px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+    }
+    .topik-opt-btn {
+      width: 100%;
+      text-align: left;
+      background: #ffffff;
+      border: 1.5px solid #cbd5e1;
+      border-radius: 10px;
+      padding: 12px 16px;
+      margin-bottom: 8px;
+      font-size: 0.94rem;
+      cursor: pointer;
+      transition: all 0.15s;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: inherit;
+    }
+    .topik-opt-btn:hover:not(:disabled) {
+      border-color: #059669;
+      background: #f0fdf4;
+    }
+    .topik-opt-btn.correct {
+      background: #dcfce7 !important;
+      border-color: #16a34a !important;
+      color: #15803d !important;
+      font-weight: 700;
+    }
+    .topik-opt-btn.wrong {
+      background: #fee2e2 !important;
+      border-color: #ef4444 !important;
+      color: #991b1b !important;
+    }
+
   </style>
 </head>
 <body>
@@ -1165,8 +1370,14 @@
       <div class="course-tabs">
         <button class="btn-pill" id="btnCourse3A">Seoul 3A</button>
         <button class="btn-pill active" id="btnCourse3B">Seoul 3B</button>
+        <button class="btn-pill" id="btnTopikTopics" style="background:#ecfdf5; border-color:#10b981; color:#065f46; font-weight:700;">
+          🎯 Chuyên đề TOPIK
+        </button>
         <button class="btn-pill" id="btnAllGrammar" style="background:#fef3c7; border-color:#f59e0b; color:#92400e; font-weight:700;">
           📚 Sổ Tổng hợp Ngữ pháp
+        </button>
+        <button class="btn-pill" id="btnMyNotes" style="background:#ede9fe; border-color:#8b5cf6; color:#5b21b6; font-weight:700;">
+          📝 Sổ tay & Highlight (<span id="notesCountBadge">0</span>)
         </button>
       </div>
       <div class="lesson-tabs" id="lessonTabsContainer">
@@ -1537,8 +1748,147 @@
   </div>
   </main>
 
+
+  <!-- TOPIK Thematic Section -->
+  <div id="topikSection" style="display:none;">
+    <div class="hero-banner" style="background:linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%); border-color:#a7f3d0; margin-bottom:24px;">
+      <span class="hero-badge" style="background:#059669;">CHUYÊN ĐỀ TỪ VỰNG & ĐỌC HIỂU TOPIK II</span>
+      <h1 style="color:#065f46;">
+        <span id="topikHeroTitleKo">01. 문화 · 예술 · 스포츠</span>
+        <span class="sub-title" id="topikHeroTitleVi" style="color:#047857;">VĂN HÓA · NGHỆ THUẬT · THỂ THAO</span>
+      </h1>
+      <p id="topikHeroSummary" style="color:#065f46; font-size:0.96rem; margin-top:6px;">
+        Hệ thống từ vựng phân loại theo chủ đề nhỏ, kèm các bài luyện đọc hiểu trắc nghiệm thực chiến TOPIK II có giải thích chi tiết, dịch nghĩa song ngữ và danh sách từ khóa.
+      </p>
+    </div>
+
+    <div class="topik-container">
+      <!-- Subtheme Navigation Pill Bar -->
+      <div class="topik-pill-bar" id="topikPillBar">
+        <button class="topik-sub-btn active" data-topik-tab="overview">📋 Từ khóa & Tổng quan</button>
+        <button class="topik-sub-btn" data-topik-tab="1.1">1.1. 한국문화 (Văn hóa HQ)</button>
+        <button class="topik-sub-btn" data-topik-tab="1.2">1.2. 공연 · 전시회 (Biểu diễn)</button>
+        <button class="topik-sub-btn" data-topik-tab="1.4">1.4. 풍습 (Phong tục & Lễ Tết)</button>
+        <button class="topik-sub-btn" data-topik-tab="reading">📖 Luyện đọc hiểu TOPIK (2 bài)</button>
+        <button class="topik-sub-btn" data-topik-tab="flashcard" style="background:#fef3c7; border-color:#f59e0b; color:#92400e;">🎴 Flashcard chuyên đề</button>
+        <button class="topik-sub-btn" data-topik-tab="quiz" style="background:#ede9fe; border-color:#8b5cf6; color:#5b21b6;">🎯 Kiểm tra từ vựng</button>
+      </div>
+
+      <!-- Tab Content 1: Overview -->
+      <div id="topikTabOverview" class="topik-tab-content">
+        <div style="background:#f8fafc; border:1px solid #cbd5e1; border-radius:12px; padding:18px 20px; margin-bottom:20px;">
+          <h3 style="color:#0f172a; font-size:1.1rem; margin-bottom:8px; display:flex; align-items:center; gap:8px;">
+            <span>🌟</span> <span>Các chủ đề nhỏ tiêu biểu trong đề thi TOPIK:</span>
+          </h3>
+          <p style="color:#475569; font-size:0.92rem; line-height:1.6; margin-bottom:14px;">
+            Dưới đây là các chủ đề cốt lõi thường xuyên xuất hiện trong các đề thi đọc hiểu và từ vựng TOPIK II thuộc mảng Văn hóa - Nghệ thuật - Thể thao:
+          </p>
+          <div style="display:flex; flex-wrap:wrap; gap:10px;" id="topikOverviewChips"></div>
+        </div>
+
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:16px;">
+          <div style="background:#eff6ff; border:1px solid #bfdbfe; border-radius:12px; padding:16px;">
+            <div style="font-weight:700; color:#1e40af; font-size:1rem; margin-bottom:6px;">🇰🇷 1.1 Văn hóa truyền thống</div>
+            <p style="font-size:0.88rem; color:#334155;">Thần thoại lập quốc, cung điện, yêu tinh dokkaebi, phong tục xông hơi jjimjilbang, tiên nữ, sơn thần...</p>
+            <button class="btn-action" onclick="switchTopikTab('1.1')" style="margin-top:10px; font-size:0.82rem; padding:6px 12px;">Học 15 từ vựng ➔</button>
+          </div>
+          <div style="background:#f0fdf4; border:1px solid #bbf7d0; border-radius:12px; padding:16px;">
+            <div style="font-weight:700; color:#166534; font-size:1rem; margin-bottom:6px;">🎭 1.2 Biểu diễn & Triển lãm</div>
+            <p style="font-size:0.88rem; color:#334155;">Đạo diễn, công chiếu, khán giả, nhạc kịch, cú twist bất ngờ, liên hoan phim, âm hưởng sân khấu...</p>
+            <button class="btn-action" onclick="switchTopikTab('1.2')" style="margin-top:10px; font-size:0.82rem; padding:6px 12px; background:#16a34a;">Học 22 từ vựng ➔</button>
+          </div>
+          <div style="background:#fefce8; border:1px solid #fde047; border-radius:12px; padding:16px;">
+            <div style="font-weight:700; color:#854d0e; font-size:1rem; margin-bottom:6px;">🏮 1.4 Phong tục & Lễ Tết</div>
+            <p style="font-size:0.88rem; color:#334155;">Tết Seollal, Chuseok, lì xì sebaetdon, bánh songpyeon, trò chơi thả diều, tảo mộ, chúc Tết...</p>
+            <button class="btn-action" onclick="switchTopikTab('1.4')" style="margin-top:10px; font-size:0.82rem; padding:6px 12px; background:#ca8a04;">Học 20 từ vựng ➔</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab Content: Vocab Tables (1.1, 1.2, 1.4) -->
+      <div id="topikTabVocab" class="topik-tab-content" style="display:none;">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+          <h3 id="topikVocabTableTitle" style="color:#0f172a; font-size:1.15rem; font-weight:700;">Danh sách từ vựng</h3>
+          <span id="topikVocabTableCount" style="font-size:0.88rem; color:#64748b; font-weight:600;">0 từ</span>
+        </div>
+        <div style="overflow-x:auto;">
+          <table class="topik-table">
+            <thead>
+              <tr>
+                <th style="width:120px;">Từ loại (품사)</th>
+                <th style="width:260px;">Từ vựng / Biểu hiện (한국어)</th>
+                <th>Nghĩa tiếng Việt (베트남어)</th>
+                <th style="width:100px; text-align:center;">Phát âm</th>
+              </tr>
+            </thead>
+            <tbody id="topikVocabTableBody"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Tab Content: Reading Comprehension -->
+      <div id="topikTabReading" class="topik-tab-content" style="display:none;">
+        <div style="margin-bottom:16px;">
+          <h3 style="color:#0f172a; font-size:1.15rem; font-weight:700;">📖 Đọc hiểu & Luyện giải đề thực chiến TOPIK II</h3>
+          <p style="color:#64748b; font-size:0.9rem;">Chọn đáp án đúng nhất để kiểm tra khả năng đọc hiểu. Bấm vào để chấm điểm ngay và xem giải thích chi tiết!</p>
+        </div>
+        <div id="topikReadingContainer"></div>
+      </div>
+
+      <!-- Tab Content: Flashcard for Topik -->
+      <div id="topikTabFlashcard" class="topik-tab-content" style="display:none;">
+        <div style="text-align:center; padding:10px 0 20px;">
+          <h3 style="color:#17523d; font-size:1.2rem; margin-bottom:6px;">🎴 Thẻ Flashcard Chuyên đề: Văn hóa · Nghệ thuật · Thể thao</h3>
+          <p style="color:#64748b; font-size:0.9rem;">Luyện tập 57 từ vựng chuyên đề TOPIK theo phương pháp lặp lại ngắt quãng Anki.</p>
+        </div>
+        <div id="topikFlashcardMount"></div>
+      </div>
+
+      <!-- Tab Content: Quiz for Topik -->
+      <div id="topikTabQuiz" class="topik-tab-content" style="display:none;">
+        <div style="text-align:center; padding:10px 0 20px;">
+          <h3 style="color:#17523d; font-size:1.2rem; margin-bottom:6px;">🎯 Kiểm tra Từ vựng Chuyên đề TOPIK</h3>
+          <p style="color:#64748b; font-size:0.9rem;">Thử thách trí nhớ với thuật toán thông minh ưu tiên các từ bạn từng làm sai.</p>
+        </div>
+        <div id="topikQuizMount"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- My Notes & Highlights Section -->
+  <div id="myNotesSection" style="display:none;">
+    <div class="hero-banner" style="background:linear-gradient(135deg, #ede9fe 0%, #ddd6fe 100%); border-color:#c4b5fd; margin-bottom:24px;">
+      <span class="hero-badge" style="background:#7c3aed;">SỔ TAY CÁ NHÂN</span>
+      <h1 style="color:#5b21b6;">
+        <span>📝 Sổ tay & Highlight của tôi</span>
+        <span class="sub-title" style="color:#6d28d9;">(Toàn bộ từ vựng & ghi chú bạn đã lưu lại)</span>
+      </h1>
+      <p style="color:#5b21b6; font-size:0.96rem; margin-top:6px;">
+        Xem lại nhanh tất cả các từ hoặc câu văn bạn đã bôi đen highlight và ghi chú trong quá trình học trên trang web. Dữ liệu được lưu cố định trong trình duyệt của bạn.
+      </p>
+    </div>
+
+    <div style="background:white; border:1px solid var(--border); border-radius:var(--radius); padding:16px 20px; margin-bottom:20px; box-shadow:var(--shadow); display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:12px;">
+      <div style="display:flex; flex-wrap:wrap; gap:8px;" id="notesFilterChips">
+        <button class="topik-sub-btn active" data-color-filter="all">Tất cả (<span id="countHlAll">0</span>)</button>
+        <button class="topik-sub-btn" data-color-filter="yellow" style="color:#854d0e;">🟡 Màu vàng (<span id="countHlYellow">0</span>)</button>
+        <button class="topik-sub-btn" data-color-filter="green" style="color:#166534;">🟢 Màu xanh (<span id="countHlGreen">0</span>)</button>
+        <button class="topik-sub-btn" data-color-filter="pink" style="color:#9d174d;">🔴 Màu hồng (<span id="countHlPink">0</span>)</button>
+        <button class="topik-sub-btn" data-color-filter="hasNote">📝 Có ghi chú (<span id="countHlNotes">0</span>)</button>
+      </div>
+      <div style="display:flex; gap:10px;">
+        <button class="btn-action" id="btnExportNotes" style="font-size:0.85rem; padding:6px 14px; background:#4f46e5;">📋 Sao chép danh sách (Copy)</button>
+        <button class="btn-action btn-danger" id="btnClearAllNotes" style="font-size:0.85rem; padding:6px 14px;">🗑️ Xóa tất cả</button>
+      </div>
+    </div>
+
+    <!-- Notes List Container -->
+    <div id="myNotesListContainer" style="display:flex; flex-direction:column; gap:12px;"></div>
+  </div>
+
   <!-- Load Data -->
   <script src="korean-data.js"></script>
+  <script src="topik-data.js"></script>
 
   <!-- Application Logic -->
   <script>
@@ -1548,6 +1898,14 @@
       lessonId: '10',
       activeTab: 'grammar',
       isAllGrammarView: false,
+      isTopikView: false,
+      topikTopicId: 'topik_01',
+      topikSubTab: 'overview',
+      isMyNotesView: false,
+      notesColorFilter: 'all',
+      highlights: JSON.parse(localStorage.getItem('korean_user_highlights') || '[]'),
+      selectedTextForHl: '',
+      activeHighlightId: null,
       dialogueIndex: 0,
       flashcardIndex: 0,
       flashcardAllList: [],
@@ -1572,7 +1930,12 @@
       btnCourse3A: document.getElementById('btnCourse3A'),
       btnCourse3B: document.getElementById('btnCourse3B'),
       btnAllGrammar: document.getElementById('btnAllGrammar'),
+      btnTopikTopics: document.getElementById('btnTopikTopics'),
+      btnMyNotes: document.getElementById('btnMyNotes'),
+      notesCountBadge: document.getElementById('notesCountBadge'),
       lessonViewWrapper: document.getElementById('lessonViewWrapper'),
+      topikSection: document.getElementById('topikSection'),
+      myNotesSection: document.getElementById('myNotesSection'),
       allGrammarSection: document.getElementById('allGrammarSection'),
       inputSearchGrammar: document.getElementById('inputSearchGrammar'),
       selectLessonFilter: document.getElementById('selectLessonFilter'),
@@ -1906,11 +2269,706 @@
 
     function showLessonView() {
       state.isAllGrammarView = false;
+      state.isTopikView = false;
+      state.isMyNotesView = false;
       elements.allGrammarSection.style.display = 'none';
+      if (elements.topikSection) elements.topikSection.style.display = 'none';
+      if (elements.myNotesSection) elements.myNotesSection.style.display = 'none';
       elements.lessonViewWrapper.style.display = 'block';
+      elements.lessonTabsContainer.style.display = 'flex';
       elements.btnAllGrammar.classList.remove('active');
       elements.btnAllGrammar.style.background = '#fef3c7';
       elements.btnAllGrammar.style.color = '#92400e';
+      if (elements.btnTopikTopics) {
+        elements.btnTopikTopics.classList.remove('active');
+        elements.btnTopikTopics.style.background = '#ecfdf5';
+        elements.btnTopikTopics.style.color = '#065f46';
+      }
+      if (elements.btnMyNotes) {
+        elements.btnMyNotes.classList.remove('active');
+        elements.btnMyNotes.style.background = '#ede9fe';
+        elements.btnMyNotes.style.color = '#5b21b6';
+      }
+      if (state.course === '3a') {
+        elements.btnCourse3A.classList.add('active');
+        elements.btnCourse3B.classList.remove('active');
+      } else {
+        elements.btnCourse3B.classList.add('active');
+        elements.btnCourse3A.classList.remove('active');
+      }
+    }
+
+    function showAllGrammarView() {
+      stopSpeaking();
+      state.isAllGrammarView = true;
+      state.isTopikView = false;
+      state.isMyNotesView = false;
+      elements.lessonViewWrapper.style.display = 'none';
+      if (elements.topikSection) elements.topikSection.style.display = 'none';
+      if (elements.myNotesSection) elements.myNotesSection.style.display = 'none';
+      elements.allGrammarSection.style.display = 'block';
+      elements.lessonTabsContainer.style.display = 'none';
+      elements.btnAllGrammar.classList.add('active');
+      elements.btnAllGrammar.style.background = '#d97706';
+      elements.btnAllGrammar.style.color = '#ffffff';
+
+      elements.btnCourse3A.classList.remove('active');
+      elements.btnCourse3B.classList.remove('active');
+      if (elements.btnTopikTopics) {
+        elements.btnTopikTopics.classList.remove('active');
+        elements.btnTopikTopics.style.background = '#ecfdf5';
+        elements.btnTopikTopics.style.color = '#065f46';
+      }
+      if (elements.btnMyNotes) {
+        elements.btnMyNotes.classList.remove('active');
+        elements.btnMyNotes.style.background = '#ede9fe';
+        elements.btnMyNotes.style.color = '#5b21b6';
+      }
+      renderAllGrammar();
+      updateURL();
+    }
+
+    function showTopikView() {
+      stopSpeaking();
+      state.isAllGrammarView = false;
+      state.isTopikView = true;
+      state.isMyNotesView = false;
+      elements.lessonViewWrapper.style.display = 'none';
+      elements.allGrammarSection.style.display = 'none';
+      if (elements.myNotesSection) elements.myNotesSection.style.display = 'none';
+      elements.topikSection.style.display = 'block';
+      elements.lessonTabsContainer.style.display = 'none';
+
+      elements.btnTopikTopics.classList.add('active');
+      elements.btnTopikTopics.style.background = '#059669';
+      elements.btnTopikTopics.style.color = '#ffffff';
+
+      elements.btnCourse3A.classList.remove('active');
+      elements.btnCourse3B.classList.remove('active');
+      elements.btnAllGrammar.classList.remove('active');
+      elements.btnAllGrammar.style.background = '#fef3c7';
+      elements.btnAllGrammar.style.color = '#92400e';
+      if (elements.btnMyNotes) {
+        elements.btnMyNotes.classList.remove('active');
+        elements.btnMyNotes.style.background = '#ede9fe';
+        elements.btnMyNotes.style.color = '#5b21b6';
+      }
+
+      renderTopikView();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function showMyNotesView() {
+      stopSpeaking();
+      state.isAllGrammarView = false;
+      state.isTopikView = false;
+      state.isMyNotesView = true;
+      elements.lessonViewWrapper.style.display = 'none';
+      elements.allGrammarSection.style.display = 'none';
+      if (elements.topikSection) elements.topikSection.style.display = 'none';
+      elements.myNotesSection.style.display = 'block';
+      elements.lessonTabsContainer.style.display = 'none';
+
+      elements.btnMyNotes.classList.add('active');
+      elements.btnMyNotes.style.background = '#7c3aed';
+      elements.btnMyNotes.style.color = '#ffffff';
+
+      elements.btnCourse3A.classList.remove('active');
+      elements.btnCourse3B.classList.remove('active');
+      elements.btnAllGrammar.classList.remove('active');
+      elements.btnAllGrammar.style.background = '#fef3c7';
+      elements.btnAllGrammar.style.color = '#92400e';
+      if (elements.btnTopikTopics) {
+        elements.btnTopikTopics.classList.remove('active');
+        elements.btnTopikTopics.style.background = '#ecfdf5';
+        elements.btnTopikTopics.style.color = '#065f46';
+      }
+
+      renderMyNotes();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+
+    /* ==========================================================================
+       TOPIK THEMATIC VIEW & LOGIC
+       ========================================================================== */
+    function renderTopikView() {
+      const topic = (window.TOPIK_TOPICS && window.TOPIK_TOPICS[state.topikTopicId]) || null;
+      if (!topic) return;
+
+      document.getElementById('topikHeroTitleKo').textContent = topic.code + '. ' + topic.titleKo;
+      document.getElementById('topikHeroTitleVi').textContent = topic.titleVi;
+      document.getElementById('topikHeroSummary').textContent = topic.description;
+
+      // Render Overview Chips
+      const chipsContainer = document.getElementById('topikOverviewChips');
+      if (chipsContainer) {
+        chipsContainer.innerHTML = topic.overviewTopics.map(item => `
+          <div style="background:white; border:1px solid #cbd5e1; border-radius:18px; padding:6px 14px; font-size:0.86rem; display:inline-flex; align-items:center; gap:6px; box-shadow:0 1px 3px rgba(0,0,0,0.05);">
+            <b style="color:#0f172a;">${item.ko}</b>
+            <span style="color:#64748b;">(${item.vi})</span>
+            <button class="btn-audio" style="width:20px; height:20px; font-size:0.65rem;" onclick="speakText('${item.ko.replace(/'/g, "\\'")}')" title="Phát âm">🔊</button>
+          </div>
+        `).join('');
+      }
+
+      // Render Subtheme buttons
+      const pillBar = document.getElementById('topikPillBar');
+      if (pillBar) {
+        pillBar.querySelectorAll('.topik-sub-btn').forEach(btn => {
+          btn.classList.toggle('active', btn.dataset.topikTab === state.topikSubTab);
+          btn.onclick = () => switchTopikTab(btn.dataset.topikTab);
+        });
+      }
+
+      switchTopikTab(state.topikSubTab);
+    }
+
+    function switchTopikTab(tabId) {
+      state.topikSubTab = tabId;
+      const topic = window.TOPIK_TOPICS[state.topikTopicId];
+      if (!topic) return;
+
+      const pillBar = document.getElementById('topikPillBar');
+      if (pillBar) {
+        pillBar.querySelectorAll('.topik-sub-btn').forEach(btn => {
+          btn.classList.toggle('active', btn.dataset.topikTab === tabId);
+        });
+      }
+
+      const tabs = ['Overview', 'Vocab', 'Reading', 'Flashcard', 'Quiz'];
+      tabs.forEach(t => {
+        const el = document.getElementById('topikTab' + t);
+        if (el) el.style.display = 'none';
+      });
+
+      if (tabId === 'overview') {
+        document.getElementById('topikTabOverview').style.display = 'block';
+      } else if (tabId === 'reading') {
+        document.getElementById('topikTabReading').style.display = 'block';
+        renderTopikReadings(topic.readings);
+      } else if (tabId === 'flashcard') {
+        document.getElementById('topikTabFlashcard').style.display = 'block';
+        mountTopikFlashcard(topic);
+      } else if (tabId === 'quiz') {
+        document.getElementById('topikTabQuiz').style.display = 'block';
+        mountTopikQuiz(topic);
+      } else {
+        // Subtheme Vocab Table (1.1, 1.2, 1.4)
+        document.getElementById('topikTabVocab').style.display = 'block';
+        const sub = topic.subthemes.find(s => s.id === tabId);
+        if (sub) {
+          renderTopikVocabTable(sub);
+        }
+      }
+    }
+
+    function renderTopikVocabTable(subtheme) {
+      document.getElementById('topikVocabTableTitle').textContent = subtheme.titleKo + ' (' + subtheme.titleVi + ')';
+      document.getElementById('topikVocabTableCount').textContent = subtheme.words.length + ' từ vựng';
+
+      const tbody = document.getElementById('topikVocabTableBody');
+      tbody.innerHTML = subtheme.words.map((w, idx) => `
+        <tr>
+          <td style="color:#0369a1; font-weight:600; font-size:0.88rem;">
+            <span style="background:#e0f2fe; padding:2px 8px; border-radius:12px;">${w.pos}</span>
+          </td>
+          <td>
+            <div style="font-weight:700; color:#0f172a; font-size:0.98rem; display:flex; align-items:center; gap:8px;">
+              <span>${w.ko}</span>
+              <button class="btn-audio" style="width:24px; height:24px; font-size:0.75rem;" onclick="speakText('${w.ko.replace(/'/g, "\\'")}')" title="Phát âm">🔊</button>
+            </div>
+          </td>
+          <td style="color:#334155; font-size:0.92rem; line-height:1.5;">${w.vi}</td>
+          <td style="text-align:center;">
+            <button class="btn-text-sm" onclick="quickHighlightWord('${w.ko.replace(/'/g, "\\'")}', 'topik')" title="Đánh dấu lưu vào sổ tay">⭐ Lưu</button>
+          </td>
+        </tr>
+      `).join('');
+    }
+
+    function renderTopikReadings(readings) {
+      const container = document.getElementById('topikReadingContainer');
+      if (!container) return;
+
+      container.innerHTML = readings.map((r, rIdx) => `
+        <div class="topik-reading-card" id="topikRCard_${r.id}">
+          <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:12px; flex-wrap:wrap; gap:8px;">
+            <div>
+              <span style="background:#059669; color:white; font-size:0.78rem; font-weight:700; padding:3px 10px; border-radius:12px;">${r.numberText}</span>
+              <h4 style="margin:6px 0 0; color:#0f172a; font-size:1.15rem; font-weight:800;">${r.titleKo}</h4>
+              <span style="font-size:0.86rem; color:#64748b;">${r.type}</span>
+            </div>
+            <button class="btn-action" style="font-size:0.82rem; padding:6px 12px; background:#047857;" onclick="speakText('${r.passageKo.replace(/'/g, "\\'")}')">🔊 Nghe bài đọc</button>
+          </div>
+
+          <!-- Korean Passage Box -->
+          <div style="background:#f8fafc; border:1px solid #cbd5e1; border-radius:10px; padding:16px 18px; font-size:1rem; line-height:1.8; color:#1e293b; margin-bottom:18px;">
+            ${r.passageKo}
+          </div>
+
+          <!-- Options Grid -->
+          <div style="margin-bottom:14px;">
+            <div style="font-weight:700; color:#334155; font-size:0.92rem; margin-bottom:8px;">Chọn đáp án đúng:</div>
+            ${r.options.map((opt, oIdx) => `
+              <button class="topik-opt-btn" id="topikOpt_${r.id}_${oIdx}" onclick="handleTopikAnswer('${r.id}', ${oIdx}, ${r.correctIndex})">
+                <span>${opt}</span>
+              </button>
+            `).join('')}
+          </div>
+
+          <!-- Feedback Box -->
+          <div id="topikFeedback_${r.id}" style="display:none; padding:14px 16px; border-radius:10px; margin-bottom:16px;"></div>
+
+          <!-- Toggle Translation & Vocab Accordion -->
+          <div style="display:flex; gap:10px; margin-bottom:12px;">
+            <button class="btn-text-sm" onclick="toggleTopikDetail('trans_${r.id}')">🇻🇳 Xem bản dịch tiếng Việt</button>
+            <button class="btn-text-sm" onclick="toggleTopikDetail('vocab_${r.id}')">📚 Xem từ vựng trọng tâm (${r.keyVocab.length})</button>
+          </div>
+
+          <!-- Translation Box -->
+          <div id="trans_${r.id}" style="display:none; background:#eff6ff; border:1px solid #bfdbfe; border-radius:10px; padding:14px; font-size:0.9rem; line-height:1.6; color:#1e3a8a; margin-bottom:14px;">
+            <div style="font-weight:700; margin-bottom:6px;">Bản dịch tiếng Việt:</div>
+            <p style="margin-bottom:10px;">${r.translation.passageVi}</p>
+            <div style="font-weight:700; margin-bottom:4px; font-size:0.85rem;">Dịch các lựa chọn:</div>
+            ${r.translation.optionsVi.map(ov => `<div style="font-size:0.85rem; color:#3b82f6;">${ov}</div>`).join('')}
+          </div>
+
+          <!-- Vocab Box -->
+          <div id="vocab_${r.id}" style="display:none; background:#f0fdf4; border:1px solid #bbf7d0; border-radius:10px; padding:14px; margin-bottom:14px;">
+            <div style="font-weight:700; color:#166534; font-size:0.92rem; margin-bottom:10px;">Từ vựng trọng tâm bóc tách từ bài đọc:</div>
+            <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(200px, 1fr)); gap:8px;">
+              ${r.keyVocab.map(v => `
+                <div style="background:white; border:1px solid #dcfce7; border-radius:8px; padding:6px 10px; display:flex; justify-content:space-between; align-items:center;">
+                  <div>
+                    <b style="color:#0f172a; font-size:0.88rem;">${v.ko}</b>
+                    <div style="color:#475569; font-size:0.8rem;">${v.vi}</div>
+                  </div>
+                  <button class="btn-audio" style="width:22px; height:22px; font-size:0.65rem;" onclick="speakText('${v.ko.replace(/'/g, "\\'")}')">🔊</button>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function handleTopikAnswer(readingId, chosenIdx, correctIdx) {
+      const topic = window.TOPIK_TOPICS[state.topikTopicId];
+      const r = topic.readings.find(item => item.id === readingId);
+      if (!r) return;
+
+      const isCorrect = (chosenIdx === correctIdx);
+      r.options.forEach((_, idx) => {
+        const btn = document.getElementById(`topikOpt_${readingId}_${idx}`);
+        if (btn) {
+          btn.disabled = true;
+          if (idx === correctIdx) {
+            btn.classList.add('correct');
+          } else if (idx === chosenIdx && !isCorrect) {
+            btn.classList.add('wrong');
+          }
+        }
+      });
+
+      const fb = document.getElementById(`topikFeedback_${readingId}`);
+      if (fb) {
+        fb.style.display = 'block';
+        if (isCorrect) {
+          fb.style.background = '#dcfce7';
+          fb.style.border = '1px solid #86efac';
+          fb.style.color = '#15803d';
+          fb.innerHTML = `
+            <div style="font-weight:700; font-size:1rem; margin-bottom:6px;">✓ Chính xác tuyệt vời!</div>
+            <div style="font-size:0.88rem; line-height:1.5; white-space:pre-line;">${r.explanation}</div>
+          `;
+        } else {
+          fb.style.background = '#fee2e2';
+          fb.style.border = '1px solid #fca5a5';
+          fb.style.color = '#991b1b';
+          fb.innerHTML = `
+            <div style="font-weight:700; font-size:1rem; margin-bottom:6px;">✗ Chưa chính xác.</div>
+            <div style="font-size:0.88rem; line-height:1.5; white-space:pre-line;">${r.explanation}</div>
+          `;
+        }
+      }
+    }
+
+    function toggleTopikDetail(elementId) {
+      const el = document.getElementById(elementId);
+      if (el) {
+        el.style.display = el.style.display === 'none' ? 'block' : 'none';
+      }
+    }
+
+    function getAllTopikWords(topic) {
+      const words = [];
+      if (!topic || !topic.subthemes) return words;
+      topic.subthemes.forEach(sub => {
+        sub.words.forEach(w => {
+          words.push({
+            ko: w.ko,
+            vi: w.vi,
+            hanja: '',
+            en: w.pos,
+            examples: []
+          });
+        });
+      });
+      return words;
+    }
+
+    function mountTopikFlashcard(topic) {
+      const mount = document.getElementById('topikFlashcardMount');
+      if (!mount) return;
+      mount.innerHTML = `
+        <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:12px; padding:20px; text-align:center;">
+          <p style="font-size:1rem; color:#334155; margin-bottom:14px;">Chuyên đề <b>${topic.titleKo}</b> có tổng cộng <b>${getAllTopikWords(topic).length} từ vựng</b>.</p>
+          <button class="btn-action" id="btnLaunchTopikFc" style="font-size:1.05rem; padding:12px 24px;">🚀 Bắt đầu học Flashcard Chuyên đề</button>
+        </div>
+      `;
+      document.getElementById('btnLaunchTopikFc').onclick = () => {
+        state.flashcardAllList = getAllTopikWords(topic);
+        state.flashcardList = [...state.flashcardAllList];
+        state.flashcardIndex = 0;
+        showLessonView();
+        state.activeTab = 'vocabulary';
+        renderApp();
+        switchVocabView('flashcard');
+      };
+    }
+
+    function mountTopikQuiz(topic) {
+      const mount = document.getElementById('topikQuizMount');
+      if (!mount) return;
+      mount.innerHTML = `
+        <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:12px; padding:20px; text-align:center;">
+          <p style="font-size:1rem; color:#334155; margin-bottom:14px;">Kiểm tra năng lực từ vựng chuyên đề <b>${topic.titleKo}</b> với bộ câu hỏi trắc nghiệm tương tác.</p>
+          <button class="btn-action" id="btnLaunchTopikQuiz" style="font-size:1.05rem; padding:12px 24px; background:#7c3aed;">🎯 Bắt đầu làm bài kiểm tra Chuyên đề</button>
+        </div>
+      `;
+      document.getElementById('btnLaunchTopikQuiz').onclick = () => {
+        state.flashcardAllList = getAllTopikWords(topic);
+        state.flashcardList = [...state.flashcardAllList];
+        state.flashcardIndex = 0;
+        showLessonView();
+        state.activeTab = 'vocabulary';
+        renderApp();
+        switchVocabView('quiz');
+      };
+    }
+
+    /* ==========================================================================
+       INTERACTIVE HIGHLIGHT & PERSONAL NOTES SYSTEM
+       ========================================================================== */
+    function initHighlightSystem() {
+      const toolbar = document.getElementById('floatingHighlightToolbar');
+      if (!toolbar) return;
+
+      document.addEventListener('selectionchange', () => {
+        // Selection monitor
+      });
+
+      document.addEventListener('mouseup', handleTextSelection);
+      document.addEventListener('touchend', handleTextSelection);
+
+      // Color click on toolbar
+      toolbar.querySelectorAll('.hl-color-dot').forEach(dot => {
+        dot.onclick = (e) => {
+          e.stopPropagation();
+          const color = dot.dataset.hlColor;
+          applyHighlight(color);
+        };
+      });
+
+      // Audio click on toolbar
+      document.getElementById('hlBtnAudio').onclick = (e) => {
+        e.stopPropagation();
+        if (state.selectedTextForHl) {
+          speakText(state.selectedTextForHl);
+        }
+      };
+
+      // Note click on toolbar
+      document.getElementById('hlBtnAddNote').onclick = (e) => {
+        e.stopPropagation();
+        openNoteModal(state.selectedTextForHl);
+      };
+
+      // Close toolbar
+      document.getElementById('hlBtnClose').onclick = (e) => {
+        e.stopPropagation();
+        hideHighlightToolbar();
+      };
+
+      // Note modal handlers
+      document.getElementById('btnCloseNoteModal').onclick = closeNoteModal;
+      document.getElementById('btnCancelNote').onclick = closeNoteModal;
+      document.getElementById('noteTargetAudio').onclick = () => {
+        const word = document.getElementById('noteTargetWord').textContent;
+        if (word) speakText(word);
+      };
+
+      document.getElementById('btnSaveNote').onclick = saveNoteModal;
+      document.getElementById('btnDeleteNote').onclick = deleteNoteModal;
+
+      // Filter chips in My Notes view
+      const filterChips = document.getElementById('notesFilterChips');
+      if (filterChips) {
+        filterChips.querySelectorAll('.topik-sub-btn').forEach(btn => {
+          btn.onclick = () => {
+            filterChips.querySelectorAll('.topik-sub-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            state.notesColorFilter = btn.dataset.colorFilter;
+            renderMyNotes();
+          };
+        });
+      }
+
+      // Export notes
+      const btnExport = document.getElementById('btnExportNotes');
+      if (btnExport) {
+        btnExport.onclick = exportNotesToClipboard;
+      }
+
+      // Clear all notes
+      const btnClear = document.getElementById('btnClearAllNotes');
+      if (btnClear) {
+        btnClear.onclick = () => {
+          if (confirm('Bạn có chắc chắn muốn xóa toàn bộ từ highlight và ghi chú đã lưu không?')) {
+            state.highlights = [];
+            localStorage.setItem('korean_user_highlights', '[]');
+            updateHighlightsBadge();
+            renderMyNotes();
+          }
+        };
+      }
+
+      updateHighlightsBadge();
+    }
+
+    function handleTextSelection(e) {
+      const toolbar = document.getElementById('floatingHighlightToolbar');
+      if (!toolbar) return;
+
+      // Don't trigger if clicked inside the toolbar or modal
+      if (e.target.closest('#floatingHighlightToolbar') || e.target.closest('#userNoteModal')) {
+        return;
+      }
+
+      const sel = window.getSelection();
+      if (!sel || sel.isCollapsed) {
+        hideHighlightToolbar();
+        return;
+      }
+
+      const text = sel.toString().trim();
+      if (text.length < 1 || text.length > 150) {
+        hideHighlightToolbar();
+        return;
+      }
+
+      state.selectedTextForHl = text;
+
+      // Calculate position
+      const range = sel.getRangeAt(0);
+      const rect = range.getBoundingClientRect();
+
+      toolbar.style.left = (rect.left + rect.width / 2 + window.scrollX) + 'px';
+      toolbar.style.top = (rect.top + window.scrollY) + 'px';
+      toolbar.style.display = 'flex';
+    }
+
+    function hideHighlightToolbar() {
+      const toolbar = document.getElementById('floatingHighlightToolbar');
+      if (toolbar) toolbar.style.display = 'none';
+    }
+
+    function applyHighlight(color, note = '') {
+      if (!state.selectedTextForHl) return;
+      const text = state.selectedTextForHl;
+      const id = 'hl_' + Date.now() + '_' + Math.random().toString(36).substr(2, 5);
+
+      const entry = {
+        id,
+        text,
+        color,
+        note,
+        createdAt: new Date().toLocaleDateString('vi-VN'),
+        context: state.isTopikView ? 'Chuyên đề TOPIK' : `Bài ${state.lessonId}`
+      };
+
+      state.highlights.push(entry);
+      localStorage.setItem('korean_user_highlights', JSON.stringify(state.highlights));
+
+      updateHighlightsBadge();
+      hideHighlightToolbar();
+      window.getSelection().removeAllRanges();
+
+      showToast(`Đã lưu highlight "${text}" (Màu ${color === 'yellow' ? 'Vàng' : color === 'green' ? 'Xanh' : 'Hồng'})`);
+    }
+
+    function quickHighlightWord(word, context = '') {
+      state.selectedTextForHl = word;
+      applyHighlight('yellow', '');
+    }
+
+    function updateHighlightsBadge() {
+      const count = state.highlights.length;
+      const badge = document.getElementById('notesCountBadge');
+      if (badge) badge.textContent = count;
+    }
+
+    function openNoteModal(word, existingHlId = null) {
+      state.activeHighlightId = existingHlId;
+      document.getElementById('noteTargetWord').textContent = word;
+      
+      const existing = existingHlId ? state.highlights.find(h => h.id === existingHlId) : null;
+      document.getElementById('noteInputText').value = existing ? (existing.note || '') : '';
+      document.getElementById('btnDeleteNote').style.display = existing ? 'inline-block' : 'none';
+
+      document.getElementById('userNoteModal').style.display = 'flex';
+      hideHighlightToolbar();
+    }
+
+    function closeNoteModal() {
+      document.getElementById('userNoteModal').style.display = 'none';
+      state.activeHighlightId = null;
+    }
+
+    function saveNoteModal() {
+      const note = document.getElementById('noteInputText').value.trim();
+      const word = document.getElementById('noteTargetWord').textContent;
+
+      if (state.activeHighlightId) {
+        const item = state.highlights.find(h => h.id === state.activeHighlightId);
+        if (item) {
+          item.note = note;
+          localStorage.setItem('korean_user_highlights', JSON.stringify(state.highlights));
+        }
+      } else {
+        applyHighlight('yellow', note);
+      }
+
+      closeNoteModal();
+      updateHighlightsBadge();
+      if (state.isMyNotesView) renderMyNotes();
+      showToast('Đã lưu ghi chú thành công!');
+    }
+
+    function deleteNoteModal() {
+      if (state.activeHighlightId) {
+        state.highlights = state.highlights.filter(h => h.id !== state.activeHighlightId);
+        localStorage.setItem('korean_user_highlights', JSON.stringify(state.highlights));
+        closeNoteModal();
+        updateHighlightsBadge();
+        if (state.isMyNotesView) renderMyNotes();
+        showToast('Đã xóa highlight & ghi chú.');
+      }
+    }
+
+    function renderMyNotes() {
+      const container = document.getElementById('myNotesListContainer');
+      if (!container) return;
+
+      const total = state.highlights.length;
+      const countYellow = state.highlights.filter(h => h.color === 'yellow').length;
+      const countGreen = state.highlights.filter(h => h.color === 'green').length;
+      const countPink = state.highlights.filter(h => h.color === 'pink').length;
+      const countNotes = state.highlights.filter(h => h.note && h.note.trim().length > 0).length;
+
+      document.getElementById('countHlAll').textContent = total;
+      document.getElementById('countHlYellow').textContent = countYellow;
+      document.getElementById('countHlGreen').textContent = countGreen;
+      document.getElementById('countHlPink').textContent = countPink;
+      document.getElementById('countHlNotes').textContent = countNotes;
+
+      let filtered = [...state.highlights];
+      if (state.notesColorFilter === 'yellow') filtered = filtered.filter(h => h.color === 'yellow');
+      if (state.notesColorFilter === 'green') filtered = filtered.filter(h => h.color === 'green');
+      if (state.notesColorFilter === 'pink') filtered = filtered.filter(h => h.color === 'pink');
+      if (state.notesColorFilter === 'hasNote') filtered = filtered.filter(h => h.note && h.note.trim().length > 0);
+
+      if (filtered.length === 0) {
+        container.innerHTML = `
+          <div style="text-align:center; padding:40px 20px; background:#f8fafc; border-radius:12px; border:2px dashed #cbd5e1;">
+            <div style="font-size:2rem; margin-bottom:8px;">📝</div>
+            <h4 style="color:#1e293b; font-size:1.1rem; margin-bottom:6px;">Chưa có từ vựng nào trong mục này</h4>
+            <p style="color:#64748b; font-size:0.9rem;">Khi đọc bài học hoặc bảng từ vựng, bạn hãy bôi đen từ/câu bất kỳ để tô màu highlight và lưu ghi chú cá nhân nhé!</p>
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = filtered.map(item => {
+        const bgDot = item.color === 'yellow' ? '#fef08a' : item.color === 'green' ? '#86efac' : '#f472b6';
+        return `
+          <div style="background:white; border:1px solid #e2e8f0; border-radius:12px; padding:16px 20px; box-shadow:0 1px 3px rgba(0,0,0,0.05); display:flex; justify-content:space-between; align-items:flex-start; gap:16px;">
+            <div style="flex:1;">
+              <div style="display:flex; align-items:center; gap:8px; margin-bottom:6px;">
+                <span style="width:12px; height:12px; border-radius:50%; background:${bgDot}; display:inline-block;"></span>
+                <span style="font-size:1.15rem; font-weight:700; color:#0f172a;">${item.text}</span>
+                <button class="btn-audio" style="width:24px; height:24px; font-size:0.75rem;" onclick="speakText('${item.text.replace(/'/g, "\\'")}')" title="Phát âm">🔊</button>
+                <span style="font-size:0.75rem; color:#94a3b8; margin-left:6px;">(${item.context} · ${item.createdAt})</span>
+              </div>
+              ${item.note ? `
+                <div style="background:#f8fafc; border-left:3px solid #7c3aed; padding:8px 12px; border-radius:0 6px 6px 0; font-size:0.88rem; color:#475569; margin-top:6px;">
+                  💬 <b>Ghi chú:</b> ${item.note}
+                </div>
+              ` : `
+                <div style="font-size:0.82rem; color:#94a3b8; font-style:italic; margin-top:4px;">Chưa có ghi chú</div>
+              `}
+            </div>
+            <div style="display:flex; gap:8px; align-items:center;">
+              <button class="btn-text-sm" onclick="openNoteModal('${item.text.replace(/'/g, "\\'")}', '${item.id}')" title="Sửa ghi chú">✏️ Sửa</button>
+              <button class="btn-text-sm" style="color:#ef4444;" onclick="deleteHighlightItem('${item.id}')" title="Xóa">🗑️</button>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function deleteHighlightItem(id) {
+      state.highlights = state.highlights.filter(h => h.id !== id);
+      localStorage.setItem('korean_user_highlights', JSON.stringify(state.highlights));
+      updateHighlightsBadge();
+      renderMyNotes();
+      showToast('Đã xóa khỏi sổ tay.');
+    }
+
+    function exportNotesToClipboard() {
+      if (state.highlights.length === 0) {
+        showToast('Chưa có từ nào để xuất!');
+        return;
+      }
+      let text = '# SỔ TAY TỪ VỰNG & GHI CHÚ TIẾNG HÀN\n\n';
+      state.highlights.forEach((h, i) => {
+        text += `${i + 1}. ${h.text} (${h.context} - ${h.createdAt})\n`;
+        if (h.note) text += `   - Ghi chú: ${h.note}\n`;
+      });
+
+      navigator.clipboard.writeText(text).then(() => {
+        showToast('Đã sao chép toàn bộ danh sách ghi chú vào Clipboard!');
+      }).catch(() => {
+        alert(text);
+      });
+    }
+
+    function showToast(msg) {
+      let toast = document.getElementById('userAppToast');
+      if (!toast) {
+        toast = document.createElement('div');
+        toast.id = 'userAppToast';
+        toast.style.cssText = 'position:fixed; bottom:24px; right:24px; background:#1e293b; color:white; padding:10px 18px; border-radius:10px; font-size:0.88rem; z-index:1000000; box-shadow:0 10px 15px -3px rgba(0,0,0,0.3); transition:opacity 0.2s; pointer-events:none;';
+        document.body.appendChild(toast);
+      }
+      toast.textContent = msg;
+      toast.style.opacity = '1';
+      toast.style.display = 'block';
+      setTimeout(() => {
+        toast.style.opacity = '0';
+        setTimeout(() => toast.style.display = 'none', 200);
+      }, 2400);
     }
 
     // Render Navigation
@@ -3430,6 +4488,17 @@
     elements.inputSearchGrammar.oninput = () => renderAllGrammar();
     elements.selectLessonFilter.onchange = () => renderAllGrammar();
 
+    // TOPIK Thematic & My Notes handlers
+    if (elements.btnTopikTopics) {
+      elements.btnTopikTopics.onclick = () => showTopikView();
+    }
+    if (elements.btnMyNotes) {
+      elements.btnMyNotes.onclick = () => showMyNotesView();
+    }
+
+    // Initialize Highlighter
+    initHighlightSystem();
+
     // Startup
     initURLParams();
     if (state.course === '3a') {
@@ -3445,5 +4514,41 @@
       renderApp();
     }
   </script>
+
+  <!-- Floating Highlight Toolbar -->
+  <div id="floatingHighlightToolbar">
+    <span style="font-size:0.75rem; color:#94a3b8; font-weight:600; text-transform:uppercase;">Tô màu:</span>
+    <div class="hl-color-dot yellow" data-hl-color="yellow" title="Tô màu Vàng"></div>
+    <div class="hl-color-dot green" data-hl-color="green" title="Tô màu Xanh lá"></div>
+    <div class="hl-color-dot pink" data-hl-color="pink" title="Tô màu Hồng"></div>
+    <div style="width:1px; height:18px; background:#475569; margin:0 2px;"></div>
+    <button class="hl-tool-btn" id="hlBtnAudio" title="Nghe phát âm">🔊 Nghe</button>
+    <button class="hl-tool-btn" id="hlBtnAddNote" title="Thêm ghi chú cá nhân">📝 Ghi chú</button>
+    <button class="hl-tool-btn" id="hlBtnClose" style="color:#cbd5e1;" title="Đóng">✕</button>
+  </div>
+
+  <!-- User Note Modal Dialog -->
+  <div class="note-modal-overlay" id="userNoteModal">
+    <div class="note-modal-box">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px;">
+        <h3 style="color:#0f172a; font-size:1.15rem; font-weight:700; margin:0;">📝 Ghi chú từ vựng</h3>
+        <button id="btnCloseNoteModal" style="background:none; border:none; font-size:1.2rem; cursor:pointer; color:#64748b;">✕</button>
+      </div>
+      <div style="margin-bottom:14px; padding:10px 14px; background:#f8fafc; border-radius:8px; border:1px solid #e2e8f0; display:flex; justify-content:space-between; align-items:center;">
+        <span id="noteTargetWord" style="font-size:1.1rem; font-weight:700; color:#1e293b;">단어</span>
+        <button class="btn-audio" id="noteTargetAudio" title="Phát âm">🔊</button>
+      </div>
+      <label style="display:block; font-size:0.88rem; color:#475569; font-weight:600; margin-bottom:6px;">Nội dung ghi chú của bạn:</label>
+      <textarea id="noteInputText" class="textarea-custom" style="min-height:90px;" placeholder="Ví dụ: Từ này hay xuất hiện ở câu 5 TOPIK, chú ý cách chia động từ..."></textarea>
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-top:14px;">
+        <button class="btn-text-sm" id="btnDeleteNote" style="color:#ef4444;">🗑️ Xóa ghi chú</button>
+        <div style="display:flex; gap:10px;">
+          <button class="btn-action" id="btnCancelNote" style="background:#e2e8f0; color:#334155;">Hủy</button>
+          <button class="btn-action" id="btnSaveNote" style="background:#059669;">Lưu ghi chú</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </body>
 </html>
